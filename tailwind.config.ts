@@ -62,11 +62,15 @@ export default {
         "dark-gray": "hsl(var(--dark-gray))",
         "light-gray": "hsl(var(--light-gray))",
       },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       fontWeight: {
         light: '300',
         normal: '400',
         medium: '500',
         semibold: '600',
+        bold: '700',
       },
       borderRadius: {
         lg: "var(--radius)",

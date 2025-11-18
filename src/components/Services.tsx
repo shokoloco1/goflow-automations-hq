@@ -51,11 +51,11 @@ const Services = () => {
             return (
               <div 
                 key={index}
-                className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth border border-border/50 hover:border-primary/30 animate-fade-in-up"
+                className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth border border-border/50 hover:border-primary/30 animate-fade-in-up hover:-translate-y-1"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`w-14 h-14 rounded-xl bg-${service.color}/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <Icon className={`w-7 h-7 text-${service.color}`} />
+                <div className={`w-14 h-14 rounded-xl ${service.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <Icon className={`w-7 h-7 ${service.color === 'primary' ? 'text-primary' : 'text-secondary'}`} />
                 </div>
                 <h3 className="text-xl mb-3">{service.title}</h3>
                 <p className="text-muted-foreground font-light leading-relaxed">
