@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "@/assets/goflow-logo.png";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -33,12 +36,12 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-light text-foreground">Go with the Flow powered by intelligence</span>
+            <span className="text-sm font-light text-foreground">{t('hero.badge')}</span>
           </div>
           
           {/* Main Headline */}
           <h1 className="mb-6 font-light tracking-tight">
-            Automate Your Business with{' '}
+            {t('hero.headline')}{' '}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-normal">
               GoFlow AI
             </span>
@@ -46,7 +49,7 @@ const Hero = () => {
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-            AI-powered automation for clinics, wellness centers and service-based businesses.
+            {t('hero.subheadline')}
           </p>
           
           {/* CTA Buttons */}
@@ -56,7 +59,7 @@ const Hero = () => {
               className="text-base px-8 py-6 shadow-glow hover:shadow-xl transition-smooth group"
               onClick={scrollToContact}
             >
-              Book a Free Consultation
+              {t('hero.ctaPrimary')}
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -65,7 +68,7 @@ const Hero = () => {
               className="text-base px-8 py-6 border-2 hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-smooth"
               onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              See How Automation Works
+              {t('hero.ctaSecondary')}
             </Button>
           </div>
         </div>
