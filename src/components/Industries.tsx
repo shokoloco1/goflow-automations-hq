@@ -39,7 +39,7 @@ const Industries = () => {
             return (
               <div 
                 key={index}
-                className="group bg-card rounded-xl p-6 shadow-card hover:shadow-glow transition-smooth border border-border/50 hover:border-primary/30 text-center animate-fade-in-up"
+                className="group bg-card rounded-xl p-6 shadow-card hover:shadow-glow transition-smooth border border-border/50 hover:border-primary/30 text-center animate-fade-in-up hover:-translate-y-1"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">

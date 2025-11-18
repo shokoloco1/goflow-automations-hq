@@ -3,7 +3,7 @@ import { TrendingUp, Clock, Star, Calendar, ArrowRight } from "lucide-react";
 
 const CaseStudy = () => {
   return (
-    <section className="py-24 bg-background">
+    <section id="case-study" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Title */}
