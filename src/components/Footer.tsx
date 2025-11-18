@@ -24,7 +24,9 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex justify-center gap-4 mb-6">
               <a
-                href="#"
+                href="https://linkedin.com/company/goflow-ai"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary/20 transition-smooth cursor-pointer flex items-center justify-center group"
                 aria-label="LinkedIn"
               >
