@@ -1,5 +1,6 @@
 import { Sparkles, Linkedin, Instagram, Facebook } from "lucide-react";
 import logo from "@/assets/goflow-logo.png";
+import LanguageSwitch from "./LanguageSwitch";
 
 const Footer = () => {
   return (
@@ -48,12 +49,8 @@ const Footer = () => {
               </a>
             </div>
             
-            {/* Language Switch Placeholder */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20">
-              <span className="text-sm font-light">EN</span>
-              <span className="text-white/40">|</span>
-              <span className="text-sm font-light text-white/60">ES</span>
-            </div>
+            {/* Language Switch */}
+            <LanguageSwitch />
           </div>
           
           {/* Copyright */}
