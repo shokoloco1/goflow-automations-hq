@@ -71,14 +71,13 @@ const CaseStudy = () => {
               
               {/* CTA */}
               <div className="text-center">
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-smooth group"
-                >
-                  See Full Case Study
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-smooth"
+              >
+                See Full Case Study
+              </Button>
               </div>
             </div>
           </div>
