@@ -1,10 +1,10 @@
-import { Users, Target } from "lucide-react";
+import { User } from "lucide-react";
 
 const About = () => {
   return (
     <section id="about" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Section Title */}
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="mb-4">Who We Are</h2>
@@ -24,30 +24,42 @@ const About = () => {
             </p>
           </div>
           
-          {/* Founders */}
-          <div className="grid md:grid-cols-2 gap-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth border border-border/50">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Users className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl mb-1">David Shaw</h3>
-                  <p className="text-primary font-medium mb-2">CEO and Growth Director</p>
-                </div>
+          {/* CEO and Co-Founder */}
+          <div className="bg-card rounded-2xl p-10 shadow-card hover:shadow-glow transition-smooth border border-border/50 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="flex items-start gap-6 mb-6">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center flex-shrink-0">
+                <User className="w-8 h-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-2xl mb-2">David Shaw</h3>
+                <p className="text-primary font-medium text-lg">CEO and Co-Founder</p>
               </div>
             </div>
             
-            <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth border border-border/50">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                  <Target className="w-6 h-6 text-secondary" />
-                </div>
-                <div>
-                  <h3 className="text-xl mb-1">Lucas</h3>
-                  <p className="text-secondary font-medium mb-2">CTO and Technical Lead</p>
-                </div>
-              </div>
+            <div className="space-y-4 text-foreground/80 leading-relaxed font-light">
+              <p>
+                David Shaw is a marketing and business development professional with a strong background in sales strategy, 
+                client management and operational improvement across multiple industries. Throughout his career, he has led 
+                commercial teams, built high-value relationships and delivered measurable results including triple-digit sales 
+                growth and process optimization in competitive markets.
+              </p>
+              
+              <p>
+                His experience spans consumer goods, technology, automation and business development in both Australia and 
+                Latin America. David combines strategic thinking with hands-on execution, allowing him to identify business 
+                inefficiencies and transform them into practical, high-impact solutions.
+              </p>
+              
+              <p>
+                As the CEO and Co-Founder of GoFlow AI, David drives the company&apos;s global vision and leads the mission of 
+                helping businesses operate smarter through intelligent automation. He focuses on connecting clients with 
+                AI-powered systems that reduce manual work, improve customer experience and enable sustainable growth.
+              </p>
+              
+              <p>
+                David is known for his analytical mindset, results-driven leadership and commitment to continuous personal 
+                and professional development.
+              </p>
             </div>
           </div>
         </div>
