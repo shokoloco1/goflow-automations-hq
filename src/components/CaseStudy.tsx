@@ -1,19 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Clock, Star, Calendar, ArrowRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const CaseStudy = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="case-study" className="py-24 bg-background">
+    <section id="case-study" className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Title */}
-          <div className="text-center mb-12 animate-fade-in-up">
+          <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="mb-4">Success Story</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
           
           {/* Case Study Card */}
-          <div className="relative overflow-hidden rounded-3xl shadow-glow border border-primary/20 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <div className={`relative overflow-hidden rounded-3xl shadow-glow border border-primary/20 transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Gradient Background */}
             <div className="absolute inset-0 gradient-hero opacity-5" />
             

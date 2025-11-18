@@ -1,18 +1,21 @@
 import { User } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="about" className="py-24 bg-muted/30">
+    <section id="about" className="py-24 bg-muted/30" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section Title */}
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="mb-4">Who We Are</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
           
           {/* Company Description */}
-          <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <div className={`space-y-6 transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <p className="text-lg text-foreground/80 leading-relaxed font-light">
               GoFlow AI is an AI automation agency that helps businesses operate smarter, faster and with less manual work. 
               We build intelligent systems that automate communication, bookings, follow-ups, CRM tasks and customer engagement 

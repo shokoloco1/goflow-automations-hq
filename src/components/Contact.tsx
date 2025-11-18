@@ -5,10 +5,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Send, Mail } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     fullName: "",
     businessName: "",
@@ -51,23 +53,23 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section Title */}
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
               <Mail className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Get in Touch</span>
             </div>
             <h2 className="mb-4">Request a Free Automation Audit</h2>
             <p className="text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-              Let's discuss how AI automation can transform your business operations
+              Let&apos;s discuss how AI automation can transform your business operations
             </p>
           </div>
           
           {/* Contact Form */}
-          <div className="bg-card rounded-3xl p-8 md:p-12 shadow-glow border border-border/50 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <div className={`bg-card rounded-3xl p-8 md:p-12 shadow-glow border border-border/50 transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
