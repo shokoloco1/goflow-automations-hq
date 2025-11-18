@@ -6,12 +6,14 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Send, Mail } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
   const { ref, isVisible } = useScrollAnimation();
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -28,8 +30,8 @@ const Contact = () => {
     // Basic validation
     if (!formData.fullName || !formData.email || !formData.service) {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
+        title: t('contact.validation.title'),
+        description: t('contact.validation.description'),
         variant: "destructive"
       });
       return;
@@ -58,8 +60,8 @@ const Contact = () => {
       console.log('Inquiry submitted successfully:', data);
       
       toast({
-        title: "Message Sent!",
-        description: "We'll get back to you within 24 hours.",
+        title: t('contact.success.title'),
+        description: t('contact.success.description'),
       });
       
       // Reset form
@@ -74,8 +76,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error:', error);
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
+        title: t('contact.error.title'),
+        description: t('contact.error.description'),
         variant: "destructive"
       });
     } finally {
@@ -91,11 +93,11 @@ const Contact = () => {
           <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
               <Mail className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Get in Touch</span>
+              <span className="text-sm font-medium text-primary">{t('contact.badge')}</span>
             </div>
-            <h2 className="mb-4">Request a Free Automation Audit</h2>
+            <h2 className="mb-4">{t('contact.title')}</h2>
             <p className="text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-              Let&apos;s discuss how AI automation can transform your business operations
+              {t('contact.subtitle')}
             </p>
           </div>
           
@@ -104,7 +106,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="fullName">Full Name *</Label>
+                  <Label htmlFor="fullName">{t('contact.fullName')} *</Label>
                   <Input
                     id="fullName"
                     value={formData.fullName}
@@ -116,7 +118,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="businessName">Business Name</Label>
+                  <Label htmlFor="businessName">{t('contact.businessName')}</Label>
                   <Input
                     id="businessName"
                     value={formData.businessName}
@@ -129,7 +131,7 @@ const Contact = () => {
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
+                  <Label htmlFor="email">{t('contact.email')} *</Label>
                   <Input
                     id="email"
                     type="email"
@@ -142,7 +144,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Phone</Label>
+                  <Label htmlFor="phone">{t('contact.phone')}</Label>
                   <Input
                     id="phone"
                     type="tel"
@@ -155,29 +157,29 @@ const Contact = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="service">What service do you need? *</Label>
+                <Label htmlFor="service">{t('contact.service')} *</Label>
                 <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })} required>
                   <SelectTrigger className="h-12">
-                    <SelectValue placeholder="Select a service" />
+                    <SelectValue placeholder={t('contact.service.placeholder')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="ai-assistant">AI Virtual Assistant</SelectItem>
-                    <SelectItem value="booking">Lead and Booking Automation</SelectItem>
-                    <SelectItem value="post-sale">Post-Sale Automation</SelectItem>
-                    <SelectItem value="crm">CRM Integration</SelectItem>
-                    <SelectItem value="consulting">AI Consulting</SelectItem>
-                    <SelectItem value="full-package">Full Automation Package</SelectItem>
+                    <SelectItem value="ai-assistant">{t('services.aiAssistant.title')}</SelectItem>
+                    <SelectItem value="booking">{t('services.booking.title')}</SelectItem>
+                    <SelectItem value="post-sale">{t('services.postSale.title')}</SelectItem>
+                    <SelectItem value="crm">{t('services.crm.title')}</SelectItem>
+                    <SelectItem value="consulting">{t('services.consulting.title')}</SelectItem>
+                    <SelectItem value="full-package">{t('contact.service.fullPackage')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="description">Describe the process you want to automate</Label>
+                <Label htmlFor="description">{t('contact.description')}</Label>
                 <Textarea
                   id="description"
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  placeholder="Tell us about your current workflow and what you'd like to automate..."
+                  placeholder={t('contact.description.placeholder')}
                   rows={5}
                   className="resize-none"
                 />
@@ -189,7 +191,7 @@ const Contact = () => {
                 className="w-full h-14 text-lg shadow-glow hover:shadow-xl transition-smooth group"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Sending..." : "Request a Free Demo of AI Automation"}
+                {isSubmitting ? t('contact.submitting') : t('contact.submit')}
                 <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>

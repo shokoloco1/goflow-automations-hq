@@ -1,10 +1,11 @@
+import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 interface LanguageSwitchProps {
   variant?: 'default' | 'compact';
 }
 
-const LanguageSwitch = ({ variant = 'default' }: LanguageSwitchProps) => {
+const LanguageSwitch = React.memo(({ variant = 'default' }: LanguageSwitchProps) => {
   const { language, setLanguage } = useLanguage();
 
   if (variant === 'compact') {
@@ -64,6 +65,8 @@ const LanguageSwitch = ({ variant = 'default' }: LanguageSwitchProps) => {
       </button>
     </div>
   );
-};
+});
+
+LanguageSwitch.displayName = 'LanguageSwitch';
 
 export default LanguageSwitch;

@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { translations } from '@/constants/translations';
 
 type Language = 'en' | 'es';
 
@@ -9,27 +10,6 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
-const translations = {
-  en: {
-    // Navigation
-    'nav.about': 'About',
-    'nav.services': 'Services',
-    'nav.howItWorks': 'How It Works',
-    'nav.caseStudy': 'Case Study',
-    'nav.contact': 'Contact',
-    'nav.getStarted': 'Get Started',
-  },
-  es: {
-    // Navigation
-    'nav.about': 'Acerca de',
-    'nav.services': 'Servicios',
-    'nav.howItWorks': 'Cómo Funciona',
-    'nav.caseStudy': 'Caso de Estudio',
-    'nav.contact': 'Contacto',
-    'nav.getStarted': 'Comenzar',
-  },
-};
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {

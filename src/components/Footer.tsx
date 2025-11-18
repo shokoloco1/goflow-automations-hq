@@ -1,8 +1,11 @@
 import { Sparkles, Linkedin, Instagram, Facebook } from "lucide-react";
 import logo from "@/assets/goflow-logo.png";
 import LanguageSwitch from "./LanguageSwitch";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-dark-gray text-white py-16">
       <div className="container mx-auto px-4">
@@ -18,7 +21,7 @@ const Footer = () => {
             <div className="mb-4">
               <div className="inline-flex items-center gap-2 text-white/70">
                 <Sparkles className="w-4 h-4" />
-                <span className="text-sm font-light">Go with the Flow powered by intelligence</span>
+                <span className="text-sm font-light">{t('hero.badge')}</span>
               </div>
             </div>
             
@@ -56,7 +59,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center pt-8 border-t border-white/10">
             <p className="text-sm text-white/60 font-light">
-              © {new Date().getFullYear()} GoFlow AI. All rights reserved.
+              © {new Date().getFullYear()} {t('footer.copyright')}
             </p>
           </div>
         </div>
