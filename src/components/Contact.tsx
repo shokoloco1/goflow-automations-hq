@@ -183,26 +183,15 @@ const Contact = () => {
                 />
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="flex-1 h-12 shadow-glow hover:shadow-xl transition-smooth group"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Request a Free Automation Audit"}
-                  <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button 
-                  type="submit"
-                  variant="outline"
-                  size="lg"
-                  className="flex-1 h-12 border-2 hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-smooth"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Send Inquiry"}
-                </Button>
-              </div>
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full h-14 text-lg shadow-glow hover:shadow-xl transition-smooth group"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Request a Free Demo of AI Automation"}
+                <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </form>
           </div>
         </div>
