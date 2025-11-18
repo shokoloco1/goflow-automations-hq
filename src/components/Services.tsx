@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Bot, Calendar, Heart, Database, Lightbulb, ArrowRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
@@ -35,11 +36,13 @@ const services = [
 ];
 
 const Services = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Title */}
-        <div className="text-center mb-16 animate-fade-in-up">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="mb-4">Our Services</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
         </div>
@@ -51,8 +54,8 @@ const Services = () => {
             return (
               <div 
                 key={index}
-                className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth border border-border/50 hover:border-primary/30 animate-fade-in-up hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`group bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-700 border border-border/50 hover:border-primary/30 hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className={`w-14 h-14 rounded-xl ${service.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                   <Icon className={`w-7 h-7 ${service.color === 'primary' ? 'text-primary' : 'text-secondary'}`} />
@@ -67,7 +70,7 @@ const Services = () => {
         </div>
         
         {/* CTA */}
-        <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+        <div className={`text-center transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Button 
             size="lg"
             className="shadow-soft hover:shadow-glow transition-smooth group"

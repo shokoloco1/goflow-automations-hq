@@ -1,4 +1,5 @@
 import { Search, FileText, Wrench, TrendingUp } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const steps = [
   {
@@ -28,11 +29,13 @@ const steps = [
 ];
 
 const HowItWorks = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="how-it-works" className="py-24 bg-muted/30">
+    <section id="how-it-works" className="py-24 bg-muted/30" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Title */}
-        <div className="text-center mb-16 animate-fade-in-up">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="mb-4">How It Works</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
         </div>
@@ -45,8 +48,8 @@ const HowItWorks = () => {
               return (
                 <div 
                   key={index}
-                  className="relative animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className={`relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
                 >
                   {/* Connector Line (hidden on mobile and last item) */}
                   {index < steps.length - 1 && (
