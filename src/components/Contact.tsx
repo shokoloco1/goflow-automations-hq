@@ -7,10 +7,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Send, Mail } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
   const { ref, isVisible } = useScrollAnimation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     businessName: "",
@@ -20,7 +22,7 @@ const Contact = () => {
     description: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -33,23 +35,52 @@ const Contact = () => {
       return;
     }
     
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
     
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    
-    // Reset form
-    setFormData({
-      fullName: "",
-      businessName: "",
-      email: "",
-      phone: "",
-      service: "",
-      description: ""
-    });
+    try {
+      // Call the edge function to submit the inquiry
+      const { data, error } = await supabase.functions.invoke('submit-contact-inquiry', {
+        body: {
+          fullName: formData.fullName,
+          businessName: formData.businessName,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          description: formData.description
+        }
+      });
+
+      if (error) {
+        console.error('Error submitting inquiry:', error);
+        throw error;
+      }
+
+      console.log('Inquiry submitted successfully:', data);
+      
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        fullName: "",
+        businessName: "",
+        email: "",
+        phone: "",
+        service: "",
+        description: ""
+      });
+    } catch (error) {
+      console.error('Error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -157,8 +188,9 @@ const Contact = () => {
                   type="submit" 
                   size="lg" 
                   className="flex-1 h-12 shadow-glow hover:shadow-xl transition-smooth group"
+                  disabled={isSubmitting}
                 >
-                  Request a Free Automation Audit
+                  {isSubmitting ? "Sending..." : "Request a Free Automation Audit"}
                   <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button 
@@ -166,8 +198,9 @@ const Contact = () => {
                   variant="outline"
                   size="lg"
                   className="flex-1 h-12 border-2 hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-smooth"
+                  disabled={isSubmitting}
                 >
-                  Send Inquiry
+                  {isSubmitting ? "Sending..." : "Send Inquiry"}
                 </Button>
               </div>
             </form>
