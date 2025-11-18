@@ -44,7 +44,7 @@ const Navigation = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <img src={logo} alt="GoFlow AI" className="h-10 w-auto" />
+            <img src={logo} alt="GoFlow AI" className="h-14 w-auto md:h-16" />
           </button>
 
           {/* Desktop Navigation */}
