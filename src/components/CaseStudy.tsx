@@ -68,17 +68,6 @@ const CaseStudy = () => {
                   <p className="text-sm text-muted-foreground font-light">Time Saved/Week</p>
                 </div>
               </div>
-              
-              {/* CTA */}
-              <div className="text-center">
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-smooth"
-              >
-                See Full Case Study
-              </Button>
-              </div>
             </div>
           </div>
         </div>
