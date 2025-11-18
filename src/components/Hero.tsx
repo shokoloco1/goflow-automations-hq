@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import logo from "@/assets/goflow-logo.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -20,6 +21,15 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center animate-fade-in">
+          {/* Logo */}
+          <div className="mb-8">
+            <img 
+              src={logo} 
+              alt="GoFlow AI" 
+              className="h-20 md:h-24 w-auto mx-auto mb-6 opacity-90 hover:opacity-100 transition-opacity" 
+            />
+          </div>
+          
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
             <Sparkles className="w-4 h-4 text-primary" />
