@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/goflow-logo.png";
+import LanguageSwitch from "./LanguageSwitch";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,11 +25,11 @@ const Navigation = () => {
   };
 
   const navLinks = [
-    { name: "About", id: "about" },
-    { name: "Services", id: "services" },
-    { name: "How It Works", id: "how-it-works" },
-    { name: "Case Study", id: "case-study" },
-    { name: "Contact", id: "contact" },
+    { name: t('nav.about'), id: "about" },
+    { name: t('nav.services'), id: "services" },
+    { name: t('nav.howItWorks'), id: "how-it-works" },
+    { name: t('nav.caseStudy'), id: "case-study" },
+    { name: t('nav.contact'), id: "contact" },
   ];
 
   return (
@@ -48,7 +51,7 @@ const Navigation = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -58,11 +61,12 @@ const Navigation = () => {
                 {link.name}
               </button>
             ))}
+            <LanguageSwitch variant="compact" />
             <Button
               onClick={() => scrollToSection("contact")}
               className="shadow-soft hover:shadow-glow transition-smooth"
             >
-              Get Started
+              {t('nav.getStarted')}
             </Button>
           </div>
 
@@ -93,11 +97,14 @@ const Navigation = () => {
                 {link.name}
               </button>
             ))}
+            <div className="flex justify-center py-2">
+              <LanguageSwitch variant="compact" />
+            </div>
             <Button
               onClick={() => scrollToSection("contact")}
               className="w-full shadow-soft hover:shadow-glow transition-smooth"
             >
-              Get Started
+              {t('nav.getStarted')}
             </Button>
           </div>
         </div>
