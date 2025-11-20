@@ -48,25 +48,41 @@ const Hero = () => {
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto font-light leading-relaxed">
             {t('hero.subheadline')}
           </p>
           
-          {/* CTA Buttons */}
+          {/* Value Props */}
+          <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm md:text-base">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-secondary" />
+              <span className="text-foreground/80 font-light">{t('hero.value1')}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-secondary" />
+              <span className="text-foreground/80 font-light">{t('hero.value2')}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-secondary" />
+              <span className="text-foreground/80 font-light">{t('hero.value3')}</span>
+            </div>
+          </div>
+          
+          {/* CTA Buttons - Optimized for conversion */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="text-base px-8 py-6 shadow-glow hover:shadow-xl transition-smooth group"
+              className="text-base px-10 py-7 shadow-glow hover:shadow-xl transition-smooth group font-medium"
               onClick={scrollToContact}
             >
               {t('hero.ctaPrimary')}
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              className="text-base px-8 py-6 border-2 hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-smooth"
-              onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-base px-10 py-7 border-2 hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-smooth"
+              onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {t('hero.ctaSecondary')}
             </Button>

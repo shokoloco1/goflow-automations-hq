@@ -1,5 +1,26 @@
 export const translations = {
   en: {
+    // Testimonials
+    'testimonials.title': 'What Our Clients Say',
+    'testimonials.subtitle': 'Real results from businesses that transformed their operations with our AI automation',
+    'testimonials.testimonial1.role': 'Clinic Owner',
+    'testimonials.testimonial1.text': 'GoFlow AI transformed how we manage appointments. The automated reminders cut our no-shows by 60% and freed up our staff to focus on patient care. The ROI was immediate.',
+    'testimonials.testimonial2.role': 'Fitness Studio Director',
+    'testimonials.testimonial2.text': 'The AI chatbot handles member inquiries 24/7, booking classes and answering questions instantly. Our lead conversion increased by 45% in the first month alone.',
+    'testimonials.testimonial3.role': 'Managing Partner',
+    'testimonials.testimonial3.text': 'Client intake used to take hours. Now our AI system qualifies leads, schedules consultations, and manages follow-ups automatically. We closed 3 extra cases this month thanks to faster response times.',
+    'testimonials.rating': '4.9/5 Average Rating',
+    'testimonials.reviews': '100+ Reviews',
+    
+    // Trust Badges
+    'trust.badge1.title': 'Data Security',
+    'trust.badge1.desc': 'Enterprise-grade encryption',
+    'trust.badge2.title': 'Proven Results',
+    'trust.badge2.desc': '34% avg. conversion increase',
+    'trust.badge3.title': '500+ Clients',
+    'trust.badge3.desc': 'Trusted by businesses',
+    'trust.badge4.title': 'Fast ROI',
+    'trust.badge4.desc': 'Results in 30 days',
     // Navigation
     'nav.about': 'About',
     'nav.services': 'Services',
@@ -8,12 +29,15 @@ export const translations = {
     'nav.contact': 'Contact',
     'nav.getStarted': 'Get Started',
     
-    // Hero
-    'hero.badge': 'Go with the Flow powered by intelligence',
-    'hero.headline': 'Automate Your Business with',
-    'hero.subheadline': 'AI-powered automation for clinics, wellness centers and service-based businesses.',
-    'hero.ctaPrimary': 'Book a Free Consultation',
-    'hero.ctaSecondary': 'See How Automation Works',
+    // Hero - Optimized for conversion
+    'hero.badge': 'AI-Powered Business Automation',
+    'hero.headline': 'Transform Your Business with',
+    'hero.subheadline': 'Automate repetitive tasks, convert more leads, and scale your business 24/7 – while you focus on growth.',
+    'hero.ctaPrimary': 'Get My Free Strategy Session',
+    'hero.ctaSecondary': 'See Real Results',
+    'hero.value1': 'Save 15+ hours weekly',
+    'hero.value2': '+34% bookings on average',
+    'hero.value3': 'ROI in 30 days',
     
     // About
     'about.title': 'Who We Are',
@@ -66,6 +90,27 @@ export const translations = {
     'footer.copyright': 'GoFlow AI. All rights reserved.',
   },
   es: {
+    // Testimonials
+    'testimonials.title': 'Lo Que Dicen Nuestros Clientes',
+    'testimonials.subtitle': 'Resultados reales de empresas que transformaron sus operaciones con nuestra automatización de IA',
+    'testimonials.testimonial1.role': 'Propietaria de Clínica',
+    'testimonials.testimonial1.text': 'GoFlow AI transformó cómo gestionamos las citas. Los recordatorios automáticos redujeron nuestras ausencias en un 60% y liberaron a nuestro personal para enfocarse en la atención al paciente. El ROI fue inmediato.',
+    'testimonials.testimonial2.role': 'Director de Estudio de Fitness',
+    'testimonials.testimonial2.text': 'El chatbot de IA atiende consultas de miembros 24/7, reservando clases y respondiendo preguntas al instante. Nuestra conversión de leads aumentó un 45% solo en el primer mes.',
+    'testimonials.testimonial3.role': 'Socio Gerente',
+    'testimonials.testimonial3.text': 'La admisión de clientes solía tomar horas. Ahora nuestro sistema de IA califica leads, agenda consultas y gestiona seguimientos automáticamente. Cerramos 3 casos adicionales este mes gracias a tiempos de respuesta más rápidos.',
+    'testimonials.rating': 'Calificación Promedio 4.9/5',
+    'testimonials.reviews': '+100 Reseñas',
+    
+    // Trust Badges
+    'trust.badge1.title': 'Seguridad de Datos',
+    'trust.badge1.desc': 'Encriptación nivel empresarial',
+    'trust.badge2.title': 'Resultados Probados',
+    'trust.badge2.desc': '34% aumento promedio conversión',
+    'trust.badge3.title': '+500 Clientes',
+    'trust.badge3.desc': 'Empresas confían en nosotros',
+    'trust.badge4.title': 'ROI Rápido',
+    'trust.badge4.desc': 'Resultados en 30 días',
     // Navigation
     'nav.about': 'Acerca de',
     'nav.services': 'Servicios',
@@ -74,12 +119,15 @@ export const translations = {
     'nav.contact': 'Contacto',
     'nav.getStarted': 'Comenzar',
     
-    // Hero
-    'hero.badge': 'Ve con el Flujo impulsado por inteligencia',
-    'hero.headline': 'Automatiza tu Negocio con',
-    'hero.subheadline': 'Automatización impulsada por IA para clínicas, centros de bienestar y negocios basados en servicios.',
-    'hero.ctaPrimary': 'Reserva una Consulta Gratis',
-    'hero.ctaSecondary': 'Ve Cómo Funciona la Automatización',
+    // Hero - Optimizado para conversión
+    'hero.badge': 'Automatización Empresarial con IA',
+    'hero.headline': 'Transforma Tu Negocio con',
+    'hero.subheadline': 'Automatiza tareas repetitivas, convierte más leads y escala tu negocio 24/7 – mientras te enfocas en crecer.',
+    'hero.ctaPrimary': 'Obtén Mi Sesión Estratégica Gratis',
+    'hero.ctaSecondary': 'Ver Resultados Reales',
+    'hero.value1': 'Ahorra +15 horas semanales',
+    'hero.value2': '+34% reservas en promedio',
+    'hero.value3': 'ROI en 30 días',
     
     // About
     'about.title': 'Quiénes Somos',
