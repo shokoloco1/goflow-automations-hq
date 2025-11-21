@@ -40,16 +40,18 @@ const Hero = () => {
           </div>
           
           {/* Main Headline */}
-          <h1 className="mb-6 font-light tracking-tight">
-            {t('hero.headline')}{' '}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-normal">
-              GoFlow AI
-            </span>
+          <h1 className="mb-4 font-normal tracking-tight">
+            {t('hero.headline')}
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-2xl md:text-3xl text-foreground mb-4 max-w-3xl mx-auto font-light leading-relaxed">
             {t('hero.subheadline')}
+          </p>
+          
+          {/* Description */}
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto font-light">
+            {t('hero.description')}
           </p>
           
           {/* Value Props */}

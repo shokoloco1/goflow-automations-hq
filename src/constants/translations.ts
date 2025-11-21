@@ -31,13 +31,53 @@ export const translations = {
     
     // Hero - Optimized for conversion
     'hero.badge': 'AI-Powered Business Automation',
-    'hero.headline': 'Transform Your Business with',
-    'hero.subheadline': 'Automate repetitive tasks, convert more leads, and scale your business 24/7 – while you focus on growth.',
-    'hero.ctaPrimary': 'Get My Free Strategy Session',
-    'hero.ctaSecondary': 'See Real Results',
+    'hero.headline': 'AI automations for modern businesses.',
+    'hero.subheadline': 'Save time, reduce errors and grow faster.',
+    'hero.description': 'We automate workflows, bookings, messaging, and repetitive tasks using AI.',
+    'hero.ctaPrimary': 'Book a Demo',
+    'hero.ctaSecondary': 'See How It Works',
     'hero.value1': 'Save 15+ hours weekly',
     'hero.value2': '+34% bookings on average',
     'hero.value3': 'ROI in 30 days',
+    
+    // Benefits
+    'benefits.title': 'Why businesses choose GoFlow AI',
+    'benefits.benefit1.title': 'Reduce manual work',
+    'benefits.benefit1.desc': 'Automate repetitive tasks that slow your business down',
+    'benefits.benefit2.title': 'Save time every week',
+    'benefits.benefit2.desc': 'Free up 15+ hours weekly for strategic growth',
+    'benefits.benefit3.title': 'Improve accuracy',
+    'benefits.benefit3.desc': 'Eliminate errors with consistent automated processes',
+    
+    // What We Automate
+    'automate.title': 'What we automate',
+    'automate.item1': 'Booking and scheduling',
+    'automate.item2': 'Follow ups and reminders',
+    'automate.item3': 'Client messaging',
+    'automate.item4': 'Workflow automations',
+    'automate.item5': 'Reporting & data entry',
+    'automate.item6': 'Missed call automations',
+    
+    // How It Works
+    'howItWorks.title': 'How it works',
+    'howItWorks.step1.title': 'We analyze your workflow',
+    'howItWorks.step1.desc': 'We understand your current processes and identify opportunities',
+    'howItWorks.step2.title': 'We build your automations',
+    'howItWorks.step2.desc': 'We set up and configure everything for your business',
+    'howItWorks.step3.title': 'You save time from day one',
+    'howItWorks.step3.desc': 'Start seeing results immediately with ongoing support',
+    
+    // Use Cases
+    'useCases.title': 'Examples of what we automate',
+    'useCases.case1': 'New inquiry → automatic message',
+    'useCases.case2': 'Missed call → instant AI reply',
+    'useCases.case3': 'Client booked → reminder sequence',
+    'useCases.case4': 'After service → follow up message',
+    
+    // Footer CTA
+    'footerCta.title': 'Ready to automate your business?',
+    'footerCta.subtitle': 'Let\'s improve your workflow with AI',
+    'footerCta.button': 'Book a Demo',
     
     // About
     'about.title': 'Who We Are',
@@ -121,13 +161,53 @@ export const translations = {
     
     // Hero - Optimizado para conversión
     'hero.badge': 'Automatización Empresarial con IA',
-    'hero.headline': 'Transforma Tu Negocio con',
-    'hero.subheadline': 'Automatiza tareas repetitivas, convierte más leads y escala tu negocio 24/7 – mientras te enfocas en crecer.',
-    'hero.ctaPrimary': 'Obtén Mi Sesión Estratégica Gratis',
-    'hero.ctaSecondary': 'Ver Resultados Reales',
+    'hero.headline': 'Automatización IA para negocios modernos.',
+    'hero.subheadline': 'Ahorra tiempo, reduce errores y crece más rápido.',
+    'hero.description': 'Automatizamos flujos de trabajo, reservas, mensajería y tareas repetitivas usando IA.',
+    'hero.ctaPrimary': 'Agenda una Demo',
+    'hero.ctaSecondary': 'Ver Cómo Funciona',
     'hero.value1': 'Ahorra +15 horas semanales',
     'hero.value2': '+34% reservas en promedio',
     'hero.value3': 'ROI en 30 días',
+    
+    // Benefits
+    'benefits.title': 'Por qué las empresas eligen GoFlow AI',
+    'benefits.benefit1.title': 'Reduce el trabajo manual',
+    'benefits.benefit1.desc': 'Automatiza tareas repetitivas que frenan tu negocio',
+    'benefits.benefit2.title': 'Ahorra tiempo cada semana',
+    'benefits.benefit2.desc': 'Libera +15 horas semanales para crecimiento estratégico',
+    'benefits.benefit3.title': 'Mejora la precisión',
+    'benefits.benefit3.desc': 'Elimina errores con procesos automatizados consistentes',
+    
+    // What We Automate
+    'automate.title': 'Qué automatizamos',
+    'automate.item1': 'Reservas y agendamiento',
+    'automate.item2': 'Seguimientos y recordatorios',
+    'automate.item3': 'Mensajería con clientes',
+    'automate.item4': 'Automatización de flujos',
+    'automate.item5': 'Reportes y entrada de datos',
+    'automate.item6': 'Automatización de llamadas perdidas',
+    
+    // How It Works
+    'howItWorks.title': 'Cómo funciona',
+    'howItWorks.step1.title': 'Analizamos tu flujo de trabajo',
+    'howItWorks.step1.desc': 'Entendemos tus procesos actuales e identificamos oportunidades',
+    'howItWorks.step2.title': 'Construimos tus automatizaciones',
+    'howItWorks.step2.desc': 'Configuramos y preparamos todo para tu negocio',
+    'howItWorks.step3.title': 'Ahorras tiempo desde el día uno',
+    'howItWorks.step3.desc': 'Empieza a ver resultados inmediatos con soporte continuo',
+    
+    // Use Cases
+    'useCases.title': 'Ejemplos de lo que automatizamos',
+    'useCases.case1': 'Nueva consulta → mensaje automático',
+    'useCases.case2': 'Llamada perdida → respuesta IA instantánea',
+    'useCases.case3': 'Cliente reservó → secuencia de recordatorios',
+    'useCases.case4': 'Después del servicio → mensaje de seguimiento',
+    
+    // Footer CTA
+    'footerCta.title': '¿Listo para automatizar tu negocio?',
+    'footerCta.subtitle': 'Mejoremos tu flujo de trabajo con IA',
+    'footerCta.button': 'Agenda una Demo',
     
     // About
     'about.title': 'Quiénes Somos',
