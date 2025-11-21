@@ -31,8 +31,8 @@ const Footer = () => {
             <div className="text-center md:text-left">
               <h4 className="text-white font-medium mb-4">Contact</h4>
               <div className="space-y-2 text-white/70 text-sm">
-                <p>goflowai.com</p>
-                <p>hello@goflowai.com</p>
+                <p>goflowaai.com</p>
+                <p>davids@goflowaai.com</p>
               </div>
             </div>
             

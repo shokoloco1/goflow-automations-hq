@@ -8,7 +8,7 @@ const corsHeaders = {
 };
 
 const resend = new Resend(Deno.env.get('RESEND_API_KEY'));
-const NOTIFICATION_EMAIL = 'davidshawcc@gmail.com';
+const NOTIFICATION_EMAIL = 'davids@goflowaai.com';
 
 interface ContactInquiry {
   fullName: string;
