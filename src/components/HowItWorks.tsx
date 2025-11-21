@@ -1,48 +1,44 @@
-import { Search, FileText, Wrench, TrendingUp } from "lucide-react";
+import { Search, Wrench, Zap } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const steps = [
   {
     number: "01",
     icon: Search,
-    title: "Discovery Call",
-    description: "We analyze your business goals and current processes."
+    titleKey: "howItWorks.step1.title",
+    descKey: "howItWorks.step1.desc"
   },
   {
     number: "02",
-    icon: FileText,
-    title: "Automation Blueprint",
-    description: "We design the ideal smart workflow for your business."
+    icon: Wrench,
+    titleKey: "howItWorks.step2.title",
+    descKey: "howItWorks.step2.desc"
   },
   {
     number: "03",
-    icon: Wrench,
-    title: "Full Implementation",
-    description: "We build your chatbot, booking flows, CRM integration and post-sale automation."
-  },
-  {
-    number: "04",
-    icon: TrendingUp,
-    title: "Optimization and Support",
-    description: "We maintain, improve and scale your automations every month."
+    icon: Zap,
+    titleKey: "howItWorks.step3.title",
+    descKey: "howItWorks.step3.desc"
   }
 ];
 
 const HowItWorks = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const { t } = useLanguage();
   
   return (
-    <section id="how-it-works" className="py-24 bg-muted/30" ref={ref}>
+    <section id="how-it-works" className="py-20 bg-muted/30" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="mb-4">How It Works</h2>
+          <h2 className="mb-4">{t('howItWorks.title')}</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
         </div>
         
         {/* Steps */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -53,7 +49,7 @@ const HowItWorks = () => {
                 >
                   {/* Connector Line (hidden on mobile and last item) */}
                   {index < steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-primary/20 to-transparent" />
+                    <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-primary/20 to-transparent z-0" />
                   )}
                   
                   <div className="relative bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth border border-border/50 hover:border-primary/30 group">
@@ -68,9 +64,9 @@ const HowItWorks = () => {
                     </div>
                     
                     {/* Content */}
-                    <h3 className="text-xl mb-3">{step.title}</h3>
+                    <h3 className="text-xl mb-3 font-medium">{t(step.titleKey)}</h3>
                     <p className="text-muted-foreground font-light leading-relaxed">
-                      {step.description}
+                      {t(step.descKey)}
                     </p>
                   </div>
                 </div>
