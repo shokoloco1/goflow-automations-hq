@@ -30,7 +30,7 @@ const Footer = () => {
               <a
                 href="https://linkedin.com/company/goflow-ai"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary/20 transition-smooth cursor-pointer flex items-center justify-center group"
                 aria-label="LinkedIn"
               >
@@ -39,7 +39,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/goflow_ai?igsh=MXZ1bHh2aTZ3MjI3cw%3D%3D&utm_source=qr"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary/20 transition-smooth cursor-pointer flex items-center justify-center group"
                 aria-label="Instagram"
               >
@@ -48,7 +48,7 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/profile.php?id=61583835790870"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary/20 transition-smooth cursor-pointer flex items-center justify-center group"
                 aria-label="Facebook"
               >
