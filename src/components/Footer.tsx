@@ -6,6 +6,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Footer = () => {
   const { t } = useLanguage();
   
+  const handleSocialClick = (url: string) => {
+    window.open(url, '_blank');
+  };
+  
   return (
     <footer className="bg-dark-gray text-white py-16">
       <div className="container mx-auto px-4">
@@ -27,33 +31,27 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex justify-center gap-4 mb-6">
-              <a
-                href="https://linkedin.com/company/goflow-ai"
-                target="_blank"
-                rel="noopener"
+              <button
+                onClick={() => handleSocialClick('https://linkedin.com/company/goflow-ai')}
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary/20 transition-smooth cursor-pointer flex items-center justify-center group"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
-              <a
-                href="https://www.instagram.com/goflow_ai?igsh=MXZ1bHh2aTZ3MjI3cw%3D%3D&utm_source=qr"
-                target="_blank"
-                rel="noopener"
+              </button>
+              <button
+                onClick={() => handleSocialClick('https://www.instagram.com/goflow_ai?igsh=MXZ1bHh2aTZ3MjI3cw%3D%3D&utm_source=qr')}
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary/20 transition-smooth cursor-pointer flex items-center justify-center group"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=61583835790870"
-                target="_blank"
-                rel="noopener"
+              </button>
+              <button
+                onClick={() => handleSocialClick('https://www.facebook.com/profile.php?id=61583835790870')}
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary/20 transition-smooth cursor-pointer flex items-center justify-center group"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
+              </button>
             </div>
             
             {/* Language Switch */}
