@@ -2,11 +2,12 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import TrustBadges from "@/components/TrustBadges";
 import Benefits from "@/components/Benefits";
-import About from "@/components/About";
 import WhatWeAutomate from "@/components/WhatWeAutomate";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
+import Packages from "@/components/Packages";
 import UseCases from "@/components/UseCases";
+import About from "@/components/About";
 import Industries from "@/components/Industries";
 import Deliverables from "@/components/Deliverables";
 import CaseStudy from "@/components/CaseStudy";
@@ -23,15 +24,16 @@ const Index = () => {
       <Hero />
       <TrustBadges />
       <Benefits />
-      <About />
       <WhatWeAutomate />
       <Services />
       <HowItWorks />
+      <Packages />
       <UseCases />
+      <Testimonials />
+      <About />
       <Industries />
       <Deliverables />
       <CaseStudy />
-      <Testimonials />
       <Leadership />
       <FooterCTA />
       <Contact />
