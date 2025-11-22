@@ -11,7 +11,6 @@ import UseCases from "@/components/UseCases";
 import About from "@/components/About";
 import Industries from "@/components/Industries";
 import Deliverables from "@/components/Deliverables";
-import CaseStudy from "@/components/CaseStudy";
 import Testimonials from "@/components/Testimonials";
 import FooterCTA from "@/components/FooterCTA";
 import Contact from "@/components/Contact";
@@ -34,7 +33,6 @@ const Index = () => {
       <About />
       <Industries />
       <Deliverables />
-      <CaseStudy />
       <FooterCTA />
       <Contact />
       <Footer />
