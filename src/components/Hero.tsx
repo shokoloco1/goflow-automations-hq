@@ -29,7 +29,7 @@ const Hero = () => {
             <img 
               src={logo} 
               alt="GoFlow AI" 
-              className="h-40 md:h-52 w-auto mx-auto mb-6 opacity-90 hover:opacity-100 transition-opacity" 
+              className="h-56 md:h-80 w-auto mx-auto mb-6 opacity-90 hover:opacity-100 transition-opacity" 
             />
           </div>
           
