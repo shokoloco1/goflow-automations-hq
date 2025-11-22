@@ -1,4 +1,4 @@
-import { Shield, Award, Users, TrendingUp } from "lucide-react";
+import { Shield, Award, Headphones, TrendingUp } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -18,7 +18,7 @@ const TrustBadges = () => {
       descKey: 'trust.badge2.desc'
     },
     {
-      icon: Users,
+      icon: Headphones,
       titleKey: 'trust.badge3.title',
       descKey: 'trust.badge3.desc'
     },
