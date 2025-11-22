@@ -115,15 +115,14 @@ export const translations = {
     'services.cta': 'Book a Demo',
     
     // Packages
-    'packages.title': 'Choose Your Plan',
-    'packages.subtitle': 'Flexible packages designed to grow with your business',
-    'packages.setup': 'Setup',
-    'packages.monthly': 'Monthly',
-    'packages.cta': 'Get Started',
+    'packages.title': 'Plans for Every Growth Stage',
+    'packages.subtitle': 'Choose the automation level that matches your business goals',
+    'packages.cta.start': 'Start My Free AI Audit',
+    'packages.cta.boost': 'Get Your Free Strategy Call',
+    'packages.cta.ultra': 'Calculate My ROI',
     
     'packages.start.name': 'GoFlow Start',
-    'packages.start.setup': '890 AUD',
-    'packages.start.monthly': '399 AUD',
+    'packages.start.desc': 'Perfect for businesses starting their automation journey',
     'packages.start.feature1': 'Lead Engine',
     'packages.start.feature2': 'Auto reply',
     'packages.start.feature3': 'Basic CRM integration',
@@ -133,8 +132,7 @@ export const translations = {
     'packages.start.feature7': 'Simple dashboard',
     
     'packages.boost.name': 'GoFlow Boost',
-    'packages.boost.setup': '1490 AUD',
-    'packages.boost.monthly': '599 AUD',
+    'packages.boost.desc': 'Most businesses achieve ROI fastest with this tier',
     'packages.boost.badge': 'Most Popular',
     'packages.boost.feature1': 'Everything in Start',
     'packages.boost.feature2': 'Smart auto reply',
@@ -146,8 +144,7 @@ export const translations = {
     'packages.boost.feature8': 'Up to 3 connected channels',
     
     'packages.ultra.name': 'GoFlow Ultra',
-    'packages.ultra.setup': '2490 AUD',
-    'packages.ultra.monthly': '899 AUD',
+    'packages.ultra.desc': 'Maximum automation and growth for scaling businesses',
     'packages.ultra.feature1': 'Everything in Boost',
     'packages.ultra.feature2': 'LinkedIn Lead Machine',
     'packages.ultra.feature3': 'Automated LinkedIn messaging',
@@ -319,15 +316,14 @@ export const translations = {
     'services.cta': 'Agenda una Demo',
     
     // Packages
-    'packages.title': 'Elige Tu Plan',
-    'packages.subtitle': 'Paquetes flexibles diseñados para crecer con tu negocio',
-    'packages.setup': 'Configuración',
-    'packages.monthly': 'Mensual',
-    'packages.cta': 'Comenzar',
+    'packages.title': 'Planes Para Cada Etapa de Crecimiento',
+    'packages.subtitle': 'Elige el nivel de automatización que se ajusta a tus objetivos',
+    'packages.cta.start': 'Comenzar Mi Auditoría IA Gratis',
+    'packages.cta.boost': 'Obtener Mi Llamada Estratégica Gratis',
+    'packages.cta.ultra': 'Calcular Mi ROI',
     
     'packages.start.name': 'GoFlow Start',
-    'packages.start.setup': '890 AUD',
-    'packages.start.monthly': '399 AUD',
+    'packages.start.desc': 'Perfecto para negocios iniciando su viaje de automatización',
     'packages.start.feature1': 'Motor de Prospectos',
     'packages.start.feature2': 'Respuesta automática',
     'packages.start.feature3': 'Integración CRM básica',
@@ -337,8 +333,7 @@ export const translations = {
     'packages.start.feature7': 'Panel simple',
     
     'packages.boost.name': 'GoFlow Boost',
-    'packages.boost.setup': '1490 AUD',
-    'packages.boost.monthly': '599 AUD',
+    'packages.boost.desc': 'La mayoría de negocios logran ROI más rápido con este nivel',
     'packages.boost.badge': 'Más Popular',
     'packages.boost.feature1': 'Todo lo de Start',
     'packages.boost.feature2': 'Respuesta automática inteligente',
@@ -350,8 +345,7 @@ export const translations = {
     'packages.boost.feature8': 'Hasta 3 canales conectados',
     
     'packages.ultra.name': 'GoFlow Ultra',
-    'packages.ultra.setup': '2490 AUD',
-    'packages.ultra.monthly': '899 AUD',
+    'packages.ultra.desc': 'Máxima automatización y crecimiento para negocios en escalamiento',
     'packages.ultra.feature1': 'Todo lo de Boost',
     'packages.ultra.feature2': 'Máquina de Prospectos LinkedIn',
     'packages.ultra.feature3': 'Mensajería automatizada LinkedIn',
