@@ -83,14 +83,14 @@ export const translations = {
     
     // About
     'about.title': 'Who We Are',
-    'about.p1': 'GoFlow AI is an intelligent automation agency that helps service businesses run smarter, faster and with far less manual work. We design AI-powered systems that handle enquiries, bookings, follow-ups, CRM updates and customer communication across WhatsApp, web and social channels—24/7.',
-    'about.p2': 'We work with clinics, wellness centres, gyms, restaurants and other service-based businesses in Australia, Ecuador and Chile. Every solution is custom-built around your real processes: how people find you, book, buy and come back.',
-    'about.approach': 'Our approach is simple and practical:',
-    'about.step1': 'Understand your operations – we map your current customer journey and internal workflows.',
-    'about.step2': 'Identify bottlenecks – we spot where time is wasted, leads are lost or customers drop off.',
-    'about.step3': 'Automate intelligently – we design and implement AI workflows that reduce response times, increase bookings and improve customer retention.',
-    'about.p4': "We don't just plug in tools and leave. We track performance and refine your automation so it keeps driving measurable business results: more revenue, lower operating costs and a better experience for your customers.",
-    'about.p5': 'Our solutions are fully bilingual (English and Spanish), making GoFlow AI a strong partner for businesses in multicultural markets. We understand the nuances of serving diverse audiences and ensure your automations work seamlessly across languages and cultures.',
+    'about.p1': 'GoFlow AI helps service businesses automate enquiries, bookings, follow-ups and customer communication across WhatsApp, web and social channels—24/7.',
+    'about.p2': 'We work with clinics, wellness centres, gyms, restaurants and service businesses in Australia, Ecuador and Chile. Every solution is custom-built around how your customers find you, book and return.',
+    'about.approach': 'Our approach:',
+    'about.step1': 'Understand your operations – map your customer journey and workflows.',
+    'about.step2': 'Identify bottlenecks – spot where time is wasted and leads are lost.',
+    'about.step3': 'Automate intelligently – implement AI workflows that reduce response times and increase bookings.',
+    'about.p4': "We track performance and refine your automation to drive measurable results: more revenue, lower costs and better customer experience.",
+    'about.p5': 'Our solutions are fully bilingual (English and Spanish), making us a strong partner for multicultural markets.',
     
     // Services
     'services.title': 'Our Services',
@@ -302,14 +302,14 @@ export const translations = {
     
     // About
     'about.title': 'Quiénes Somos',
-    'about.p1': 'GoFlow AI es una agencia de automatización inteligente que ayuda a empresas de servicios a funcionar de manera más inteligente, rápida y con mucho menos trabajo manual. Diseñamos sistemas impulsados por IA que manejan consultas, reservas, seguimientos, actualizaciones de CRM y comunicación con clientes a través de WhatsApp, web y redes sociales—24/7.',
-    'about.p2': 'Trabajamos con clínicas, centros de bienestar, gimnasios, restaurantes y otros negocios basados en servicios en Australia, Ecuador y Chile. Cada solución está construida a medida alrededor de sus procesos reales: cómo te encuentran, reservan, compran y regresan.',
-    'about.approach': 'Nuestro enfoque es simple y práctico:',
-    'about.step1': 'Entender tus operaciones – mapeamos tu recorrido del cliente actual y flujos de trabajo internos.',
-    'about.step2': 'Identificar cuellos de botella – detectamos dónde se pierde tiempo, se pierden clientes potenciales o los clientes abandonan.',
-    'about.step3': 'Automatizar inteligentemente – diseñamos e implementamos flujos de trabajo de IA que reducen tiempos de respuesta, aumentan reservas y mejoran la retención de clientes.',
-    'about.p4': 'No solo conectamos herramientas y nos vamos. Rastreamos el rendimiento y refinamos tu automatización para que siga generando resultados comerciales medibles: más ingresos, menores costos operativos y una mejor experiencia para tus clientes.',
-    'about.p5': 'Nuestras soluciones son completamente bilingües (inglés y español), lo que hace de GoFlow AI un socio fuerte para negocios en mercados multiculturales. Entendemos los matices de servir a audiencias diversas y aseguramos que tus automatizaciones funcionen perfectamente en todos los idiomas y culturas.',
+    'about.p1': 'GoFlow AI ayuda a empresas de servicios a automatizar consultas, reservas, seguimientos y comunicación con clientes a través de WhatsApp, web y redes sociales—24/7.',
+    'about.p2': 'Trabajamos con clínicas, centros de bienestar, gimnasios, restaurantes y negocios de servicios en Australia, Ecuador y Chile. Cada solución está construida a medida según cómo tus clientes te encuentran, reservan y regresan.',
+    'about.approach': 'Nuestro enfoque:',
+    'about.step1': 'Entender tus operaciones – mapeamos tu recorrido del cliente y flujos de trabajo.',
+    'about.step2': 'Identificar cuellos de botella – detectamos dónde se pierde tiempo y clientes potenciales.',
+    'about.step3': 'Automatizar inteligentemente – implementamos flujos de IA que reducen tiempos de respuesta y aumentan reservas.',
+    'about.p4': 'Rastreamos el rendimiento y refinamos tu automatización para generar resultados medibles: más ingresos, menores costos y mejor experiencia del cliente.',
+    'about.p5': 'Nuestras soluciones son completamente bilingües (inglés y español), lo que nos hace un socio fuerte para mercados multiculturales.',
     
     // Services
     'services.title': 'Nuestros Servicios',
