@@ -73,9 +73,9 @@ const Packages = () => {
           {packages.map((pkg, index) => (
             <div 
               key={index}
-              className={`relative bg-card rounded-2xl p-8 shadow-card border transition-all duration-700 ${
+              className={`relative bg-card rounded-2xl p-6 md:p-8 shadow-card border transition-all duration-700 ${
                 pkg.highlighted 
-                  ? 'border-primary shadow-glow scale-105 md:scale-110' 
+                  ? 'border-primary shadow-glow md:scale-105' 
                   : 'border-border/50 hover:border-primary/30 hover:shadow-glow'
               } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${index * 150}ms` }}
