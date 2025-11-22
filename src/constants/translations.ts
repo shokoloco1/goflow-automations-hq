@@ -119,7 +119,7 @@ export const translations = {
     'packages.subtitle': 'Choose the automation level that matches your business goals',
     'packages.cta.start': 'Start My Growth Plan',
     'packages.cta.boost': 'Free Automation Strategy Call',
-    'packages.cta.ultra': 'See How Much You Can Automate',
+    'packages.cta.ultra': 'Scale My Business',
     
     'packages.start.name': 'GoFlow Start',
     'packages.start.desc': 'Perfect for businesses starting their automation journey',
@@ -338,7 +338,7 @@ export const translations = {
     'packages.subtitle': 'Elige el nivel de automatización que se ajusta a tus objetivos',
     'packages.cta.start': 'Comenzar Mi Plan de Crecimiento',
     'packages.cta.boost': 'Llamada de Estrategia Gratis',
-    'packages.cta.ultra': 'Ver Cuánto Puedo Automatizar',
+    'packages.cta.ultra': 'Escalar Mi Negocio',
     
     'packages.start.name': 'GoFlow Start',
     'packages.start.desc': 'Perfecto para negocios iniciando su viaje de automatización',
