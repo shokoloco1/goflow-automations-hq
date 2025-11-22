@@ -1,4 +1,4 @@
-import { Search, Wrench, Zap } from "lucide-react";
+import { Search, Wrench, TestTube, Rocket } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -17,9 +17,15 @@ const steps = [
   },
   {
     number: "03",
-    icon: Zap,
+    icon: TestTube,
     titleKey: "howItWorks.step3.title",
     descKey: "howItWorks.step3.desc"
+  },
+  {
+    number: "04",
+    icon: Rocket,
+    titleKey: "howItWorks.step4.title",
+    descKey: "howItWorks.step4.desc"
   }
 ];
 
@@ -37,8 +43,8 @@ const HowItWorks = () => {
         </div>
         
         {/* Steps */}
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
