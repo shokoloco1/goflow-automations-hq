@@ -10,8 +10,8 @@ const Packages = () => {
   const packages = [
     {
       nameKey: 'packages.start.name',
-      setupKey: 'packages.start.setup',
-      monthlyKey: 'packages.start.monthly',
+      descKey: 'packages.start.desc',
+      ctaKey: 'packages.cta.start',
       features: [
         'packages.start.feature1',
         'packages.start.feature2',
@@ -25,9 +25,9 @@ const Packages = () => {
     },
     {
       nameKey: 'packages.boost.name',
-      setupKey: 'packages.boost.setup',
-      monthlyKey: 'packages.boost.monthly',
+      descKey: 'packages.boost.desc',
       badgeKey: 'packages.boost.badge',
+      ctaKey: 'packages.cta.boost',
       features: [
         'packages.boost.feature1',
         'packages.boost.feature2',
@@ -42,8 +42,8 @@ const Packages = () => {
     },
     {
       nameKey: 'packages.ultra.name',
-      setupKey: 'packages.ultra.setup',
-      monthlyKey: 'packages.ultra.monthly',
+      descKey: 'packages.ultra.desc',
+      ctaKey: 'packages.cta.ultra',
       features: [
         'packages.ultra.feature1',
         'packages.ultra.feature2',
@@ -87,19 +87,10 @@ const Packages = () => {
                 </div>
               )}
               
-              {/* Package Name */}
-              <h3 className="text-2xl font-bold mb-6 text-center">{t(pkg.nameKey)}</h3>
-              
-              {/* Pricing */}
-              <div className="mb-8">
-                <div className="flex items-baseline justify-center gap-2 mb-2">
-                  <span className="text-sm text-muted-foreground">{t('packages.setup')}</span>
-                  <span className="text-3xl font-bold text-primary">{t(pkg.setupKey)}</span>
-                </div>
-                <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-sm text-muted-foreground">{t('packages.monthly')}</span>
-                  <span className="text-2xl font-bold">{t(pkg.monthlyKey)}</span>
-                </div>
+              {/* Package Name & Description */}
+              <div className="mb-8 text-center">
+                <h3 className="text-2xl font-bold mb-3">{t(pkg.nameKey)}</h3>
+                <p className="text-muted-foreground text-sm">{t(pkg.descKey)}</p>
               </div>
               
               {/* Features */}
@@ -119,7 +110,7 @@ const Packages = () => {
                 size="lg"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                {t('packages.cta')}
+                {t(pkg.ctaKey)}
               </Button>
             </div>
           ))}
