@@ -17,8 +17,8 @@ export const translations = {
     'trust.badge1.desc': 'Enterprise-grade encryption',
     'trust.badge2.title': 'Proven Results',
     'trust.badge2.desc': '34% avg. conversion increase',
-    'trust.badge3.title': '500+ Clients',
-    'trust.badge3.desc': 'Trusted by businesses',
+    'trust.badge3.title': 'Monthly Support',
+    'trust.badge3.desc': 'Ongoing optimization & review',
     'trust.badge4.title': 'Fast ROI',
     'trust.badge4.desc': 'Results in 30 days',
     // Navigation
@@ -221,8 +221,8 @@ export const translations = {
     'trust.badge1.desc': 'Encriptación nivel empresarial',
     'trust.badge2.title': 'Resultados Probados',
     'trust.badge2.desc': '34% aumento promedio conversión',
-    'trust.badge3.title': '+500 Clientes',
-    'trust.badge3.desc': 'Empresas confían en nosotros',
+    'trust.badge3.title': 'Soporte Mensual',
+    'trust.badge3.desc': 'Acompañamiento y revisión continua',
     'trust.badge4.title': 'ROI Rápido',
     'trust.badge4.desc': 'Resultados en 30 días',
     // Navigation
