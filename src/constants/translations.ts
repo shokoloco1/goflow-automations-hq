@@ -176,6 +176,24 @@ export const translations = {
     'contact.validation.title': 'Missing Information',
     'contact.validation.description': 'Please fill in all required fields.',
     
+    // ROI Calculator
+    'roi.badge': 'ROI Calculator',
+    'roi.title': 'Calculate Your Potential Savings',
+    'roi.subtitle': 'See how much time and money you could save with AI automation',
+    'roi.inputs.title': 'Your Business Details',
+    'roi.inputs.employees': 'Team Size',
+    'roi.inputs.inquiries': 'Monthly Inquiries',
+    'roi.inputs.timePerTask': 'Avg. Time Per Inquiry',
+    'roi.inputs.hourlyRate': 'Hourly Labor Cost',
+    'roi.results.title': 'Your Potential ROI',
+    'roi.results.hoursAutomated': 'Hours Automated',
+    'roi.results.monthlySavings': 'Monthly Savings',
+    'roi.results.yearlySavings': 'Yearly Savings',
+    'roi.results.perMonth': 'per month',
+    'roi.results.perYear': 'per year',
+    'roi.cta': 'Get My Custom Automation Plan',
+    'roi.disclaimer': 'Results based on 60% automation rate. Actual savings may vary.',
+    
     // Deliverables
     'deliverables.title': 'What You Get',
     'deliverables.item1.title': 'Revenue-Driven Automation Blueprint',
@@ -376,6 +394,24 @@ export const translations = {
     'contact.error.description': 'No se pudo enviar el mensaje. Por favor intenta de nuevo.',
     'contact.validation.title': 'Información Faltante',
     'contact.validation.description': 'Por favor completa todos los campos requeridos.',
+    
+    // ROI Calculator
+    'roi.badge': 'Calculadora de ROI',
+    'roi.title': 'Calcula Tus Ahorros Potenciales',
+    'roi.subtitle': 'Descubre cuánto tiempo y dinero podrías ahorrar con automatización IA',
+    'roi.inputs.title': 'Detalles de Tu Negocio',
+    'roi.inputs.employees': 'Tamaño del Equipo',
+    'roi.inputs.inquiries': 'Consultas Mensuales',
+    'roi.inputs.timePerTask': 'Tiempo Promedio Por Consulta',
+    'roi.inputs.hourlyRate': 'Costo Laboral Por Hora',
+    'roi.results.title': 'Tu ROI Potencial',
+    'roi.results.hoursAutomated': 'Horas Automatizadas',
+    'roi.results.monthlySavings': 'Ahorro Mensual',
+    'roi.results.yearlySavings': 'Ahorro Anual',
+    'roi.results.perMonth': 'por mes',
+    'roi.results.perYear': 'por año',
+    'roi.cta': 'Obtener Mi Plan de Automatización Personalizado',
+    'roi.disclaimer': 'Resultados basados en tasa de automatización del 60%. Los ahorros reales pueden variar.',
     
     // Deliverables
     'deliverables.title': 'Lo Que Obtienes',

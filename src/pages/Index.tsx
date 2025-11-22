@@ -6,6 +6,7 @@ import WhatWeAutomate from "@/components/WhatWeAutomate";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import Packages from "@/components/Packages";
+import ROICalculator from "@/components/ROICalculator";
 import UseCases from "@/components/UseCases";
 import About from "@/components/About";
 import Industries from "@/components/Industries";
@@ -28,6 +29,7 @@ const Index = () => {
       <Services />
       <HowItWorks />
       <Packages />
+      <ROICalculator />
       <UseCases />
       <Testimonials />
       <About />
