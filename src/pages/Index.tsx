@@ -13,7 +13,6 @@ import Industries from "@/components/Industries";
 import Deliverables from "@/components/Deliverables";
 import CaseStudy from "@/components/CaseStudy";
 import Testimonials from "@/components/Testimonials";
-import Leadership from "@/components/Leadership";
 import FooterCTA from "@/components/FooterCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -36,7 +35,6 @@ const Index = () => {
       <Industries />
       <Deliverables />
       <CaseStudy />
-      <Leadership />
       <FooterCTA />
       <Contact />
       <Footer />
