@@ -50,6 +50,33 @@ export type Database = {
         }
         Relationships: []
       }
+      lead_magnet_subscribers: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          ip_address: string | null
+          status: string
+          user_agent: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          ip_address?: string | null
+          status?: string
+          user_agent?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          ip_address?: string | null
+          status?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
