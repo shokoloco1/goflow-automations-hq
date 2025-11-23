@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
-import { Phone, Bot, Clock } from "lucide-react";
+import { Phone, Bot, Clock, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const LiveActivity = () => {
   const { t } = useLanguage();
   const [callsHandled, setCallsHandled] = useState(127);
   const [activeAgents] = useState(52);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,14 +17,38 @@ export const LiveActivity = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    // Check localStorage for user preference
+    const savedVisibility = localStorage.getItem('liveActivityVisible');
+    if (savedVisibility !== null) {
+      setIsVisible(savedVisibility === 'true');
+    }
+  }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+    localStorage.setItem('liveActivityVisible', 'false');
+  };
+
+  if (!isVisible) return null;
+
   return (
     <Card className="fixed bottom-6 right-6 p-4 shadow-elegant z-50 max-w-xs animate-fade-in hidden lg:block">
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-            {t('liveActivity.title')}
-          </span>
-          <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+              {t('liveActivity.title')}
+            </span>
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+          </div>
+          <button
+            onClick={handleClose}
+            className="text-muted-foreground hover:text-foreground transition-colors p-1 hover:bg-muted/50 rounded"
+            aria-label="Cerrar"
+          >
+            <X className="w-4 h-4" />
+          </button>
         </div>
 
         <div className="space-y-2">
