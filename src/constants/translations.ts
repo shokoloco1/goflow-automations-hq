@@ -80,7 +80,7 @@ export const translations = {
     'footerCta.title': 'Ready to Stop Losing Leads?',
     'footerCta.subtitle': 'Every day you wait is another day of missed opportunities. Get your first automation live in 14 days.',
     'footerCta.button': 'Book Free Automation Audit',
-    'footerCta.noObligation': 'No obligation • No sales pitch • Just a 30-min strategy session',
+    'footerCta.noObligation': 'No obligation | No sales pitch | Just a 30-min strategy session',
     
     // About - Mission-Driven
     'about.title': 'Why GoFlow AI Exists',
@@ -96,16 +96,16 @@ export const translations = {
     // Services - Simplified to 3 core
     'services.title': 'Our Services',
     'services.aiAgents.title': '🤖 AI Agents',
-    'services.aiAgents.description': '24/7 Virtual Assistants that handle calls, texts, DMs, and bookings—without human involvement. Includes Voice AI Receptionist, Text AI Assistant, Booking AI, and Lead Qualifier AI. Perfect for businesses missing inquiries due to limited staff or after-hours calls.',
+    'services.aiAgents.description': '24/7 Virtual Assistants that handle calls, texts, DMs, and bookings • without human involvement. Includes Voice AI Receptionist, Text AI Assistant, Booking AI, and Lead Qualifier AI. Perfect for businesses missing inquiries due to limited staff or after-hours calls.',
     'services.workflows.title': '⚡ Workflow Automations',
     'services.workflows.description': 'Invisible systems that capture leads, send follow-ups, update your CRM, and prevent no-shows automatically. Includes missed call text-back, reminder sequences, lead nurture campaigns, CRM pipeline automation, and post-service follow-ups. Perfect for businesses losing deals to slow follow-up.',
     'services.optimization.title': '📊 Reporting & Optimization',
-    'services.optimization.description': 'Real-time dashboards showing what\'s working, what\'s not, and how to improve—plus monthly optimization support. Includes custom analytics, monthly performance reviews, A/B testing, and ROI tracking. Perfect for businesses that want continuous improvement.',
+    'services.optimization.description': 'Real-time dashboards showing what\'s working, what\'s not, and how to improve • plus monthly optimization support. Includes custom analytics, monthly performance reviews, A/B testing, and ROI tracking. Perfect for businesses that want continuous improvement.',
     'services.cta': 'Book Free Automation Audit',
     
     // Packages
     'packages.title': 'Choose Your Automation Journey',
-    'packages.subtitle': 'Custom pricing based on your business size • ROI in 30 days guaranteed • No long-term contracts',
+    'packages.subtitle': 'Custom pricing based on your business size | ROI in 30 days guaranteed | No long-term contracts',
     
     // Guarantee
     'packages.guarantee.title': 'Our Iron-Clad Guarantee',
@@ -136,7 +136,7 @@ export const translations = {
     'packages.start.result2': 'Capture 40% more leads',
     'packages.start.result3': 'ROI typically in 45 days',
     'packages.cta.start': 'Get Starter Package Quote',
-    'packages.cta.start.subtext': 'Takes 30 seconds • No spam',
+    'packages.cta.start.subtext': 'Takes 30 seconds | No spam',
     
     // GoFlow Boost
     'packages.boost.name': 'GoFlow Boost',
@@ -162,10 +162,10 @@ export const translations = {
     'packages.boost.result1': 'Save 20+ hours weekly',
     'packages.boost.result2': '34% increase in bookings',
     'packages.boost.result3': 'ROI typically in 30 days or less',
-    'packages.boost.whyPopular': '73% of businesses choose this - best balance of features & ROI',
+    'packages.boost.whyPopular': '73% of businesses choose this | best balance of features & ROI',
     'packages.boost.urgency': '🔥 Only 3 spots left this month',
     'packages.cta.boost': 'Book Free Strategy Call',
-    'packages.cta.boost.subtext': '30 minutes • See your custom ROI • No obligation',
+    'packages.cta.boost.subtext': '30 minutes | See your custom ROI | No obligation',
     
     // GoFlow Ultra
     'packages.ultra.name': 'GoFlow Ultra',
@@ -192,7 +192,7 @@ export const translations = {
     'packages.ultra.result2': '50%+ efficiency gains',
     'packages.ultra.result3': 'Enterprise-grade reliability',
     'packages.cta.ultra': 'Request Enterprise Demo',
-    'packages.cta.ultra.subtext': 'Custom pricing • ROI analysis included',
+    'packages.cta.ultra.subtext': 'Custom pricing | ROI analysis included',
     
     // Calculator Section
     'packages.calculator.title': 'What\'s Your ROI Potential?',
@@ -501,16 +501,16 @@ export const translations = {
     // Services - Simplified to 3 core
     'services.title': 'Nuestros Servicios',
     'services.aiAgents.title': '🤖 Agentes IA',
-    'services.aiAgents.description': 'Asistentes Virtuales 24/7 que manejan llamadas, textos, DMs y reservas—sin intervención humana. Incluye Recepcionista IA de Voz, Asistente IA de Texto, IA de Reservas y Calificador de Leads IA. Perfecto para negocios que pierden consultas por personal limitado o llamadas fuera de horario.',
+    'services.aiAgents.description': 'Asistentes Virtuales 24/7 que manejan llamadas, textos, DMs y reservas • sin intervención humana. Incluye Recepcionista IA de Voz, Asistente IA de Texto, IA de Reservas y Calificador de Leads IA. Perfecto para negocios que pierden consultas por personal limitado o llamadas fuera de horario.',
     'services.workflows.title': '⚡ Automatizaciones de Flujos',
     'services.workflows.description': 'Sistemas invisibles que capturan leads, envían seguimientos, actualizan tu CRM y previenen ausencias automáticamente. Incluye respuesta automática a llamadas perdidas, secuencias de recordatorios, campañas de nutrición de leads, automatización de pipeline CRM y seguimientos post-servicio. Perfecto para negocios que pierden tratos por seguimiento lento.',
     'services.optimization.title': '📊 Reportes y Optimización',
-    'services.optimization.description': 'Dashboards en tiempo real mostrando qué funciona, qué no, y cómo mejorar—más soporte de optimización mensual. Incluye analíticas personalizadas, revisiones mensuales de rendimiento, pruebas A/B y seguimiento de ROI. Perfecto para negocios que quieren mejora continua.',
+    'services.optimization.description': 'Dashboards en tiempo real mostrando qué funciona, qué no, y cómo mejorar • más soporte de optimización mensual. Incluye analíticas personalizadas, revisiones mensuales de rendimiento, pruebas A/B y seguimiento de ROI. Perfecto para negocios que quieren mejora continua.',
     'services.cta': 'Agenda Auditoría Gratis',
     
     // Packages
     'packages.title': 'Elige Tu Camino de Automatización',
-    'packages.subtitle': 'Precios personalizados según el tamaño de tu negocio • ROI en 30 días garantizado • Sin contratos a largo plazo',
+    'packages.subtitle': 'Precios personalizados según el tamaño de tu negocio | ROI en 30 días garantizado | Sin contratos a largo plazo',
     
     // Guarantee
     'packages.guarantee.title': 'Nuestra Garantía de Hierro',
@@ -541,7 +541,7 @@ export const translations = {
     'packages.start.result2': 'Captura 40% más prospectos',
     'packages.start.result3': 'ROI típicamente en 45 días',
     'packages.cta.start': 'Obtener Cotización Paquete Inicial',
-    'packages.cta.start.subtext': 'Toma 30 segundos • Sin spam',
+    'packages.cta.start.subtext': 'Toma 30 segundos | Sin spam',
     
     // GoFlow Boost
     'packages.boost.name': 'GoFlow Boost',
@@ -567,10 +567,10 @@ export const translations = {
     'packages.boost.result1': 'Ahorra 20+ horas semanales',
     'packages.boost.result2': '34% aumento en reservas',
     'packages.boost.result3': 'ROI típicamente en 30 días o menos',
-    'packages.boost.whyPopular': '73% de los negocios eligen esto - mejor balance de características y ROI',
+    'packages.boost.whyPopular': '73% de los negocios eligen esto | mejor balance de características y ROI',
     'packages.boost.urgency': '🔥 Solo 3 cupos disponibles este mes',
     'packages.cta.boost': 'Agendar Llamada de Estrategia Gratis',
-    'packages.cta.boost.subtext': '30 minutos • Ve tu ROI personalizado • Sin obligación',
+    'packages.cta.boost.subtext': '30 minutos | Ve tu ROI personalizado | Sin obligación',
     
     // GoFlow Ultra
     'packages.ultra.name': 'GoFlow Ultra',
@@ -597,7 +597,7 @@ export const translations = {
     'packages.ultra.result2': '50%+ ganancias en eficiencia',
     'packages.ultra.result3': 'Confiabilidad de nivel empresarial',
     'packages.cta.ultra': 'Solicitar Demo Empresarial',
-    'packages.cta.ultra.subtext': 'Precios personalizados • Análisis ROI incluido',
+    'packages.cta.ultra.subtext': 'Precios personalizados | Análisis ROI incluido',
     
     // Calculator Section
     'packages.calculator.title': '¿Cuál es Tu Potencial de ROI?',
