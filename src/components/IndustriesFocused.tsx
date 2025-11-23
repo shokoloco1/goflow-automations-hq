@@ -85,8 +85,8 @@ const IndustriesFocused = () => {
         <div className={`text-center mt-12 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-muted-foreground font-light">
             {language === 'en' 
-              ? "Not sure if you fit? If you take appointments, have inquiries to respond to, or struggle with follow-up—we can help."
-              : '¿No estás seguro si encajas? Si tomas citas, tienes consultas que responder, o luchas con el seguimiento—podemos ayudar.'}
+              ? "Not sure if you fit? If you take appointments, have inquiries to respond to, or struggle with follow-up • we can help."
+              : '¿No estás seguro si encajas? Si tomas citas, tienes consultas que responder, o luchas con el seguimiento • podemos ayudar.'}
           </p>
         </div>
       </div>
