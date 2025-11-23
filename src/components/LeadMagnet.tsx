@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 export const LeadMagnet = () => {
   const { t } = useLanguage();
@@ -30,16 +31,32 @@ export const LeadMagnet = () => {
     return () => document.removeEventListener("mouseleave", handleExit);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
-    setIsSubmitted(true);
-    toast.success(t('leadMagnet.successMessage'));
-    
-    setTimeout(() => {
-      setIsVisible(false);
-    }, 3000);
+    try {
+      const { data, error } = await supabase.functions.invoke('submit-lead-magnet', {
+        body: { email }
+      });
+
+      if (error) {
+        console.error('Error submitting lead magnet:', error);
+        toast.error('Error al enviar. Por favor intenta de nuevo.');
+        return;
+      }
+
+      console.log('Lead magnet submitted successfully:', data);
+      setIsSubmitted(true);
+      toast.success(t('leadMagnet.successMessage'));
+      
+      setTimeout(() => {
+        setIsVisible(false);
+      }, 3000);
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('Error al enviar. Por favor intenta de nuevo.');
+    }
   };
 
   if (!isVisible) return null;
