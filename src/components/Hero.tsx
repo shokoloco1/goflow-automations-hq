@@ -86,7 +86,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               className="text-base px-10 py-7 border-2 hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-smooth"
-              onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('roi')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {t('hero.ctaSecondary')}
             </Button>

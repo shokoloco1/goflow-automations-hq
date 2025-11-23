@@ -12,15 +12,15 @@ export const translations = {
     'testimonials.rating': '4.9/5 Average Rating',
     'testimonials.reviews': '100+ Reviews',
     
-    // Trust Badges
-    'trust.badge1.title': 'Data Security',
-    'trust.badge1.desc': 'Enterprise-grade encryption',
-    'trust.badge2.title': 'Proven Results',
-    'trust.badge2.desc': '34% avg. conversion increase',
-    'trust.badge3.title': 'Monthly Support',
-    'trust.badge3.desc': 'Ongoing optimization & review',
-    'trust.badge4.title': 'Fast ROI',
-    'trust.badge4.desc': 'Results in 30 days',
+    // Trust Badges - Micro-benefits focused
+    'trust.badge1.title': '24/7 Lead Response',
+    'trust.badge1.desc': 'Never miss an after-hours inquiry',
+    'trust.badge2.title': '14-Day Setup',
+    'trust.badge2.desc': 'Live and working in 2 weeks',
+    'trust.badge3.title': 'Done-For-You',
+    'trust.badge3.desc': 'We handle everything, you relax',
+    'trust.badge4.title': 'Zero Tech Skills',
+    'trust.badge4.desc': 'No coding, no complexity',
     // Navigation
     'nav.about': 'About',
     'nav.services': 'Services',
@@ -29,25 +29,25 @@ export const translations = {
     'nav.contact': 'Contact',
     'nav.getStarted': 'Get Started',
     
-    // Hero - Optimized for conversion
+    // Hero - Pain-focused and specific
     'hero.badge': 'AI-Powered Business Automation',
-    'hero.headline': 'AI automations for modern businesses.',
-    'hero.subheadline': 'Save time, reduce errors and grow faster.',
-    'hero.description': 'We automate workflows, bookings, messaging, and repetitive tasks using AI.',
-    'hero.ctaPrimary': 'Book a Demo',
-    'hero.ctaSecondary': 'See How It Works',
-    'hero.value1': 'Save 15+ hours weekly',
-    'hero.value2': '+34% bookings on average',
-    'hero.value3': 'ROI in 30 days',
+    'hero.headline': 'Stop Losing Clients to Missed Calls & Slow Follow-Ups',
+    'hero.subheadline': 'Your competitors respond in 2 minutes with AI. You\'re still manually handling every inquiry.',
+    'hero.description': 'GoFlow AI captures, qualifies and books clients 24/7—so you never lose a lead to slow response times again.',
+    'hero.ctaPrimary': 'Book Free Automation Audit',
+    'hero.ctaSecondary': 'Calculate Your ROI',
+    'hero.value1': 'Respond in <30 seconds (vs 2+ hours)',
+    'hero.value2': '34% more leads converted instantly',
+    'hero.value3': 'Live in 14 days',
     
-    // Benefits
-    'benefits.title': 'Why businesses choose GoFlow AI',
-    'benefits.benefit1.title': 'Reduce manual work',
-    'benefits.benefit1.desc': 'Automate repetitive tasks that slow your business down',
-    'benefits.benefit2.title': 'Save time every week',
-    'benefits.benefit2.desc': 'Free up 15+ hours weekly for strategic growth',
-    'benefits.benefit3.title': 'Improve accuracy',
-    'benefits.benefit3.desc': 'Eliminate errors with consistent automated processes',
+    // Benefits - What Makes Us Different
+    'benefits.title': 'Why Service Businesses Choose GoFlow AI',
+    'benefits.benefit1.title': 'Built for YOU, Not a Template',
+    'benefits.benefit1.desc': 'Every AI agent is custom-configured around your actual customer journey, FAQs, booking rules and tone',
+    'benefits.benefit2.title': 'Live in 14 Days, Not 2 Months',
+    'benefits.benefit2.desc': 'Most agencies take 60-90 days. We get your first automation working in 2 weeks—then optimize monthly',
+    'benefits.benefit3.title': 'Done-For-You, Not DIY',
+    'benefits.benefit3.desc': 'You don\'t lift a finger. We build it, test it, launch it, and train your team. Then we optimize monthly',
     
     // What We Automate
     'automate.title': 'What we automate',
@@ -76,43 +76,32 @@ export const translations = {
     'useCases.case3': 'Client booked → reminder sequence',
     'useCases.case4': 'After service → follow up message',
     
-    // Footer CTA
-    'footerCta.title': 'Ready to automate your business?',
-    'footerCta.subtitle': 'Let\'s improve your workflow with AI',
-    'footerCta.button': 'Book a Demo',
+    // Footer CTA - With urgency
+    'footerCta.title': 'Ready to Stop Losing Leads?',
+    'footerCta.subtitle': 'Every day you wait is another day of missed opportunities. Get your first automation live in 14 days.',
+    'footerCta.button': 'Book Free Automation Audit',
+    'footerCta.noObligation': 'No obligation • No sales pitch • Just a 30-min strategy session',
     
-    // About
-    'about.title': 'Who We Are',
-    'about.p1': 'GoFlow AI helps service businesses automate enquiries, bookings, follow-ups and customer communication across WhatsApp, web and social channels—24/7.',
-    'about.p2': 'We work with clinics, wellness centres, gyms, restaurants and service businesses in Australia, Ecuador and Chile. Every solution is custom-built around how your customers find you, book and return.',
-    'about.approach': 'Our approach:',
-    'about.step1': 'Understand your operations – map your customer journey and workflows.',
-    'about.step2': 'Identify bottlenecks – spot where time is wasted and leads are lost.',
-    'about.step3': 'Automate intelligently – implement AI workflows that reduce response times and increase bookings.',
-    'about.p4': "We track performance and refine your automation to drive measurable results: more revenue, lower costs and better customer experience.",
-    'about.p5': 'Our solutions are fully bilingual (English and Spanish), making us a strong partner for multicultural markets.',
+    // About - Mission-Driven
+    'about.title': 'Why GoFlow AI Exists',
+    'about.p1': 'Small businesses deserve enterprise-level automation without enterprise-level complexity or cost.',
+    'about.p2': 'We\'re tired of seeing clinics, gyms, and consultants work 60-hour weeks while losing leads to slow follow-up.',
+    'about.approach': 'Most AI agencies:',
+    'about.step1': '❌ Sell generic templates',
+    'about.step2': '❌ Take 90+ days to launch',
+    'about.step3': '❌ Disappear after setup',
+    'about.p4': "We decided to do the opposite: ✓ Custom-built for YOUR business ✓ Live in 14 days ✓ Ongoing optimization included ✓ Transparent pricing.",
+    'about.p5': 'We\'re a focused team serving service businesses in Australia, Ecuador, and Chile. Our clients are clinics, gyms, consultants, and coaches tired of losing revenue to slow follow-up.',
     
-    // Services
+    // Services - Simplified to 3 core
     'services.title': 'Our Services',
-    'services.aiAssistant.title': 'AI Virtual Assistants',
-    'services.aiAssistant.description': 'Chat and voice AI assistants that handle customer interactions 24/7',
-    'services.leadCapture.title': 'Lead Capture Automation',
-    'services.leadCapture.description': 'Automatically capture and qualify leads from all channels',
-    'services.autoReply.title': 'Instant Auto Replies',
-    'services.autoReply.description': 'Respond to inquiries instantly, never miss an opportunity',
-    'services.booking.title': 'Booking & Calendar Automation',
-    'services.booking.description': 'Automated scheduling and calendar management that works while you sleep',
-    'services.crmPipeline.title': 'CRM Pipeline Automation',
-    'services.crmPipeline.description': 'Keep your pipeline organized and moving automatically',
-    'services.followUp.title': 'Email & SMS Follow Up',
-    'services.followUp.description': 'Automated follow-up sequences that nurture and convert',
-    'services.linkedin.title': 'LinkedIn Outreach Automation',
-    'services.linkedin.description': 'Scale your LinkedIn prospecting with intelligent automation',
-    'services.nurturing.title': 'Lead Nurturing Workflows',
-    'services.nurturing.description': 'Build relationships automatically with smart nurture sequences',
-    'services.reporting.title': 'Reporting Dashboards',
-    'services.reporting.description': 'Real-time insights and analytics to track your performance',
-    'services.cta': 'Book a Demo',
+    'services.aiAgents.title': '🤖 AI Agents',
+    'services.aiAgents.description': '24/7 Virtual Assistants that handle calls, texts, DMs, and bookings—without human involvement. Includes Voice AI Receptionist, Text AI Assistant, Booking AI, and Lead Qualifier AI. Perfect for businesses missing inquiries due to limited staff or after-hours calls.',
+    'services.workflows.title': '⚡ Workflow Automations',
+    'services.workflows.description': 'Invisible systems that capture leads, send follow-ups, update your CRM, and prevent no-shows automatically. Includes missed call text-back, reminder sequences, lead nurture campaigns, CRM pipeline automation, and post-service follow-ups. Perfect for businesses losing deals to slow follow-up.',
+    'services.optimization.title': '📊 Reporting & Optimization',
+    'services.optimization.description': 'Real-time dashboards showing what\'s working, what\'s not, and how to improve—plus monthly optimization support. Includes custom analytics, monthly performance reviews, A/B testing, and ROI tracking. Perfect for businesses that want continuous improvement.',
+    'services.cta': 'Book Free Automation Audit',
     
     // Packages
     'packages.title': 'Plans for Every Growth Stage',
@@ -154,10 +143,17 @@ export const translations = {
     'packages.ultra.feature7': 'Full integrations',
     'packages.ultra.feature8': 'Monthly optimization meeting',
     
-    // Contact
+    // Contact - Better messaging
     'contact.badge': 'Get in Touch',
-    'contact.title': 'Request a Free Automation Audit',
-    'contact.subtitle': "Let's discuss how AI automation can transform your business operations",
+    'contact.title': 'Book Your Free Automation Strategy Call',
+    'contact.subtitle': "30 minutes. Zero pressure. Real value. We'll show you exactly which automations would give you the biggest ROI.",
+    'contact.whatNext': 'What happens next?',
+    'contact.step1': 'You submit this form',
+    'contact.step2': 'We review your info (within 2 hours)',
+    'contact.step3': 'We email you to schedule a 30-min call',
+    'contact.step4': 'We discuss your needs and opportunities',
+    'contact.step5': 'You decide if you want to move forward',
+    'contact.noObligation': 'Zero obligation. Zero sales pressure.',
     'contact.fullName': 'Full Name',
     'contact.businessName': 'Business Name',
     'contact.email': 'Email',
@@ -165,8 +161,8 @@ export const translations = {
     'contact.service': 'Service of Interest',
     'contact.service.placeholder': 'Select a service',
     'contact.service.fullPackage': 'Full Automation Package',
-    'contact.description': 'Tell us about your needs',
-    'contact.description.placeholder': 'Describe what you want to automate...',
+    'contact.description': 'Tell us about your business challenges',
+    'contact.description.placeholder': 'Example: "Dental clinic in Brisbane missing 30-40 calls/week. Want to automate booking and reminders." The more specific, the better!',
     'contact.submit': 'Send Message',
     'contact.submitting': 'Sending...',
     'contact.success.title': 'Message Sent!',
@@ -176,10 +172,10 @@ export const translations = {
     'contact.validation.title': 'Missing Information',
     'contact.validation.description': 'Please fill in all required fields.',
     
-    // ROI Calculator
+    // ROI Calculator - Better headline
     'roi.badge': 'ROI Calculator',
-    'roi.title': 'Calculate Your Potential Savings',
-    'roi.subtitle': 'See how much time and money you could save with AI automation',
+    'roi.title': 'How Much Is Slow Follow-Up Costing You?',
+    'roi.subtitle': 'Most businesses lose 30-40% of leads simply because they can\'t respond fast enough. Calculate what you\'re leaving on the table:',
     'roi.inputs.title': 'Your Business Details',
     'roi.inputs.employees': 'Team Size',
     'roi.inputs.inquiries': 'Monthly Inquiries',
@@ -217,6 +213,21 @@ export const translations = {
     
     // Footer
     'footer.copyright': 'GoFlow AI. All rights reserved.',
+    
+    // FAQ
+    'faq.title': 'Frequently Asked Questions',
+    'faq.q1': 'How long does setup take?',
+    'faq.a1': 'Most clients are live within 14 days. Complex multi-location setups can take 3-4 weeks.',
+    'faq.q2': 'Do I need technical skills?',
+    'faq.a2': 'Nope. We handle 100% of the technical work. You just answer questions about your business.',
+    'faq.q3': 'What if my team doesn\'t like it?',
+    'faq.a3': 'We include full training and a 60-day guarantee. If it\'s not working, we\'ll fix it or refund you.',
+    'faq.q4': 'Can I cancel anytime?',
+    'faq.a4': 'Yes. No long-term contracts. Cancel with 30 days notice.',
+    'faq.q5': 'How much does it cost?',
+    'faq.a5': 'Plans start at $697 AUD/month for small businesses. Most clients invest $1,200-2,500/month depending on complexity.',
+    'faq.q6': 'Do you work with businesses outside Australia?',
+    'faq.a6': 'Yes! We serve clients in Australia, Ecuador, Chile, and expanding to other Spanish-speaking markets.',
   },
   es: {
     // Testimonials
@@ -231,15 +242,15 @@ export const translations = {
     'testimonials.rating': 'Calificación Promedio 4.9/5',
     'testimonials.reviews': '+100 Reseñas',
     
-    // Trust Badges
-    'trust.badge1.title': 'Seguridad de Datos',
-    'trust.badge1.desc': 'Encriptación nivel empresarial',
-    'trust.badge2.title': 'Resultados Probados',
-    'trust.badge2.desc': '34% aumento promedio conversión',
-    'trust.badge3.title': 'Soporte Mensual',
-    'trust.badge3.desc': 'Acompañamiento y revisión continua',
-    'trust.badge4.title': 'ROI Rápido',
-    'trust.badge4.desc': 'Resultados en 30 días',
+    // Trust Badges - Micro-benefits focused
+    'trust.badge1.title': 'Respuesta 24/7',
+    'trust.badge1.desc': 'Nunca pierdas una consulta fuera de horario',
+    'trust.badge2.title': 'Listo en 14 Días',
+    'trust.badge2.desc': 'En vivo y funcionando en 2 semanas',
+    'trust.badge3.title': 'Todo Por Ti',
+    'trust.badge3.desc': 'Nosotros manejamos todo, tú te relajas',
+    'trust.badge4.title': 'Cero Habilidades Técnicas',
+    'trust.badge4.desc': 'Sin código, sin complejidad',
     // Navigation
     'nav.about': 'Acerca de',
     'nav.services': 'Servicios',
@@ -248,25 +259,25 @@ export const translations = {
     'nav.contact': 'Contacto',
     'nav.getStarted': 'Comenzar',
     
-    // Hero - Optimizado para conversión
+    // Hero - Pain-focused and specific
     'hero.badge': 'Automatización Empresarial con IA',
-    'hero.headline': 'Automatización IA para negocios modernos.',
-    'hero.subheadline': 'Ahorra tiempo, reduce errores y crece más rápido.',
-    'hero.description': 'Automatizamos flujos de trabajo, reservas, mensajería y tareas repetitivas usando IA.',
-    'hero.ctaPrimary': 'Agenda una Demo',
-    'hero.ctaSecondary': 'Ver Cómo Funciona',
-    'hero.value1': 'Ahorra +15 horas semanales',
-    'hero.value2': '+34% reservas en promedio',
-    'hero.value3': 'ROI en 30 días',
+    'hero.headline': 'Deja de Perder Clientes por Llamadas Perdidas y Seguimiento Lento',
+    'hero.subheadline': 'Tus competidores responden en 2 minutos con IA. Tú aún manejas cada consulta manualmente.',
+    'hero.description': 'GoFlow AI captura, califica y agenda clientes 24/7—para que nunca pierdas un prospecto por tiempos de respuesta lentos.',
+    'hero.ctaPrimary': 'Agenda Auditoría Gratis',
+    'hero.ctaSecondary': 'Calcula Tu ROI',
+    'hero.value1': 'Responde en <30 segundos (vs 2+ horas)',
+    'hero.value2': '34% más leads convertidos al instante',
+    'hero.value3': 'En vivo en 14 días',
     
-    // Benefits
-    'benefits.title': 'Por qué las empresas eligen GoFlow AI',
-    'benefits.benefit1.title': 'Reduce el trabajo manual',
-    'benefits.benefit1.desc': 'Automatiza tareas repetitivas que frenan tu negocio',
-    'benefits.benefit2.title': 'Ahorra tiempo cada semana',
-    'benefits.benefit2.desc': 'Libera +15 horas semanales para crecimiento estratégico',
-    'benefits.benefit3.title': 'Mejora la precisión',
-    'benefits.benefit3.desc': 'Elimina errores con procesos automatizados consistentes',
+    // Benefits - What Makes Us Different
+    'benefits.title': 'Por Qué Empresas de Servicios Eligen GoFlow AI',
+    'benefits.benefit1.title': 'Construido Para TI, No una Plantilla',
+    'benefits.benefit1.desc': 'Cada agente IA está configurado según tu recorrido del cliente, FAQs, reglas de reserva y tono',
+    'benefits.benefit2.title': 'En Vivo en 14 Días, No 2 Meses',
+    'benefits.benefit2.desc': 'La mayoría de agencias toman 60-90 días. Tenemos tu primera automatización funcionando en 2 semanas—luego optimizamos mensualmente',
+    'benefits.benefit3.title': 'Todo Por Ti, No Hazlo Tú Mismo',
+    'benefits.benefit3.desc': 'No mueves un dedo. Lo construimos, probamos, lanzamos y capacitamos a tu equipo. Luego optimizamos mensualmente',
     
     // What We Automate
     'automate.title': 'Qué automatizamos',
@@ -295,43 +306,32 @@ export const translations = {
     'useCases.case3': 'Cliente reservó → secuencia de recordatorios',
     'useCases.case4': 'Después del servicio → mensaje de seguimiento',
     
-    // Footer CTA
-    'footerCta.title': '¿Listo para automatizar tu negocio?',
-    'footerCta.subtitle': 'Mejoremos tu flujo de trabajo con IA',
-    'footerCta.button': 'Agenda una Demo',
+    // Footer CTA - With urgency
+    'footerCta.title': '¿Listo Para Dejar de Perder Prospectos?',
+    'footerCta.subtitle': 'Cada día que esperas es otro día de oportunidades perdidas. Ten tu primera automatización en vivo en 14 días.',
+    'footerCta.button': 'Agenda Auditoría Gratis',
+    'footerCta.noObligation': 'Sin obligación • Sin presión de ventas • Solo una sesión de estrategia de 30 min',
     
-    // About
-    'about.title': 'Quiénes Somos',
-    'about.p1': 'GoFlow AI ayuda a empresas de servicios a automatizar consultas, reservas, seguimientos y comunicación con clientes a través de WhatsApp, web y redes sociales—24/7.',
-    'about.p2': 'Trabajamos con clínicas, centros de bienestar, gimnasios, restaurantes y negocios de servicios en Australia, Ecuador y Chile. Cada solución está construida a medida según cómo tus clientes te encuentran, reservan y regresan.',
-    'about.approach': 'Nuestro enfoque:',
-    'about.step1': 'Entender tus operaciones – mapeamos tu recorrido del cliente y flujos de trabajo.',
-    'about.step2': 'Identificar cuellos de botella – detectamos dónde se pierde tiempo y clientes potenciales.',
-    'about.step3': 'Automatizar inteligentemente – implementamos flujos de IA que reducen tiempos de respuesta y aumentan reservas.',
-    'about.p4': 'Rastreamos el rendimiento y refinamos tu automatización para generar resultados medibles: más ingresos, menores costos y mejor experiencia del cliente.',
-    'about.p5': 'Nuestras soluciones son completamente bilingües (inglés y español), lo que nos hace un socio fuerte para mercados multiculturales.',
+    // About - Mission-Driven
+    'about.title': 'Por Qué Existe GoFlow AI',
+    'about.p1': 'Los negocios pequeños merecen automatización de nivel empresarial sin la complejidad ni el costo empresarial.',
+    'about.p2': 'Estamos cansados de ver clínicas, gimnasios y consultores trabajar 60 horas semanales mientras pierden prospectos por seguimiento lento.',
+    'about.approach': 'La mayoría de agencias IA:',
+    'about.step1': '❌ Venden plantillas genéricas',
+    'about.step2': '❌ Toman 90+ días para lanzar',
+    'about.step3': '❌ Desaparecen después de la configuración',
+    'about.p4': 'Decidimos hacer lo opuesto: ✓ Construido para TU negocio ✓ En vivo en 14 días ✓ Optimización continua incluida ✓ Precios transparentes.',
+    'about.p5': 'Somos un equipo enfocado sirviendo negocios de servicios en Australia, Ecuador y Chile. Nuestros clientes son clínicas, gimnasios, consultores y coaches cansados de perder ingresos por seguimiento lento.',
     
-    // Services
+    // Services - Simplified to 3 core
     'services.title': 'Nuestros Servicios',
-    'services.aiAssistant.title': 'Asistentes Virtuales IA',
-    'services.aiAssistant.description': 'Asistentes IA de chat y voz que manejan interacciones 24/7',
-    'services.leadCapture.title': 'Automatización de Captura de Prospectos',
-    'services.leadCapture.description': 'Captura y califica prospectos automáticamente desde todos los canales',
-    'services.autoReply.title': 'Respuestas Automáticas Instantáneas',
-    'services.autoReply.description': 'Responde consultas al instante, nunca pierdas una oportunidad',
-    'services.booking.title': 'Automatización de Reservas y Calendario',
-    'services.booking.description': 'Gestión automatizada de agenda y calendario que funciona mientras duermes',
-    'services.crmPipeline.title': 'Automatización de Pipeline CRM',
-    'services.crmPipeline.description': 'Mantén tu pipeline organizado y en movimiento automáticamente',
-    'services.followUp.title': 'Seguimiento por Email y SMS',
-    'services.followUp.description': 'Secuencias de seguimiento automatizadas que nutren y convierten',
-    'services.linkedin.title': 'Automatización de Alcance en LinkedIn',
-    'services.linkedin.description': 'Escala tu prospección en LinkedIn con automatización inteligente',
-    'services.nurturing.title': 'Flujos de Nutrición de Prospectos',
-    'services.nurturing.description': 'Construye relaciones automáticamente con secuencias inteligentes',
-    'services.reporting.title': 'Paneles de Reportes',
-    'services.reporting.description': 'Información en tiempo real y analíticas para seguir tu desempeño',
-    'services.cta': 'Agenda una Demo',
+    'services.aiAgents.title': '🤖 Agentes IA',
+    'services.aiAgents.description': 'Asistentes Virtuales 24/7 que manejan llamadas, textos, DMs y reservas—sin intervención humana. Incluye Recepcionista IA de Voz, Asistente IA de Texto, IA de Reservas y Calificador de Leads IA. Perfecto para negocios que pierden consultas por personal limitado o llamadas fuera de horario.',
+    'services.workflows.title': '⚡ Automatizaciones de Flujos',
+    'services.workflows.description': 'Sistemas invisibles que capturan leads, envían seguimientos, actualizan tu CRM y previenen ausencias automáticamente. Incluye respuesta automática a llamadas perdidas, secuencias de recordatorios, campañas de nutrición de leads, automatización de pipeline CRM y seguimientos post-servicio. Perfecto para negocios que pierden tratos por seguimiento lento.',
+    'services.optimization.title': '📊 Reportes y Optimización',
+    'services.optimization.description': 'Dashboards en tiempo real mostrando qué funciona, qué no, y cómo mejorar—más soporte de optimización mensual. Incluye analíticas personalizadas, revisiones mensuales de rendimiento, pruebas A/B y seguimiento de ROI. Perfecto para negocios que quieren mejora continua.',
+    'services.cta': 'Agenda Auditoría Gratis',
     
     // Packages
     'packages.title': 'Planes Para Cada Etapa de Crecimiento',
@@ -373,10 +373,17 @@ export const translations = {
     'packages.ultra.feature7': 'Integraciones completas',
     'packages.ultra.feature8': 'Reunión de optimización mensual',
     
-    // Contact
+    // Contact - Better messaging
     'contact.badge': 'Contáctanos',
-    'contact.title': 'Solicita una Auditoría de Automatización Gratis',
-    'contact.subtitle': 'Hablemos sobre cómo la automatización IA puede transformar las operaciones de tu negocio',
+    'contact.title': 'Agenda Tu Llamada de Estrategia Gratis',
+    'contact.subtitle': '30 minutos. Cero presión. Valor real. Te mostraremos exactamente qué automatizaciones te darían el mayor ROI.',
+    'contact.whatNext': '¿Qué sigue?',
+    'contact.step1': 'Envías este formulario',
+    'contact.step2': 'Revisamos tu información (en 2 horas)',
+    'contact.step3': 'Te enviamos email para agendar llamada de 30 min',
+    'contact.step4': 'Discutimos tus necesidades y oportunidades',
+    'contact.step5': 'Tú decides si quieres avanzar',
+    'contact.noObligation': 'Cero obligación. Cero presión de ventas.',
     'contact.fullName': 'Nombre Completo',
     'contact.businessName': 'Nombre del Negocio',
     'contact.email': 'Correo Electrónico',
@@ -384,8 +391,8 @@ export const translations = {
     'contact.service': 'Servicio de Interés',
     'contact.service.placeholder': 'Selecciona un servicio',
     'contact.service.fullPackage': 'Paquete de Automatización Completo',
-    'contact.description': 'Cuéntanos sobre tus necesidades',
-    'contact.description.placeholder': 'Describe qué quieres automatizar...',
+    'contact.description': 'Cuéntanos sobre los desafíos de tu negocio',
+    'contact.description.placeholder': 'Ejemplo: "Clínica dental en Brisbane perdiendo 30-40 llamadas/semana. Quiero automatizar reservas y recordatorios." ¡Entre más específico, mejor!',
     'contact.submit': 'Enviar Mensaje',
     'contact.submitting': 'Enviando...',
     'contact.success.title': '¡Mensaje Enviado!',
@@ -395,10 +402,10 @@ export const translations = {
     'contact.validation.title': 'Información Faltante',
     'contact.validation.description': 'Por favor completa todos los campos requeridos.',
     
-    // ROI Calculator
+    // ROI Calculator - Better headline
     'roi.badge': 'Calculadora de ROI',
-    'roi.title': 'Calcula Tus Ahorros Potenciales',
-    'roi.subtitle': 'Descubre cuánto tiempo y dinero podrías ahorrar con automatización IA',
+    'roi.title': '¿Cuánto Te Está Costando el Seguimiento Lento?',
+    'roi.subtitle': 'La mayoría de negocios pierden 30-40% de prospectos simplemente porque no pueden responder suficientemente rápido. Calcula lo que estás dejando sobre la mesa:',
     'roi.inputs.title': 'Detalles de Tu Negocio',
     'roi.inputs.employees': 'Tamaño del Equipo',
     'roi.inputs.inquiries': 'Consultas Mensuales',
@@ -436,5 +443,20 @@ export const translations = {
     
     // Footer
     'footer.copyright': 'GoFlow AI. Todos los derechos reservados.',
+    
+    // FAQ
+    'faq.title': 'Preguntas Frecuentes',
+    'faq.q1': '¿Cuánto toma la configuración?',
+    'faq.a1': 'La mayoría de clientes están en vivo en 14 días. Configuraciones multi-ubicación complejas pueden tomar 3-4 semanas.',
+    'faq.q2': '¿Necesito habilidades técnicas?',
+    'faq.a2': 'No. Manejamos el 100% del trabajo técnico. Solo respondes preguntas sobre tu negocio.',
+    'faq.q3': '¿Qué pasa si a mi equipo no le gusta?',
+    'faq.a3': 'Incluimos capacitación completa y garantía de 60 días. Si no funciona, lo arreglamos o te reembolsamos.',
+    'faq.q4': '¿Puedo cancelar en cualquier momento?',
+    'faq.a4': 'Sí. Sin contratos a largo plazo. Cancela con 30 días de aviso.',
+    'faq.q5': '¿Cuánto cuesta?',
+    'faq.a5': 'Los planes comienzan en $697 AUD/mes para negocios pequeños. La mayoría de clientes invierten $1,200-2,500/mes dependiendo de la complejidad.',
+    'faq.q6': '¿Trabajan con negocios fuera de Australia?',
+    'faq.a6': '¡Sí! Servimos clientes en Australia, Ecuador, Chile, y expandiéndose a otros mercados de habla hispana.',
   },
 };
