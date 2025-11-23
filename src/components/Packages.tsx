@@ -122,30 +122,6 @@ const Packages = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-6" />
         </div>
         
-        {/* Guarantee Section */}
-        <div className={`max-w-4xl mx-auto mb-16 bg-card rounded-2xl p-8 border border-secondary/20 shadow-glow transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-center">
-            <div className="text-4xl mb-4">🛡️</div>
-            <h3 className="text-2xl font-bold mb-4">{t('packages.guarantee.title')}</h3>
-            <p className="text-lg font-semibold mb-6 text-primary">{t('packages.guarantee.mainPromise')}</p>
-            <ul className="space-y-3 text-left max-w-2xl mx-auto mb-6">
-              <li className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
-                <span>{t('packages.guarantee.detail1')}</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
-                <span>{t('packages.guarantee.detail2')}</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
-                <span>{t('packages.guarantee.detail3')}</span>
-              </li>
-            </ul>
-            <p className="text-sm text-muted-foreground font-medium">{t('packages.guarantee.stat')}</p>
-          </div>
-        </div>
-        
         {/* Packages Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {packages.map((pkg, index) => (
