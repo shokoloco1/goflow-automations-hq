@@ -28,9 +28,9 @@ const About = () => {
             <div className="text-lg text-foreground/80 leading-relaxed font-light">
               <p className="mb-4">{t('about.approach')}</p>
               <ol className="list-decimal list-inside space-y-3 ml-4">
-                <li><strong>{t('about.step1').split(' – ')[0]}</strong> – {t('about.step1').split(' – ')[1]}</li>
-                <li><strong>{t('about.step2').split(' – ')[0]}</strong> – {t('about.step2').split(' – ')[1]}</li>
-                <li><strong>{t('about.step3').split(' – ')[0]}</strong> – {t('about.step3').split(' – ')[1]}</li>
+                <li>{t('about.step1')}</li>
+                <li>{t('about.step2')}</li>
+                <li>{t('about.step3')}</li>
               </ol>
             </div>
             

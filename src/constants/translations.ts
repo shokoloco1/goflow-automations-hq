@@ -33,7 +33,7 @@ export const translations = {
     'hero.badge': 'AI-Powered Business Automation',
     'hero.headline': 'Stop Losing Clients to Missed Calls & Slow Follow-Ups',
     'hero.subheadline': 'Your competitors respond in 2 minutes with AI. You\'re still manually handling every inquiry.',
-    'hero.description': 'GoFlow AI captures, qualifies and books clients 24/7—so you never lose a lead to slow response times again.',
+    'hero.description': 'GoFlow AI captures, qualifies and books clients 24/7 • so you never lose a lead to slow response times again.',
     'hero.ctaPrimary': 'Book Free Automation Audit',
     'hero.ctaSecondary': 'Calculate Your ROI',
     'hero.value1': 'Respond in <30 seconds (vs 2+ hours)',
@@ -45,7 +45,7 @@ export const translations = {
     'benefits.benefit1.title': 'Built for YOU, Not a Template',
     'benefits.benefit1.desc': 'Every AI agent is custom-configured around your actual customer journey, FAQs, booking rules and tone',
     'benefits.benefit2.title': 'Live in 14 Days, Not 2 Months',
-    'benefits.benefit2.desc': 'Most agencies take 60-90 days. We get your first automation working in 2 weeks—then optimize monthly',
+    'benefits.benefit2.desc': 'Most agencies take 60-90 days. We get your first automation working in 2 weeks • then optimize monthly',
     'benefits.benefit3.title': 'Done-For-You, Not DIY',
     'benefits.benefit3.desc': 'You don\'t lift a finger. We build it, test it, launch it, and train your team. Then we optimize monthly',
     
@@ -438,7 +438,7 @@ export const translations = {
     'hero.badge': 'Automatización Empresarial con IA',
     'hero.headline': 'Deja de Perder Clientes por Llamadas Perdidas y Seguimiento Lento',
     'hero.subheadline': 'Tus competidores responden en 2 minutos con IA. Tú aún manejas cada consulta manualmente.',
-    'hero.description': 'GoFlow AI captura, califica y agenda clientes 24/7—para que nunca pierdas un prospecto por tiempos de respuesta lentos.',
+    'hero.description': 'GoFlow AI captura, califica y agenda clientes 24/7 • para que nunca pierdas un prospecto por tiempos de respuesta lentos.',
     'hero.ctaPrimary': 'Agenda Auditoría Gratis',
     'hero.ctaSecondary': 'Calcula Tu ROI',
     'hero.value1': 'Responde en <30 segundos (vs 2+ horas)',
@@ -450,7 +450,7 @@ export const translations = {
     'benefits.benefit1.title': 'Construido Para TI, No una Plantilla',
     'benefits.benefit1.desc': 'Cada agente IA está configurado según tu recorrido del cliente, FAQs, reglas de reserva y tono',
     'benefits.benefit2.title': 'En Vivo en 14 Días, No 2 Meses',
-    'benefits.benefit2.desc': 'La mayoría de agencias toman 60-90 días. Tenemos tu primera automatización funcionando en 2 semanas—luego optimizamos mensualmente',
+    'benefits.benefit2.desc': 'La mayoría de agencias toman 60-90 días. Tenemos tu primera automatización funcionando en 2 semanas • luego optimizamos mensualmente',
     'benefits.benefit3.title': 'Todo Por Ti, No Hazlo Tú Mismo',
     'benefits.benefit3.desc': 'No mueves un dedo. Lo construimos, probamos, lanzamos y capacitamos a tu equipo. Luego optimizamos mensualmente',
     
@@ -485,7 +485,7 @@ export const translations = {
     'footerCta.title': '¿Listo Para Dejar de Perder Prospectos?',
     'footerCta.subtitle': 'Cada día que esperas es otro día de oportunidades perdidas. Ten tu primera automatización en vivo en 14 días.',
     'footerCta.button': 'Agenda Auditoría Gratis',
-    'footerCta.noObligation': 'Sin obligación • Sin presión de ventas • Solo una sesión de estrategia de 30 min',
+    'footerCta.noObligation': 'Sin obligación | Sin presión de ventas | Solo una sesión de estrategia de 30 min',
     
     // About - Mission-Driven
     'about.title': 'Por Qué Existe GoFlow AI',
