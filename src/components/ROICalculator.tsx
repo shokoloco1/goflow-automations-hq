@@ -21,18 +21,29 @@ const ROICalculator = () => {
   const [yearlySavings, setYearlySavings] = useState(0);
   
   useEffect(() => {
-    // Calculate hours automated per month (assuming 60% of inquiries can be automated)
-    const automationRate = 0.6;
-    const totalMinutes = monthlyInquiries * avgTimePerTask * automationRate;
-    const hours = totalMinutes / 60;
+    // Time savings calculation (75% reduction)
+    const automationRate = 0.75;
+    const hoursPerMonth = avgTimePerTask * monthlyInquiries;
+    const automated = hoursPerMonth * automationRate;
+    setHoursAutomated(automated);
+
+    // Labor cost savings
+    const laborSaved = (automated / 60) * hourlyRate;
     
-    // Calculate savings
-    const monthly = hours * hourlyRate;
-    const yearly = monthly * 12;
+    // Revenue improvement (34% conversion increase on average)
+    const currentConversionRate = 0.15; // 15% baseline
+    const improvedConversionRate = currentConversionRate * 1.34; // 34% improvement
+    const avgTransactionValue = 150; // Average booking value
     
-    setHoursAutomated(Math.round(hours));
-    setMonthlySavings(Math.round(monthly));
-    setYearlySavings(Math.round(yearly));
+    const currentRevenue = monthlyInquiries * currentConversionRate * avgTransactionValue;
+    const improvedRevenue = monthlyInquiries * improvedConversionRate * avgTransactionValue;
+    const additionalRevenue = improvedRevenue - currentRevenue;
+    
+    // Total monthly benefit
+    const totalBenefit = laborSaved + additionalRevenue;
+    
+    setMonthlySavings(totalBenefit);
+    setYearlySavings(totalBenefit * 12);
   }, [employees, monthlyInquiries, avgTimePerTask, hourlyRate]);
   
   return (
@@ -136,7 +147,7 @@ const ROICalculator = () => {
                       </div>
                       <div className="flex-1">
                         <p className="text-sm text-muted-foreground mb-1">{t('roi.results.hoursAutomated')}</p>
-                        <p className="text-3xl font-bold text-primary">{hoursAutomated}</p>
+                        <p className="text-3xl font-bold text-primary">{hoursAutomated.toFixed(0)}</p>
                         <p className="text-xs text-muted-foreground mt-1">{t('roi.results.perMonth')}</p>
                       </div>
                     </div>
@@ -150,8 +161,8 @@ const ROICalculator = () => {
                       </div>
                       <div className="flex-1">
                         <p className="text-sm text-muted-foreground mb-1">{t('roi.results.monthlySavings')}</p>
-                        <p className="text-3xl font-bold text-secondary">${monthlySavings.toLocaleString()}</p>
-                        <p className="text-xs text-muted-foreground mt-1">{t('roi.results.perMonth')}</p>
+                        <p className="text-3xl font-bold text-secondary">${monthlySavings.toFixed(0)}</p>
+                        <p className="text-xs text-muted-foreground mt-1">{t('roi.results.totalBenefit')}</p>
                       </div>
                     </div>
                   </div>
@@ -165,11 +176,17 @@ const ROICalculator = () => {
                       <div className="flex-1">
                         <p className="text-sm text-muted-foreground mb-1">{t('roi.results.yearlySavings')}</p>
                         <p className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                          ${yearlySavings.toLocaleString()}
+                          ${yearlySavings.toFixed(0)}
                         </p>
-                        <p className="text-xs text-muted-foreground mt-1">{t('roi.results.perYear')}</p>
+                        <p className="text-xs text-muted-foreground mt-1">{t('roi.results.yearlyProjection')}</p>
                       </div>
                     </div>
+                  </div>
+
+                  <div className="col-span-full">
+                    <p className="text-xs text-center text-muted-foreground italic">
+                      {t('roi.results.disclaimer')}
+                    </p>
                   </div>
                 </div>
                 

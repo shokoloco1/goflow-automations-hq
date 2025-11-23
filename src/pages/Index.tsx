@@ -16,6 +16,11 @@ import FAQ from "@/components/FAQ";
 import FooterCTA from "@/components/FooterCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { ComparisonTable } from "@/components/ComparisonTable";
+import { VisualProof } from "@/components/VisualProof";
+import { IntegrationLogos } from "@/components/IntegrationLogos";
+import { LiveActivity } from "@/components/LiveActivity";
+import { LeadMagnet } from "@/components/LeadMagnet";
 
 const Index = () => {
   return (
@@ -27,17 +32,22 @@ const Index = () => {
       <WhatWeAutomate />
       <Services />
       <HowItWorks />
-      <Packages />
-      <ROICalculator />
+      <VisualProof />
       <UseCases />
+      <ROICalculator />
+      <ComparisonTable />
+      <Packages />
+      <Deliverables />
       <EarlyResults />
       <About />
       <IndustriesFocused />
-      <Deliverables />
+      <IntegrationLogos />
       <FAQ />
       <FooterCTA />
       <Contact />
       <Footer />
+      <LiveActivity />
+      <LeadMagnet />
     </div>
   );
 };

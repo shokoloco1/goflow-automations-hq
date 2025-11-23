@@ -160,13 +160,12 @@ const Contact = () => {
                 <Label htmlFor="service">{t('contact.service')} *</Label>
                 <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })} required>
                   <SelectTrigger className="h-12">
-                    <SelectValue placeholder={t('contact.service.placeholder')} />
+                    <SelectValue placeholder={t('contact.selectService')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="ai-agents">{t('services.aiAgents.title')}</SelectItem>
-                    <SelectItem value="workflows">{t('services.workflows.title')}</SelectItem>
-                    <SelectItem value="optimization">{t('services.optimization.title')}</SelectItem>
-                    <SelectItem value="full-package">{t('contact.service.fullPackage')}</SelectItem>
+                    <SelectItem value="ai-agents">{t('contact.services.aiAgents')}</SelectItem>
+                    <SelectItem value="workflows">{t('contact.services.workflows')}</SelectItem>
+                    <SelectItem value="optimization">{t('contact.services.optimization')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -177,7 +176,7 @@ const Contact = () => {
                   id="description"
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  placeholder={t('contact.description.placeholder')}
+                  placeholder={t('contact.descriptionPlaceholder')}
                   rows={5}
                   className="resize-none"
                 />
@@ -196,41 +195,23 @@ const Contact = () => {
             
             {/* What Happens Next */}
             <div className="mt-10 pt-10 border-t border-border/50">
-              <h3 className="text-lg font-medium mb-6 text-center">{t('contact.whatNext')}</h3>
+              <h3 className="text-lg font-medium mb-6 text-center">{t('contact.whatHappensNext.title')}</h3>
               <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-medium text-primary">1</span>
+                {[0, 1, 2, 3, 4].map((index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-xs font-medium text-primary">{index + 1}</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm font-semibold text-primary">{t(`contact.whatHappensNext.steps.${index}.time`)}</div>
+                      <div className="text-sm font-medium">{t(`contact.whatHappensNext.steps.${index}.action`)}</div>
+                      <div className="text-xs text-muted-foreground">{t(`contact.whatHappensNext.steps.${index}.description`)}</div>
+                    </div>
                   </div>
-                  <p className="text-muted-foreground text-sm">{t('contact.step1')}</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-medium text-primary">2</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{t('contact.step2')}</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-medium text-primary">3</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{t('contact.step3')}</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-medium text-primary">4</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{t('contact.step4')}</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-medium text-primary">5</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{t('contact.step5')}</p>
-                </div>
+                ))}
               </div>
               <p className="text-center text-sm text-muted-foreground/80 mt-6 font-light italic">
-                {t('contact.noObligation')}
+                {t('contact.guarantee')}
               </p>
             </div>
           </div>
