@@ -27,11 +27,11 @@ const About = () => {
             
             <div className="text-lg text-foreground/80 leading-relaxed font-light">
               <p className="mb-4">{t('about.approach')}</p>
-              <ol className="list-decimal list-inside space-y-3 ml-4">
+              <ul className="space-y-3 ml-4">
                 <li>{t('about.step1')}</li>
                 <li>{t('about.step2')}</li>
                 <li>{t('about.step3')}</li>
-              </ol>
+              </ul>
             </div>
             
             <p className="text-lg text-foreground/80 leading-relaxed font-light">
