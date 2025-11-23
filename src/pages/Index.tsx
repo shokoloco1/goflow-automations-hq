@@ -11,7 +11,6 @@ import UseCases from "@/components/UseCases";
 import About from "@/components/About";
 import IndustriesFocused from "@/components/IndustriesFocused";
 import Deliverables from "@/components/Deliverables";
-import EarlyResults from "@/components/EarlyResults";
 import FAQ from "@/components/FAQ";
 import FooterCTA from "@/components/FooterCTA";
 import Contact from "@/components/Contact";
@@ -38,7 +37,6 @@ const Index = () => {
       <ComparisonTable />
       <Packages />
       <Deliverables />
-      <EarlyResults />
       <About />
       <IndustriesFocused />
       <IntegrationLogos />
