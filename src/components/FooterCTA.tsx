@@ -16,8 +16,11 @@ const FooterCTA = () => {
       <div className="container mx-auto px-4">
         <div className={`max-w-3xl mx-auto text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="mb-4">{t('footerCta.title')}</h2>
-          <p className="text-xl text-muted-foreground mb-8 font-light">
+          <p className="text-xl text-muted-foreground mb-2 font-light">
             {t('footerCta.subtitle')}
+          </p>
+          <p className="text-sm text-muted-foreground/80 mb-8 font-light">
+            {t('footerCta.noObligation')}
           </p>
           <Button 
             size="lg" 

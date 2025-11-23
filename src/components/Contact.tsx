@@ -163,11 +163,9 @@ const Contact = () => {
                     <SelectValue placeholder={t('contact.service.placeholder')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="ai-assistant">{t('services.aiAssistant.title')}</SelectItem>
-                    <SelectItem value="booking">{t('services.booking.title')}</SelectItem>
-                    <SelectItem value="post-sale">{t('services.postSale.title')}</SelectItem>
-                    <SelectItem value="crm">{t('services.crm.title')}</SelectItem>
-                    <SelectItem value="consulting">{t('services.consulting.title')}</SelectItem>
+                    <SelectItem value="ai-agents">{t('services.aiAgents.title')}</SelectItem>
+                    <SelectItem value="workflows">{t('services.workflows.title')}</SelectItem>
+                    <SelectItem value="optimization">{t('services.optimization.title')}</SelectItem>
                     <SelectItem value="full-package">{t('contact.service.fullPackage')}</SelectItem>
                   </SelectContent>
                 </Select>
@@ -195,6 +193,46 @@ const Contact = () => {
                 <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
+            
+            {/* What Happens Next */}
+            <div className="mt-10 pt-10 border-t border-border/50">
+              <h3 className="text-lg font-medium mb-6 text-center">{t('contact.whatNext')}</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-xs font-medium text-primary">1</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('contact.step1')}</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-xs font-medium text-primary">2</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('contact.step2')}</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-xs font-medium text-primary">3</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('contact.step3')}</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-xs font-medium text-primary">4</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('contact.step4')}</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-xs font-medium text-primary">5</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('contact.step5')}</p>
+                </div>
+              </div>
+              <p className="text-center text-sm text-muted-foreground/80 mt-6 font-light italic">
+                {t('contact.noObligation')}
+              </p>
+            </div>
           </div>
         </div>
       </div>

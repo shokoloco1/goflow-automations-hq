@@ -9,9 +9,10 @@ import Packages from "@/components/Packages";
 import ROICalculator from "@/components/ROICalculator";
 import UseCases from "@/components/UseCases";
 import About from "@/components/About";
-import Industries from "@/components/Industries";
+import IndustriesFocused from "@/components/IndustriesFocused";
 import Deliverables from "@/components/Deliverables";
-import Testimonials from "@/components/Testimonials";
+import EarlyResults from "@/components/EarlyResults";
+import FAQ from "@/components/FAQ";
 import FooterCTA from "@/components/FooterCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -29,10 +30,11 @@ const Index = () => {
       <Packages />
       <ROICalculator />
       <UseCases />
-      <Testimonials />
+      <EarlyResults />
       <About />
-      <Industries />
+      <IndustriesFocused />
       <Deliverables />
+      <FAQ />
       <FooterCTA />
       <Contact />
       <Footer />
