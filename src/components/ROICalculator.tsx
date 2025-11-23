@@ -4,6 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
+import { Input } from "@/components/ui/input";
 
 const ROICalculator = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -70,9 +71,19 @@ const ROICalculator = () => {
                 
                 {/* Team Size */}
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center gap-4">
                     <label className="text-sm font-medium text-foreground">{t('roi.inputs.employees')}</label>
-                    <span className="text-lg font-bold text-primary">{employees}</span>
+                    <Input
+                      type="number"
+                      value={employees}
+                      onChange={(e) => {
+                        const val = parseInt(e.target.value) || 1;
+                        setEmployees(Math.min(Math.max(val, 1), 50));
+                      }}
+                      min={1}
+                      max={50}
+                      className="w-20 h-8 text-center font-bold text-primary"
+                    />
                   </div>
                   <Slider
                     value={[employees]}
@@ -86,9 +97,19 @@ const ROICalculator = () => {
                 
                 {/* Monthly Inquiries */}
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center gap-4">
                     <label className="text-sm font-medium text-foreground">{t('roi.inputs.inquiries')}</label>
-                    <span className="text-lg font-bold text-primary">{monthlyInquiries}</span>
+                    <Input
+                      type="number"
+                      value={monthlyInquiries}
+                      onChange={(e) => {
+                        const val = parseInt(e.target.value) || 50;
+                        setMonthlyInquiries(Math.min(Math.max(val, 50), 1000));
+                      }}
+                      min={50}
+                      max={1000}
+                      className="w-20 h-8 text-center font-bold text-primary"
+                    />
                   </div>
                   <Slider
                     value={[monthlyInquiries]}
@@ -102,9 +123,22 @@ const ROICalculator = () => {
                 
                 {/* Average Time Per Task */}
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center gap-4">
                     <label className="text-sm font-medium text-foreground">{t('roi.inputs.timePerTask')}</label>
-                    <span className="text-lg font-bold text-primary">{avgTimePerTask} min</span>
+                    <div className="flex items-center gap-2">
+                      <Input
+                        type="number"
+                        value={avgTimePerTask}
+                        onChange={(e) => {
+                          const val = parseInt(e.target.value) || 5;
+                          setAvgTimePerTask(Math.min(Math.max(val, 5), 30));
+                        }}
+                        min={5}
+                        max={30}
+                        className="w-16 h-8 text-center font-bold text-primary"
+                      />
+                      <span className="text-sm text-muted-foreground">min</span>
+                    </div>
                   </div>
                   <Slider
                     value={[avgTimePerTask]}
@@ -118,9 +152,22 @@ const ROICalculator = () => {
                 
                 {/* Hourly Rate */}
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center gap-4">
                     <label className="text-sm font-medium text-foreground">{t('roi.inputs.hourlyRate')}</label>
-                    <span className="text-lg font-bold text-primary">${hourlyRate}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-muted-foreground">$</span>
+                      <Input
+                        type="number"
+                        value={hourlyRate}
+                        onChange={(e) => {
+                          const val = parseInt(e.target.value) || 20;
+                          setHourlyRate(Math.min(Math.max(val, 20), 100));
+                        }}
+                        min={20}
+                        max={100}
+                        className="w-20 h-8 text-center font-bold text-primary"
+                      />
+                    </div>
                   </div>
                   <Slider
                     value={[hourlyRate]}
