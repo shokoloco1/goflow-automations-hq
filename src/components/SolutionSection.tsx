@@ -38,7 +38,7 @@ const SolutionSection = () => {
             <h2 className="mb-8 scroll-reveal">
               Nosotros lo resolvemos todo.
               <br />
-              <span className="text-primary">En 72 horas. Por $300.</span>
+              <span className="text-primary">En 72 horas. Sin complicaciones.</span>
             </h2>
 
             <div className="space-y-4">

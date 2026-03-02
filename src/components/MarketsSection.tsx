@@ -29,7 +29,7 @@ const MarketsSection = () => {
             <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
               Para restaurantes, consultorios, tiendas, abogados, constructoras y cualquier negocio que quiera presencia digital profesional.
             </p>
-            <p className="text-3xl font-display font-bold text-primary font-mono">$300 USD</p>
+            <a href="https://wa.me/593992189290" target="_blank" rel="noopener noreferrer" className="inline-block text-primary font-medium text-sm hover:underline">Solicitar cotización →</a>
           </div>
 
           {/* Australia */}
@@ -39,7 +39,7 @@ const MarketsSection = () => {
             <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
               For small businesses paying $5,000–$25,000 AUD for the same result. Our AI delivers agency-quality work at a fraction of the cost.
             </p>
-            <p className="text-3xl font-display font-bold text-primary font-mono">$300 USD <span className="text-lg text-muted-foreground">· ~$480 AUD</span></p>
+            <a href="https://wa.me/593992189290" target="_blank" rel="noopener noreferrer" className="inline-block text-primary font-medium text-sm hover:underline">Get a quote →</a>
           </div>
         </div>
       </div>

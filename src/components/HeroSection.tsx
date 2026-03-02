@@ -27,7 +27,7 @@ const HeroSection = () => {
 
             {/* Headline */}
             <h1 className="leading-[1.1]">
-              {["Tu página web", "lista en 72 horas", "por $300."].map((line, i) => (
+              {["Tu página web", "lista en 72 horas.", "Sin complicaciones."].map((line, i) => (
                 <span
                   key={i}
                   className={`block text-reveal ${i === 2 ? "text-primary" : ""}`}

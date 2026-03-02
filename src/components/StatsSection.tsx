@@ -3,7 +3,7 @@ import AnimatedCounter from "./AnimatedCounter";
 const stats = [
   { value: 72, suffix: "h", label: "Tiempo de entrega" },
   { value: 89, suffix: "%", label: "Margen de satisfacción" },
-  { value: 300, prefix: "$", label: "Precio fijo, sin sorpresas" },
+  { value: 50, suffix: "+", label: "Sitios entregados" },
   { value: 2, suffix: "×", label: "Velocidad vs sitio anterior" },
 ];
 
@@ -15,7 +15,7 @@ const StatsSection = () => (
         {stats.map((s, i) => (
           <div key={i} className="text-center">
             <p className="text-5xl md:text-6xl font-display font-bold text-primary mb-2">
-              <AnimatedCounter end={s.value} suffix={s.suffix} prefix={s.prefix} />
+              <AnimatedCounter end={s.value} suffix={s.suffix} />
             </p>
             <p className="text-muted-foreground text-sm">{s.label}</p>
           </div>

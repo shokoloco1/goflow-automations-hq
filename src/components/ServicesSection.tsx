@@ -5,7 +5,6 @@ const services = [
   {
     icon: Code,
     title: "Sitio Web Profesional",
-    price: "$300 USD",
     subtitle: "Entrega en 72 horas",
     badge: "MÁS POPULAR",
     featured: true,
@@ -15,7 +14,6 @@ const services = [
   {
     icon: TrendingUp,
     title: "Crecimiento en Google",
-    price: "desde $500/mes",
     subtitle: "SEO automático con IA",
     items: ["Contenido semanal con IA", "Auditoría técnica continua", "Reporte mensual"],
     cta: "Consultar →",
@@ -23,7 +21,6 @@ const services = [
   {
     icon: Settings,
     title: "Automatiza tu negocio",
-    price: "A medida",
     subtitle: "Automatización inteligente",
     items: ["WhatsApp automático", "Facturación electrónica", "Conexión con CRM"],
     cta: "Consultar →",
@@ -31,7 +28,6 @@ const services = [
   {
     icon: Brain,
     title: "Estrategia con IA",
-    price: "A medida",
     subtitle: "Consultoría inteligente",
     items: ["Análisis financiero", "Plan de marketing", "Dashboard de métricas"],
     cta: "Consultar →",
@@ -76,8 +72,7 @@ const ServicesSection = () => {
               )}
               <s.icon className="w-10 h-10 text-primary mb-4" />
               <h3 className="mb-1">{s.title}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{s.subtitle}</p>
-              <p className="text-3xl font-display font-bold text-primary mb-6 font-mono">{s.price}</p>
+              <p className="text-muted-foreground text-sm mb-6">{s.subtitle}</p>
               <ul className="space-y-2 mb-8">
                 {s.items.map((item, j) => (
                   <li key={j} className="flex items-center gap-2 text-sm text-foreground/80">
