@@ -3,7 +3,7 @@ import AnimatedCounter from "./AnimatedCounter";
 const stats = [
   { value: 72, suffix: "h", label: "Tiempo de entrega" },
   { value: 89, suffix: "%", label: "Margen de satisfacción" },
-  { value: 50, suffix: "+", label: "Sitios entregados" },
+  { value: 10, suffix: "+", label: "Sitios entregados" },
   { value: 2, suffix: "×", label: "Velocidad vs sitio anterior" },
 ];
 
