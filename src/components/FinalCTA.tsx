@@ -4,7 +4,7 @@ const FinalCTA = () => (
       <h2 className="mb-6">
         ¿Listo para tener un sitio web
         <br />
-        <span className="text-primary">que trabaje por usted?</span>
+        <span className="text-primary">que trabaje por ti?</span>
       </h2>
       <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
         Sin reuniones largas. Sin contratos. Sin sorpresas. Solo resultados.
