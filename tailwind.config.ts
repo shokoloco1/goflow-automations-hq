@@ -51,8 +51,8 @@ export default {
         "text-secondary": "hsl(var(--text-secondary))",
       },
       fontFamily: {
-        sans: ['DM Sans', 'system-ui', 'sans-serif'],
-        display: ['Syne', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
         mono: ['DM Mono', 'monospace'],
       },
       borderRadius: {

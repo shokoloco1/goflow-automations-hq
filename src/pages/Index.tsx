@@ -20,19 +20,33 @@ const Index = () => (
     <Navigation />
     <HeroSection />
     <SectionDivider />
-    <ProblemSection />
+    <div className="lazy-section">
+      <ProblemSection />
+    </div>
     <SectionDivider />
-    <SolutionSection />
+    <div className="lazy-section">
+      <SolutionSection />
+    </div>
     <SectionDivider />
-    <ServicesSection />
+    <div className="lazy-section">
+      <ServicesSection />
+    </div>
     <SectionDivider />
-    <HowItWorksSection />
+    <div className="lazy-section">
+      <HowItWorksSection />
+    </div>
     <SectionDivider />
-    <MarketsSection />
+    <div className="lazy-section">
+      <MarketsSection />
+    </div>
     <SectionDivider />
-    <StatsSection />
+    <div className="lazy-section">
+      <StatsSection />
+    </div>
     <SectionDivider />
-    <FinalCTA />
+    <div className="lazy-section">
+      <FinalCTA />
+    </div>
     <Footer />
     <WhatsAppButton />
   </div>
