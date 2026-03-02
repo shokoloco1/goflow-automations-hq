@@ -1,28 +1,52 @@
 
 
-# Plan: Reemplazar ServicesSection con los 6 nuevos servicios
+# Plan: 5 modificaciones adicionales al sitio
 
-## Resumen
-Reescribir `ServicesSection.tsx` con los 6 servicios especificados y reposicionar la seccion entre "Como funciona" y "Estadisticas" en `Index.tsx`.
+## 1. Hero — Cambiar subtitulo
+**Archivo:** `src/components/HeroSection.tsx`
+- Reemplazar linea 45 ("Usamos inteligencia artificial...") por "Diseno web, automatizacion e inteligencia artificial para negocios que quieren crecer"
 
-## Cambios
+## 2. Nueva seccion "Senales de alerta"
+**Archivo nuevo:** `src/components/PainPointsSection.tsx`
+- Titulo: "Como sabemos que tu negocio necesita ayuda?"
+- Grid 3 columnas desktop / 1 movil con 6 senales de alerta (circulo rojo + texto)
+- Subtitulo final: "Si te identificas con alguno de estos puntos, tenemos la solucion exacta para ti."
+- Mismo patron de scroll-reveal + IntersectionObserver
+- Glass-card por cada pain point con icono rojo
 
-### 1. `src/components/ServicesSection.tsx` — Reescribir completo
-- 6 servicios con emoji como icono grande, badge de categoria, titulo, descripcion y CTA
-- Grid 2 columnas desktop / 1 movil (`grid md:grid-cols-2`)
-- Cards con `glass-card`, hover con borde verde y glow (`hover:border-[#00e5a0] hover:shadow-[0_0_30px_rgba(0,229,160,0.3)]`)
-- Badges con colores diferenciados (MAS POPULAR verde, NUEVO naranja, ESENCIAL gris, EMPIEZA AQUI outline)
-- CTAs: todos `bg-primary text-primary-foreground`, enlace a WhatsApp con mensaje predefinido por servicio (ej: `?text=Hola, me interesa el servicio de Sitio Web Profesional`)
-- Titulo: "Soluciones que transforman tu negocio" / Subtitulo: "Tecnologia de punta, resultados desde el primer mes"
-- Sin precios
-- Scroll-reveal animations (mismo patron existente con IntersectionObserver)
+**Archivo:** `src/pages/Index.tsx` — Insertar entre HowItWorksSection y ServicesSection
 
-### 2. `src/pages/Index.tsx` — Reordenar secciones
-Mover `ServicesSection` de su posicion actual (entre SolutionSection y HowItWorksSection) a entre HowItWorksSection y MarketsSection, justo antes de StatsSection:
+## 3. Combos en ServicesSection
+**Archivo:** `src/components/ServicesSection.tsx`
+- Agregar debajo del grid de servicios una seccion de 3 combos
+- Grid 3 columnas desktop / 1 movil
+- Cada combo: glass-card con badge, titulo del combo, los 2 servicios que incluye, y etiqueta
+  - Combo 1: "Presencia Digital Completa" — Sitio Web + Marca — "Ahorra 20% combinando"
+  - Combo 2: "Negocio en Piloto Automatico" — WhatsApp Bot + Motor de Ventas — "El mas popular"
+  - Combo 3: "Control Total del Negocio" — CFO Virtual + Diagnostico — "Empieza aqui"
+- CTA de cada combo abre WhatsApp con mensaje del combo
 
-```
-HeroSection → ProblemSection → SolutionSection → HowItWorksSection → ServicesSection → MarketsSection → StatsSection → FinalCTA
-```
+## 4. Nueva seccion "Para que tipo de negocio"
+**Archivo nuevo:** `src/components/IndustriesSection.tsx`
+- Titulo: "Trabajamos con negocios como el tuyo"
+- Grid de 8 industrias (4 cols desktop, 2 cols mobile) con emoji + nombre
+- Industrias: Clinicas, Inmobiliarias, Abogados, Restaurantes, Academias, Salud y belleza, Constructoras, Tiendas
+- Glass-card por industria, hover verde
+- Mismo patron scroll-reveal
 
-Orden actual ya tiene ServicesSection entre Solution y HowItWorks. Nuevo orden: moverlo despues de HowItWorks, antes de Markets/Stats.
+**Archivo:** `src/pages/Index.tsx` — Insertar despues de ServicesSection, antes de MarketsSection
+
+## 5. Floating banner mobile (sticky bottom)
+**Archivo nuevo:** `src/components/MobileCTABanner.tsx`
+- Solo visible en mobile (`md:hidden`)
+- Sticky bottom, fondo `#00e5a0`, texto negro
+- Texto: "No sabes por donde empezar? → Diagnostico gratis por WhatsApp"
+- Link a wa.me/593992189290
+- Z-index alto para estar sobre todo
+
+**Archivo:** `src/pages/Index.tsx` — Agregar al layout
+
+## Resumen de archivos
+- **Modificar:** `HeroSection.tsx`, `ServicesSection.tsx`, `Index.tsx`
+- **Crear:** `PainPointsSection.tsx`, `IndustriesSection.tsx`, `MobileCTABanner.tsx`
 
