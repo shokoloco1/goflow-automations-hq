@@ -1,53 +1,41 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import TrustBadges from "@/components/TrustBadges";
-import Benefits from "@/components/Benefits";
-import WhatWeAutomate from "@/components/WhatWeAutomate";
-import Services from "@/components/Services";
-import HowItWorks from "@/components/HowItWorks";
-import Packages from "@/components/Packages";
-import ROICalculator from "@/components/ROICalculator";
-import UseCases from "@/components/UseCases";
-import About from "@/components/About";
-import IndustriesFocused from "@/components/IndustriesFocused";
-import Deliverables from "@/components/Deliverables";
-import FAQ from "@/components/FAQ";
-import FooterCTA from "@/components/FooterCTA";
-import Contact from "@/components/Contact";
+import HeroSection from "@/components/HeroSection";
+import SectionDivider from "@/components/SectionDivider";
+import ProblemSection from "@/components/ProblemSection";
+import SolutionSection from "@/components/SolutionSection";
+import ServicesSection from "@/components/ServicesSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import MarketsSection from "@/components/MarketsSection";
+import StatsSection from "@/components/StatsSection";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
-import { ComparisonTable } from "@/components/ComparisonTable";
-import { VisualProof } from "@/components/VisualProof";
-import { IntegrationLogos } from "@/components/IntegrationLogos";
-import { LiveActivity } from "@/components/LiveActivity";
-import { LeadMagnet } from "@/components/LeadMagnet";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import CustomCursor from "@/components/CustomCursor";
+import GrainOverlay from "@/components/GrainOverlay";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <TrustBadges />
-      <Benefits />
-      <WhatWeAutomate />
-      <Services />
-      <HowItWorks />
-      <VisualProof />
-      <UseCases />
-      <ROICalculator />
-      <ComparisonTable />
-      <Packages />
-      <Deliverables />
-      <About />
-      <IndustriesFocused />
-      <IntegrationLogos />
-      <FAQ />
-      <FooterCTA />
-      <Contact />
-      <Footer />
-      <LiveActivity />
-      <LeadMagnet />
-    </div>
-  );
-};
+const Index = () => (
+  <div className="min-h-screen">
+    <CustomCursor />
+    <GrainOverlay />
+    <Navigation />
+    <HeroSection />
+    <SectionDivider />
+    <ProblemSection />
+    <SectionDivider />
+    <SolutionSection />
+    <SectionDivider />
+    <ServicesSection />
+    <SectionDivider />
+    <HowItWorksSection />
+    <SectionDivider />
+    <MarketsSection />
+    <SectionDivider />
+    <StatsSection />
+    <SectionDivider />
+    <FinalCTA />
+    <Footer />
+    <WhatsAppButton />
+  </div>
+);
 
 export default Index;
