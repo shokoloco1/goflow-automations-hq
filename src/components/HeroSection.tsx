@@ -42,7 +42,7 @@ const HeroSection = () => {
             <p
               className={`text-muted-foreground text-lg md:text-xl max-w-lg transition-all duration-700 delay-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
-              Usamos inteligencia artificial para darte resultados que una agencia tradicional cobra 10 veces más.
+              Diseño web, automatización e inteligencia artificial para negocios que quieren crecer.
             </p>
 
             {/* CTAs */}

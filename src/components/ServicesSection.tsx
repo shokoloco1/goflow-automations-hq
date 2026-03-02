@@ -124,6 +124,67 @@ const ServicesSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Combos */}
+        <div className="mt-16">
+          <h3 className="text-center text-2xl mb-2 scroll-reveal">
+            Combina y <span className="text-primary">ahorra</span>
+          </h3>
+          <p className="text-center text-muted-foreground mb-8 scroll-reveal">
+            Paquetes diseñados para máximo impacto
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                badge: "Ahorra 20% combinando",
+                badgeClass: "bg-primary text-primary-foreground",
+                title: "Presencia Digital Completa",
+                items: ["🌐 Sitio Web Profesional", "🎨 Marca en 72 Horas"],
+                msg: "Hola, me interesa el combo Presencia Digital Completa (Sitio Web + Marca)",
+              },
+              {
+                badge: "El más popular",
+                badgeClass: "bg-secondary text-secondary-foreground",
+                title: "Negocio en Piloto Automático",
+                items: ["🤖 Empleado Digital de WhatsApp", "🎯 Motor de Ventas Automático"],
+                msg: "Hola, me interesa el combo Negocio en Piloto Automático (WhatsApp Bot + Motor de Ventas)",
+              },
+              {
+                badge: "Empieza aquí",
+                badgeClass: "border border-primary/40 text-primary bg-transparent",
+                title: "Control Total del Negocio",
+                items: ["📊 CFO Virtual con IA", "🔍 Diagnóstico Empresarial"],
+                msg: "Hola, me interesa el combo Control Total del Negocio (CFO Virtual + Diagnóstico)",
+              },
+            ].map((combo, i) => (
+              <div
+                key={i}
+                className="scroll-reveal glass-card rounded-2xl p-8 text-center transition-all duration-300 hover:border-primary/60 hover:shadow-[0_0_30px_rgba(0,229,160,0.3)]"
+                style={{ transitionDelay: `${i * 0.1}s` }}
+              >
+                <span
+                  className={`inline-block text-[10px] font-bold tracking-wider px-3 py-1 rounded-full mb-4 ${combo.badgeClass}`}
+                >
+                  {combo.badge}
+                </span>
+                <h4 className="text-lg font-semibold mb-4">{combo.title}</h4>
+                <div className="space-y-2 mb-6">
+                  {combo.items.map((item, j) => (
+                    <p key={j} className="text-sm text-muted-foreground">{item}</p>
+                  ))}
+                </div>
+                <a
+                  href={`https://wa.me/593992189290?text=${encodeURIComponent(combo.msg)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block w-full text-center py-3 rounded-xl font-medium text-sm bg-primary text-primary-foreground transition-all hover:shadow-[0_0_20px_rgba(0,229,160,0.4)] cursor-none"
+                >
+                  Quiero este combo
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
