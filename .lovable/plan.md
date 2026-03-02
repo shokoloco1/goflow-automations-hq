@@ -1,25 +1,28 @@
 
 
-# Plan: Eliminar todos los precios del sitio
+# Plan: Reemplazar ServicesSection con los 6 nuevos servicios
 
-Remover todas las referencias a precios ($300, $500, "A medida", etc.) de las siguientes secciones, reemplazando con mensajes orientados a la acción (contactar por WhatsApp).
+## Resumen
+Reescribir `ServicesSection.tsx` con los 6 servicios especificados y reposicionar la seccion entre "Como funciona" y "Estadisticas" en `Index.tsx`.
 
-## Cambios por archivo
+## Cambios
 
-### `src/components/HeroSection.tsx`
-- Cambiar headline de "Tu página web / lista en 72 horas / por $300." a algo como "Tu página web / lista en 72 horas / sin complicaciones."
+### 1. `src/components/ServicesSection.tsx` — Reescribir completo
+- 6 servicios con emoji como icono grande, badge de categoria, titulo, descripcion y CTA
+- Grid 2 columnas desktop / 1 movil (`grid md:grid-cols-2`)
+- Cards con `glass-card`, hover con borde verde y glow (`hover:border-[#00e5a0] hover:shadow-[0_0_30px_rgba(0,229,160,0.3)]`)
+- Badges con colores diferenciados (MAS POPULAR verde, NUEVO naranja, ESENCIAL gris, EMPIEZA AQUI outline)
+- CTAs: todos `bg-primary text-primary-foreground`, enlace a WhatsApp con mensaje predefinido por servicio (ej: `?text=Hola, me interesa el servicio de Sitio Web Profesional`)
+- Titulo: "Soluciones que transforman tu negocio" / Subtitulo: "Tecnologia de punta, resultados desde el primer mes"
+- Sin precios
+- Scroll-reveal animations (mismo patron existente con IntersectionObserver)
 
-### `src/components/SolutionSection.tsx`
-- Cambiar "En 72 horas. Por $300." → "En 72 horas. Sin complicaciones."
+### 2. `src/pages/Index.tsx` — Reordenar secciones
+Mover `ServicesSection` de su posicion actual (entre SolutionSection y HowItWorksSection) a entre HowItWorksSection y MarketsSection, justo antes de StatsSection:
 
-### `src/components/ServicesSection.tsx`
-- Eliminar la propiedad `price` de todas las cards y su renderizado
-- Mantener subtítulos, listas y CTAs
+```
+HeroSection → ProblemSection → SolutionSection → HowItWorksSection → ServicesSection → MarketsSection → StatsSection → FinalCTA
+```
 
-### `src/components/MarketsSection.tsx`
-- Eliminar las líneas de precio "$300 USD" y "$300 USD · ~$480 AUD" de ambos portales
-- Reemplazar con CTA tipo "Escríbenos para una cotización" o simplemente dejar sin precio
-
-### `src/components/StatsSection.tsx`
-- Reemplazar el stat "$300 / Precio fijo, sin sorpresas" por otro dato relevante (ej: "+50 sitios entregados" o "24h soporte")
+Orden actual ya tiene ServicesSection entre Solution y HowItWorks. Nuevo orden: moverlo despues de HowItWorks, antes de Markets/Stats.
 
