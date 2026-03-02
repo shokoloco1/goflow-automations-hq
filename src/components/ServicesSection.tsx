@@ -1,36 +1,65 @@
 import { useEffect, useRef } from "react";
-import { Code, TrendingUp, Settings, Brain } from "lucide-react";
 
 const services = [
   {
-    icon: Code,
-    title: "Sitio Web Profesional",
-    subtitle: "Entrega en 72 horas",
+    emoji: "🌐",
+    badge: "ESENCIAL",
+    badgeClass: "bg-muted text-muted-foreground",
+    title: "Tu presencia digital en 72 horas",
+    name: "Sitio Web Profesional",
+    desc: "Diseñamos tu sitio web completo, optimizado para celulares y listo para convertir visitantes en clientes. Sin que tengas que preocuparte por nada técnico.",
+    cta: "Quiero mi sitio web",
+    msg: "Hola, me interesa el servicio de Sitio Web Profesional",
+  },
+  {
+    emoji: "🤖",
     badge: "MÁS POPULAR",
-    featured: true,
-    items: ["5 páginas completas", "Optimizado para celular", "SEO básico incluido", "WhatsApp integrado", "Hosting no incluido"],
-    cta: "Empezar ahora →",
+    badgeClass: "bg-primary text-primary-foreground",
+    title: "Atención al cliente 24/7 sin contratar a nadie",
+    name: "Empleado Digital de WhatsApp",
+    desc: "Un agente de inteligencia artificial atiende tus mensajes de WhatsApp a cualquier hora, responde preguntas, agenda citas y califica prospectos. Trabaja mientras tú duermes.",
+    cta: "Quiero mi agente",
+    msg: "Hola, me interesa el servicio de Empleado Digital de WhatsApp",
   },
   {
-    icon: TrendingUp,
-    title: "Crecimiento en Google",
-    subtitle: "SEO automático con IA",
-    items: ["Contenido semanal con IA", "Auditoría técnica continua", "Reporte mensual"],
-    cta: "Consultar →",
+    emoji: "📊",
+    badge: "NUEVO",
+    badgeClass: "bg-secondary text-secondary-foreground",
+    title: "Tu contador inteligente que nunca duerme",
+    name: "CFO Virtual con IA",
+    desc: "Analiza tus finanzas cada semana, genera alertas de flujo de caja, proyecciones a 90 días y recomendaciones concretas para tomar mejores decisiones. Sin hojas de Excel complicadas.",
+    cta: "Quiero mis análisis",
+    msg: "Hola, me interesa el servicio de CFO Virtual con IA",
   },
   {
-    icon: Settings,
-    title: "Automatiza tu negocio",
-    subtitle: "Automatización inteligente",
-    items: ["WhatsApp automático", "Facturación electrónica", "Conexión con CRM"],
-    cta: "Consultar →",
+    emoji: "🎯",
+    badge: "NUEVO",
+    badgeClass: "bg-secondary text-secondary-foreground",
+    title: "Nuevos clientes en piloto automático",
+    name: "Motor de Ventas Automático",
+    desc: "Sistema de prospección que identifica negocios que necesitan tus servicios, analiza su situación y les envía mensajes personalizados automáticamente. Tu equipo de ventas que nunca descansa.",
+    cta: "Quiero más clientes",
+    msg: "Hola, me interesa el servicio de Motor de Ventas Automático",
   },
   {
-    icon: Brain,
-    title: "Estrategia con IA",
-    subtitle: "Consultoría inteligente",
-    items: ["Análisis financiero", "Plan de marketing", "Dashboard de métricas"],
-    cta: "Consultar →",
+    emoji: "🎨",
+    badge: "ESENCIAL",
+    badgeClass: "bg-muted text-muted-foreground",
+    title: "Identidad de marca completa en 3 días",
+    name: "Marca en 72 Horas",
+    desc: "Logo, colores, tipografía, manual de marca y 30 plantillas para redes sociales. Todo diseñado con inteligencia artificial para que tu negocio se vea profesional desde el primer día.",
+    cta: "Quiero mi marca",
+    msg: "Hola, me interesa el servicio de Marca en 72 Horas",
+  },
+  {
+    emoji: "🔍",
+    badge: "EMPIEZA AQUÍ",
+    badgeClass: "border border-primary/40 text-primary bg-transparent",
+    title: "Descubre qué está frenando tu negocio",
+    name: "Diagnóstico Empresarial con IA",
+    desc: "Análisis completo de tu empresa en 48 horas. Revisamos finanzas, marketing, operaciones y presencia digital. Recibes un plan de acción con las 10 mejoras más importantes priorizadas por impacto.",
+    cta: "Quiero mi diagnóstico",
+    msg: "Hola, me interesa el servicio de Diagnóstico Empresarial con IA",
   },
 ];
 
@@ -41,7 +70,10 @@ const ServicesSection = () => {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }),
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add("visible");
+        }),
       { threshold: 0.1 }
     );
     el.querySelectorAll(".scroll-reveal").forEach((c) => obs.observe(c));
@@ -52,44 +84,40 @@ const ServicesSection = () => {
     <section id="servicios" ref={ref} className="py-24 md:py-32 px-4">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-center mb-4 scroll-reveal">
-          Todo lo que necesita <span className="text-primary">tu negocio</span>
+          Soluciones que transforman{" "}
+          <span className="text-primary">tu negocio</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-16 scroll-reveal">
-          Desde tu primera página web hasta automatización completa.
+        <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto scroll-reveal">
+          Tecnología de punta, resultados desde el primer mes
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((s, i) => (
             <div
               key={i}
-              className={`scroll-reveal rounded-2xl p-8 relative ${s.featured ? "glass-card border-primary/30 glow-green-soft" : "glass-card"}`}
+              className="scroll-reveal glass-card rounded-2xl p-8 relative transition-all duration-300 hover:border-primary/60 hover:shadow-[0_0_30px_rgba(0,229,160,0.3)]"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              {s.badge && (
-                <span className="absolute top-4 right-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
-                  {s.badge}
-                </span>
-              )}
-              <s.icon className="w-10 h-10 text-primary mb-4" />
-              <h3 className="mb-1">{s.title}</h3>
-              <p className="text-muted-foreground text-sm mb-6">{s.subtitle}</p>
-              <ul className="space-y-2 mb-8">
-                {s.items.map((item, j) => (
-                  <li key={j} className="flex items-center gap-2 text-sm text-foreground/80">
-                    <span className="text-primary text-xs">●</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <span
+                className={`absolute top-4 right-4 text-[10px] font-bold tracking-wider px-3 py-1 rounded-full ${s.badgeClass}`}
+              >
+                {s.badge}
+              </span>
+
+              <span className="text-4xl mb-4 block">{s.emoji}</span>
+              <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-1">
+                {s.name}
+              </p>
+              <h3 className="text-lg md:text-xl mb-3">{s.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+                {s.desc}
+              </p>
+
               <a
-                href="https://wa.me/593992189290"
+                href={`https://wa.me/593992189290?text=${encodeURIComponent(s.msg)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-block w-full text-center py-3 rounded-xl font-medium text-sm transition-all cursor-none ${
-                  s.featured
-                    ? "bg-primary text-primary-foreground hover:glow-green"
-                    : "border border-primary/30 text-primary hover:bg-primary/10"
-                }`}
+                className="inline-block w-full text-center py-3 rounded-xl font-medium text-sm bg-primary text-primary-foreground transition-all hover:shadow-[0_0_20px_rgba(0,229,160,0.4)] cursor-none"
               >
                 {s.cta}
               </a>

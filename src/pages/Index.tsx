@@ -29,11 +29,11 @@ const Index = () => (
     </div>
     <SectionDivider />
     <div className="lazy-section">
-      <ServicesSection />
+      <HowItWorksSection />
     </div>
     <SectionDivider />
     <div className="lazy-section">
-      <HowItWorksSection />
+      <ServicesSection />
     </div>
     <SectionDivider />
     <div className="lazy-section">
