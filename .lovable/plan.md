@@ -1,17 +1,28 @@
 
 
-# Plan: Actualizar meta tags OG y Twitter para eliminar precios
+# Plan: Lead Capture Form — "Auditoría Web GRATIS"
 
-El problema es que las etiquetas Open Graph y Twitter Card en `index.html` todavía muestran "$300". Esto es lo que aparece como preview cuando compartes el link en WhatsApp, LinkedIn, etc.
+## Ubicacion
+Insertar justo antes de `FinalCTA`, despues de `StatsSection`. Es el punto natural donde el usuario ya vio todo el valor y esta listo para convertir — la auditoria gratis es un paso mas suave que "Hablar con David ahora".
 
-## Cambios en `index.html`
+## Archivo nuevo: `src/components/LeadCaptureForm.tsx`
 
-### Líneas a modificar:
-- **Línea 19** `og:title`: "GoFlow AI | Tu página web en 72 horas por $300" → "GoFlow AI | Diseño web, IA y automatización para tu negocio"
-- **Línea 20** `og:description`: Eliminar "$300" → "Creamos tu sitio web profesional en 72 horas. Automatización e inteligencia artificial para negocios que quieren crecer."
-- **Línea 24** `twitter:title`: Mismo cambio que og:title
-- **Línea 25** `twitter:description`: Mismo cambio que og:description
+- **Urgency badge**: "🔥 Solo 3 auditorías disponibles esta semana" — badge naranja/rojo encima del titulo
+- **Titulo**: "Obtén una Auditoría Web GRATIS"
+- **Subtitulo**: "Analizamos tu sitio web y te decimos exactamente qué está perdiendo clientes — sin costo, sin compromiso."
+- **Formulario** con 4 campos en glass-card con borde glow verde:
+  - Nombre completo (text)
+  - Email empresarial (email)
+  - URL de tu sitio web (url)
+  - WhatsApp (tel, placeholder: "+593 99 999 9999")
+- **CTA**: "Quiero mi Auditoría Gratis →" — `bg-primary text-primary-foreground`, full width
+- **Trust line**: "✓ Sin spam ✓ Respuesta en 24h ✓ 100% gratis"
+- **On submit**: POST a `YOUR_WEBHOOK_URL` placeholder, mostrar toast de exito "¡Listo! Te contactamos en menos de 24 horas 🚀", limpiar formulario, sin reload
+- **Validacion**: zod schema para los 4 campos, react-hook-form
+- **Responsive**: campos stack en mobile, 2 columnas en desktop para nombre/email, url/whatsapp
+- **Scroll-reveal**: mismo patron IntersectionObserver del sitio
 
-### Nota importante
-Después de publicar, las plataformas (WhatsApp, LinkedIn, etc.) cachean las previews. Puede tomar tiempo en actualizarse o necesitar que se limpie el caché manualmente.
+## Archivo modificado: `src/pages/Index.tsx`
+- Importar `LeadCaptureForm`
+- Insertar entre `StatsSection` y `FinalCTA` con `SectionDivider`
 
