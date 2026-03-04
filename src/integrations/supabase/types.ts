@@ -14,6 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
+      audit_requests: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          status: string
+          website_url: string
+          whatsapp: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          status?: string
+          website_url: string
+          whatsapp: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          status?: string
+          website_url?: string
+          whatsapp?: string
+        }
+        Relationships: []
+      }
       contact_inquiries: {
         Row: {
           business_name: string | null

@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Badge } from "@/components/ui/badge";
+import { supabase } from "@/integrations/supabase/client";
 
 const schema = z.object({
   fullName: z.string().trim().min(2, "Ingresa tu nombre").max(100),
@@ -16,8 +17,6 @@ const schema = z.object({
 });
 
 type FormData = z.infer<typeof schema>;
-
-const WEBHOOK_URL = "YOUR_WEBHOOK_URL";
 
 const LeadCaptureForm = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -42,11 +41,11 @@ const LeadCaptureForm = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      await fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+      const { error } = await supabase.functions.invoke('submit-audit-request', {
+        body: data,
       });
+
+      if (error) throw error;
       toast({
         title: "¡Listo! Te contactamos en menos de 24 horas 🚀",
         description: "Revisa tu email y WhatsApp para los resultados de tu auditoría.",
