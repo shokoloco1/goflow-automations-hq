@@ -9,6 +9,7 @@ import ServicesSection from "@/components/ServicesSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import MarketsSection from "@/components/MarketsSection";
 import StatsSection from "@/components/StatsSection";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -53,6 +54,10 @@ const Index = () => (
     <SectionDivider />
     <div className="lazy-section">
       <StatsSection />
+    </div>
+    <SectionDivider />
+    <div className="lazy-section">
+      <LeadCaptureForm />
     </div>
     <SectionDivider />
     <div className="lazy-section">
