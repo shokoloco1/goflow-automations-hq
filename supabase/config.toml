@@ -2,3 +2,6 @@ project_id = "qgvrlovdanxkgomrtdzj"
 
 [functions.submit-contact-inquiry]
 verify_jwt = false
+
+[functions.submit-audit-request]
+verify_jwt = false
