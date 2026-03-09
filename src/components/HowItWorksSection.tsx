@@ -58,7 +58,7 @@ const HowItWorksSection = () => {
           </p>
         </div>
 
-        {/* Timeline — horizontal on desktop, vertical on mobile */}
+        {/* Timeline: horizontal on desktop, vertical on mobile */}
         <div className="relative">
           {/* Connecting line — desktop */}
           <div className="hidden md:block absolute top-7 left-[calc(12.5%+16px)] right-[calc(12.5%+16px)] h-px bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40" />
