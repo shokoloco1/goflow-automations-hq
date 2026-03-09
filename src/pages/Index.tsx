@@ -10,6 +10,7 @@ import IndustriesSection from "@/components/IndustriesSection";
 import MarketsSection from "@/components/MarketsSection";
 import StatsSection from "@/components/StatsSection";
 import PricingSection from "@/components/PricingSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
