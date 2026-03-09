@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Check } from "lucide-react";
+import { Check, X as XIcon } from "lucide-react";
 
 const points = [
   "Diseño moderno mobile-first",
@@ -9,6 +9,22 @@ const points = [
   "Botón de WhatsApp integrado",
   "Dominio conectado",
   "Sin contratos ni sorpresas",
+];
+
+const antes = [
+  "Carga lenta (>5 segundos)",
+  "No se ve bien en celular",
+  "Sin SEO — invisible en Google",
+  "Sin formulario de contacto",
+  "Sin analytics ni métricas",
+];
+
+const despues = [
+  "Velocidad <2 segundos",
+  "100% responsive en todo dispositivo",
+  "SEO optimizado desde el inicio",
+  "Formularios + WhatsApp integrado",
+  "Analytics en tiempo real",
 ];
 
 const SolutionSection = () => {
@@ -57,35 +73,42 @@ const SolutionSection = () => {
             </div>
           </div>
 
-          {/* Right: Before/After visual */}
+          {/* Right: Before/After comparison */}
           <div className="scroll-reveal">
             <div className="glass-card rounded-2xl overflow-hidden">
               <div className="grid grid-cols-2">
+                {/* Antes */}
                 <div className="p-6 md:p-8 border-r border-border/50">
-                  <p className="text-xs text-secondary font-mono uppercase tracking-wider mb-4">Antes</p>
-                  <div className="space-y-3">
-                    <div className="h-3 bg-secondary/10 rounded w-full" />
-                    <div className="h-3 bg-secondary/10 rounded w-3/4" />
-                    <div className="h-12 bg-secondary/5 rounded mt-4" />
-                    <div className="h-3 bg-secondary/10 rounded w-1/2" />
-                    <div className="h-3 bg-secondary/10 rounded w-2/3" />
-                  </div>
+                  <p className="text-xs text-secondary font-mono uppercase tracking-wider mb-5 font-semibold">
+                    Antes
+                  </p>
+                  <ul className="space-y-3">
+                    {antes.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <XIcon className="w-4 h-4 text-secondary/60 shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                   <div className="mt-6 flex items-center gap-2 text-xs text-secondary">
                     <div className="w-2 h-2 rounded-full bg-secondary" />
                     Lento · Sin SEO · Roto
                   </div>
                 </div>
+
+                {/* Después */}
                 <div className="p-6 md:p-8">
-                  <p className="text-xs text-primary font-mono uppercase tracking-wider mb-4">Después</p>
-                  <div className="space-y-3">
-                    <div className="h-3 bg-primary/20 rounded w-full" />
-                    <div className="h-3 bg-primary/20 rounded w-3/4" />
-                    <div className="h-12 bg-primary/10 rounded mt-4 flex items-center justify-center">
-                      <div className="w-16 h-5 bg-primary/30 rounded" />
-                    </div>
-                    <div className="h-3 bg-primary/20 rounded w-1/2" />
-                    <div className="h-3 bg-primary/20 rounded w-2/3" />
-                  </div>
+                  <p className="text-xs text-primary font-mono uppercase tracking-wider mb-5 font-semibold">
+                    Después
+                  </p>
+                  <ul className="space-y-3">
+                    {despues.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-foreground/90">
+                        <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                   <div className="mt-6 flex items-center gap-2 text-xs text-primary">
                     <div className="w-2 h-2 rounded-full bg-primary" />
                     Rápido · SEO · Mobile
