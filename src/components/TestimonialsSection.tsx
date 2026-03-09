@@ -50,7 +50,7 @@ const despues = [
 ];
 
 const TestimonialsSection = () => (
-  <section className="py-24 md:py-32 px-4 relative overflow-hidden">
+  <section id="testimonios" className="py-24 md:py-32 px-4 relative overflow-hidden">
     <div className="container mx-auto max-w-6xl">
       {/* Header */}
       <div className="text-center mb-14 space-y-3">
