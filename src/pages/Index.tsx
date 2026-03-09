@@ -58,6 +58,10 @@ const Index = () => (
     </div>
     <SectionDivider />
     <div className="lazy-section">
+      <PricingSection />
+    </div>
+    <SectionDivider />
+    <div className="lazy-section">
       <LeadCaptureForm />
     </div>
     <SectionDivider />
