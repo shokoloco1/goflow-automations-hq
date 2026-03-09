@@ -81,7 +81,7 @@ const HeroSection = () => {
                 Quiero mi sitio web →
               </a>
               <button
-                onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("precios")?.scrollIntoView({ behavior: "smooth" })}
                 className="border border-primary/40 text-primary px-8 py-4 rounded-xl font-medium text-base hover:bg-primary/10 transition-all cursor-none"
               >
                 Ver servicios y precios →
