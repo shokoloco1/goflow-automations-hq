@@ -1,10 +1,8 @@
-import AnimatedCounter from "./AnimatedCounter";
-
 const stats = [
-  { value: 72, suffix: "h", label: "Tiempo de entrega" },
-  { value: 89, suffix: "%", label: "Margen de satisfacción" },
-  { value: 10, suffix: "+", label: "Sitios entregados" },
-  { value: 2, suffix: "×", label: "Velocidad vs sitio anterior" },
+  { value: "72h", label: "Entrega de landing page" },
+  { value: "5 días", label: "Sitio web completo" },
+  { value: "$450 USD", label: "Landing page Ecuador" },
+  { value: "10×", label: "Vs. agencia tradicional" },
 ];
 
 const StatsSection = () => (
@@ -14,8 +12,8 @@ const StatsSection = () => (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
         {stats.map((s, i) => (
           <div key={i} className="text-center">
-            <p className="text-5xl md:text-6xl font-display font-bold text-primary mb-2">
-              <AnimatedCounter end={s.value} suffix={s.suffix} />
+            <p className="text-4xl md:text-5xl font-display font-bold text-primary mb-2">
+              {s.value}
             </p>
             <p className="text-muted-foreground text-sm">{s.label}</p>
           </div>
