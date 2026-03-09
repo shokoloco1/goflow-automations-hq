@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Shield, CheckCircle } from "lucide-react";
+
+const servicePills = [
+  "Sitio Web 72h",
+  "Landing Page",
+  "Manual de Marca",
+  "Consultoría IA",
+  "Plan de Marketing",
+  "Diagnóstico Empresarial",
+];
 
 const HeroSection = () => {
   const [loaded, setLoaded] = useState(false);
@@ -16,7 +25,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-8 relative z-10 pt-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Text */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Badge */}
             <div
               className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 badge-pulse text-sm text-muted-foreground transition-all duration-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
@@ -42,8 +51,22 @@ const HeroSection = () => {
             <p
               className={`text-muted-foreground text-lg md:text-xl max-w-lg transition-all duration-700 delay-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
-              Diseño web, automatización e inteligencia artificial para negocios que quieren crecer.
+              Diseño web, identidad de marca, estrategia de marketing y consultoría de IA — para negocios en Ecuador y Australia. Entregado en días, no semanas.
             </p>
+
+            {/* Service Pills */}
+            <div
+              className={`flex gap-2 overflow-x-auto pb-2 scrollbar-hide transition-all duration-700 delay-[850ms] ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            >
+              {servicePills.map((pill) => (
+                <span
+                  key={pill}
+                  className="whitespace-nowrap shrink-0 px-3 py-1.5 rounded-full border border-primary/40 bg-background/60 text-xs text-muted-foreground hover:border-primary hover:text-primary transition-colors cursor-none"
+                >
+                  {pill}
+                </span>
+              ))}
+            </div>
 
             {/* CTAs */}
             <div
@@ -61,8 +84,23 @@ const HeroSection = () => {
                 onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
                 className="border border-primary/40 text-primary px-8 py-4 rounded-xl font-medium text-base hover:bg-primary/10 transition-all cursor-none"
               >
-                Ver ejemplos
+                Ver servicios y precios →
               </button>
+            </div>
+
+            {/* Trust Badges */}
+            <div
+              className={`flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground transition-all duration-700 delay-[1.1s] ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            >
+              <span>🇪🇨 Ecuador · 🇦🇺 Australia</span>
+              <span className="flex items-center gap-1">
+                <CheckCircle className="w-3.5 h-3.5 text-primary" />
+                Entrega garantizada
+              </span>
+              <span className="flex items-center gap-1">
+                <Shield className="w-3.5 h-3.5 text-primary" />
+                Pago después de aprobación
+              </span>
             </div>
           </div>
 
