@@ -140,7 +140,7 @@ const HeroSection = () => {
 
         {/* Scroll indicator */}
         <div
-          className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-700 delay-[1.2s] ${loaded ? "opacity-100" : "opacity-0"}`}
+          className={`hidden md:flex absolute bottom-4 left-1/2 -translate-x-1/2 flex-col items-center gap-2 transition-all duration-700 delay-[1.2s] ${loaded ? "opacity-100" : "opacity-0"}`}
         >
           <span className="text-muted-foreground text-xs">Scroll para descubrir</span>
           <ChevronDown className="w-4 h-4 text-primary scroll-indicator" />
