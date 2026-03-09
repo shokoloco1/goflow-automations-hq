@@ -74,7 +74,7 @@ const LeadCaptureForm = () => {
           <span className="text-primary">GRATIS</span>
         </h2>
         <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-          Analizamos tu sitio web y te decimos exactamente qué está perdiendo clientes — sin costo, sin compromiso.
+          Analizamos tu sitio web y te decimos exactamente qué está perdiendo clientes, sin costo, sin compromiso.
         </p>
 
         <div className="relative rounded-2xl border border-primary/20 bg-card/80 backdrop-blur-sm p-6 md:p-8 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.15)]">

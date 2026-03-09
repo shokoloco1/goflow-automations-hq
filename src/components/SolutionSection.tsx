@@ -14,7 +14,7 @@ const points = [
 const antes = [
   "Carga lenta (>5 segundos)",
   "No se ve bien en celular",
-  "Sin SEO — invisible en Google",
+  "Sin SEO, invisible en Google",
   "Sin formulario de contacto",
   "Sin analytics ni métricas",
 ];

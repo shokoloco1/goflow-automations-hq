@@ -106,7 +106,7 @@ const Footer = () => (
 
       {/* Value prop + Copyright */}
       <div className="border-t border-border/50 mt-10 pt-6 space-y-3 text-center text-xs text-muted-foreground">
-        <p>Diseño web profesional entregado en días, no semanas — para Ecuador y Australia</p>
+        <p>Diseño web profesional entregado en días, no semanas para Ecuador y Australia</p>
         <p>© 2026 GoFlowAI · Ecuador & Australia</p>
       </div>
     </div>

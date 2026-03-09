@@ -58,9 +58,9 @@ const HowItWorksSection = () => {
           </p>
         </div>
 
-        {/* Timeline — horizontal on desktop, vertical on mobile */}
+        {/* Timeline: horizontal on desktop, vertical on mobile */}
         <div className="relative">
-          {/* Connecting line — desktop */}
+          {/* Connecting line (desktop) */}
           <div className="hidden md:block absolute top-7 left-[calc(12.5%+16px)] right-[calc(12.5%+16px)] h-px bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40" />
 
           <div className="grid md:grid-cols-4 gap-10 md:gap-6 relative">
@@ -70,7 +70,7 @@ const HowItWorksSection = () => {
                 className="scroll-reveal relative flex md:flex-col items-start md:items-center text-left md:text-center gap-5 md:gap-0"
                 style={{ transitionDelay: `${i * 0.15}s` }}
               >
-                {/* Vertical connecting line — mobile only */}
+                {/* Vertical connecting line (mobile only) */}
                 {i < steps.length - 1 && (
                   <div className="absolute left-[18px] top-[44px] bottom-[-20px] w-px bg-gradient-to-b from-primary/40 to-primary/10 md:hidden" />
                 )}
