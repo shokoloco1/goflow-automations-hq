@@ -70,7 +70,7 @@ const HowItWorksSection = () => {
                 className="scroll-reveal relative flex md:flex-col items-start md:items-center text-left md:text-center gap-5 md:gap-0"
                 style={{ transitionDelay: `${i * 0.15}s` }}
               >
-                {/* Vertical connecting line — mobile only */}
+                {/* Vertical connecting line (mobile only) */}
                 {i < steps.length - 1 && (
                   <div className="absolute left-[18px] top-[44px] bottom-[-20px] w-px bg-gradient-to-b from-primary/40 to-primary/10 md:hidden" />
                 )}

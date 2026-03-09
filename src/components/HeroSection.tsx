@@ -51,7 +51,7 @@ const HeroSection = () => {
             <p
               className={`text-muted-foreground text-lg md:text-xl max-w-lg transition-all duration-700 delay-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
-              Diseño web, identidad de marca, estrategia de marketing y consultoría de IA — para negocios en Ecuador y Australia. Entregado en días, no semanas.
+              Diseño web, identidad de marca, estrategia de marketing y consultoría de IA para negocios en Ecuador y Australia. Entregado en días, no semanas.
             </p>
 
             {/* Service Pills */}
