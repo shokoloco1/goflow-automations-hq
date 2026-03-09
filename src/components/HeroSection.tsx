@@ -22,7 +22,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="hero-mesh" />
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10 pt-20">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 pt-24 pb-20 md:pb-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Text */}
           <div className="space-y-6">
@@ -81,7 +81,7 @@ const HeroSection = () => {
                 Quiero mi sitio web →
               </a>
               <button
-                onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("precios")?.scrollIntoView({ behavior: "smooth" })}
                 className="border border-primary/40 text-primary px-8 py-4 rounded-xl font-medium text-base hover:bg-primary/10 transition-all cursor-none"
               >
                 Ver servicios y precios →
