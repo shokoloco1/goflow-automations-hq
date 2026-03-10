@@ -1,7 +1,7 @@
 const stats = [
-  { value: "72h", label: "Entrega de landing page" },
-  { value: "5 días", label: "Sitio web completo" },
-  { value: "$450 USD", label: "Landing page Ecuador" },
+  { value: "72h", label: "Entrega garantizada" },
+  { value: "112+", label: "Negocios analizados" },
+  { value: "$500", label: "Desde USD" },
   { value: "10×", label: "Vs. agencia tradicional" },
 ];
 

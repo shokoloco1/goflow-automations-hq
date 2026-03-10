@@ -77,12 +77,12 @@ const Navigation = () => {
             </div>
 
             <a
-              href="https://wa.me/593992189290"
+              href="https://calendly.com/davids-goflowaai/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:glow-green transition-all cursor-none"
             >
-              WhatsApp →
+              Agendar llamada →
             </a>
           </div>
 
@@ -133,12 +133,12 @@ const Navigation = () => {
             </div>
 
             <a
-              href="https://wa.me/593992189290"
+              href="https://calendly.com/davids-goflowaai/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-medium text-center"
             >
-              WhatsApp →
+              Agendar llamada →
             </a>
           </div>
         </div>

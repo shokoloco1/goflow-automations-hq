@@ -2,12 +2,9 @@ import { Linkedin, Instagram, Mail, Phone } from "lucide-react";
 import logo from "@/assets/goflow-logo.png";
 
 const services = [
-  { label: "Sitio Web Completo", id: "precios" },
-  { label: "Landing Page Pro", id: "precios" },
-  { label: "Manual de Marca", id: "precios" },
-  { label: "Consultoría IA", id: "precios" },
-  { label: "Plan de Marketing 90 días", id: "precios" },
-  { label: "Pack Transformación Digital", id: "precios" },
+  { label: "Web Growth", id: "precios" },
+  { label: "AI Business Boost", id: "precios" },
+  { label: "Automation Essentials", id: "precios" },
 ];
 
 const scrollTo = (id: string) => {
