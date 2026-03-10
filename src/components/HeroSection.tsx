@@ -1,14 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronDown, Shield, CheckCircle } from "lucide-react";
-
-const servicePills = [
-  "Sitio Web 72h",
-  "Landing Page",
-  "Manual de Marca",
-  "Consultoría IA",
-  "Plan de Marketing",
-  "Diagnóstico Empresarial",
-];
+import { ChevronDown, CheckCircle, BarChart3 } from "lucide-react";
 
 const HeroSection = () => {
   const [loaded, setLoaded] = useState(false);
@@ -26,17 +17,17 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Text */}
           <div className="space-y-6">
-            {/* Badge */}
+            {/* Social proof badge */}
             <div
               className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 badge-pulse text-sm text-muted-foreground transition-all duration-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
-              <span className="text-primary">✦</span>
-              Agencia de IA · Ecuador & Australia
+              <BarChart3 className="w-4 h-4 text-primary" />
+              112+ negocios analizados en Ecuador
             </div>
 
             {/* Headline */}
             <h1 className="leading-[1.1]">
-              {["Tu página web", "lista en 72 horas.", "Sin complicaciones."].map((line, i) => (
+              {["Tu página web", "profesional en", "72 horas."].map((line, i) => (
                 <span
                   key={i}
                   className={`block text-reveal ${i === 2 ? "text-primary" : ""}`}
@@ -51,56 +42,36 @@ const HeroSection = () => {
             <p
               className={`text-muted-foreground text-lg md:text-xl max-w-lg transition-all duration-700 delay-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
-              Diseño web, identidad de marca, estrategia de marketing y consultoría de IA para negocios en Ecuador y Australia. Entregado en días, no semanas.
+              Sitios rápidos, optimizados para Google y diseñados con IA para convertir visitantes en clientes reales. Más visitas, más contactos, menos esfuerzo.
             </p>
 
-            {/* Service Pills */}
-            <div
-              className={`flex gap-2 overflow-x-auto pb-2 scrollbar-hide transition-all duration-700 delay-[850ms] ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-            >
-              {servicePills.map((pill) => (
-                <span
-                  key={pill}
-                  className="whitespace-nowrap shrink-0 px-3 py-1.5 rounded-full border border-primary/40 bg-background/60 text-xs text-muted-foreground hover:border-primary hover:text-primary transition-colors cursor-none"
-                >
-                  {pill}
-                </span>
-              ))}
-            </div>
-
-            {/* CTAs */}
+            {/* CTA principal */}
             <div
               className={`flex flex-wrap gap-4 transition-all duration-700 delay-1000 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
               <a
-                href="https://wa.me/593992189290"
+                href="https://calendly.com/davids-goflowaai/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium text-base hover:glow-green transition-all cursor-none"
               >
-                Quiero mi sitio web →
+                Reservar 30 min gratis →
               </a>
-              <button
-                onClick={() => document.getElementById("precios")?.scrollIntoView({ behavior: "smooth" })}
-                className="border border-primary/40 text-primary px-8 py-4 rounded-xl font-medium text-base hover:bg-primary/10 transition-all cursor-none"
-              >
-                Ver servicios y precios →
-              </button>
             </div>
 
-            {/* Trust Badges */}
+            {/* Trust line */}
             <div
               className={`flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground transition-all duration-700 delay-[1.1s] ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
-              <span>🇪🇨 Ecuador · 🇦🇺 Australia</span>
+              <span className="flex items-center gap-1">
+                <CheckCircle className="w-3.5 h-3.5 text-primary" />
+                Análisis gratuito de tu web en 24h
+              </span>
               <span className="flex items-center gap-1">
                 <CheckCircle className="w-3.5 h-3.5 text-primary" />
                 Entrega garantizada
               </span>
-              <span className="flex items-center gap-1">
-                <Shield className="w-3.5 h-3.5 text-primary" />
-                Pago después de aprobación
-              </span>
+              <span>🇪🇨 Ecuador · 🇦🇺 Australia</span>
             </div>
           </div>
 
@@ -110,7 +81,6 @@ const HeroSection = () => {
           >
             <div className="glass-card rounded-2xl p-1 animate-float">
               <div className="bg-muted rounded-xl overflow-hidden">
-                {/* Browser bar */}
                 <div className="flex items-center gap-2 px-4 py-3 border-b border-border/50">
                   <div className="flex gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-red-500/60" />
@@ -123,7 +93,6 @@ const HeroSection = () => {
                     </div>
                   </div>
                 </div>
-                {/* Content */}
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/10" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">

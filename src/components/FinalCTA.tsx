@@ -10,12 +10,12 @@ const FinalCTA = () => (
         Sin reuniones largas. Sin contratos. Sin sorpresas. Solo resultados.
       </p>
       <a
-        href="https://wa.me/593992189290"
+        href="https://calendly.com/davids-goflowaai/30min"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block bg-primary text-primary-foreground px-10 py-5 rounded-2xl text-lg font-bold pulse-glow transition-all cursor-none"
       >
-        📱 Hablar con David ahora
+        📅 Reservar 30 min gratis
       </a>
       <p className="text-muted-foreground text-sm mt-6">
         Respuesta en menos de 2 horas · Lunes a Sábado
