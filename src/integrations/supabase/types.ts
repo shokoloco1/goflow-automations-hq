@@ -80,6 +80,36 @@ export type Database = {
         }
         Relationships: []
       }
+      diagnostic_leads: {
+        Row: {
+          company: string
+          created_at: string
+          full_name: string
+          id: string
+          pain_point: string
+          status: string
+          whatsapp: string
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          full_name: string
+          id?: string
+          pain_point: string
+          status?: string
+          whatsapp: string
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          full_name?: string
+          id?: string
+          pain_point?: string
+          status?: string
+          whatsapp?: string
+        }
+        Relationships: []
+      }
       lead_magnet_subscribers: {
         Row: {
           created_at: string
