@@ -2,10 +2,17 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/goflow-logo.png";
 
+const links = [
+  { label: "Problema", id: "problema" },
+  { label: "Cómo funciona", id: "como-funciona" },
+  { label: "Servicio", id: "servicio" },
+  { label: "Calculadora", id: "calculadora" },
+  { label: "Contacto", id: "cta-final" },
+];
+
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState<"ES" | "EN">("ES");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -17,14 +24,6 @@ const Navigation = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
-
-  const links = [
-    { label: "Servicios", id: "servicios" },
-    { label: "Precios", id: "precios" },
-    { label: "Casos de Éxito", id: "testimonios" },
-    { label: "Cómo funciona", id: "como-funciona" },
-    { label: "Contacto", id: "cta-final" },
-  ];
 
   return (
     <nav
@@ -51,38 +50,11 @@ const Navigation = () => {
                 {l.label}
               </button>
             ))}
-
-            {/* Language Toggle */}
-            <div className="flex items-center rounded-full border border-border bg-muted/50 p-0.5 text-xs">
-              <button
-                onClick={() => setLang("ES")}
-                className={`px-2.5 py-1 rounded-full transition-all cursor-none ${
-                  lang === "ES"
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                ES
-              </button>
-              <button
-                onClick={() => setLang("EN")}
-                className={`px-2.5 py-1 rounded-full transition-all cursor-none ${
-                  lang === "EN"
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                EN
-              </button>
-            </div>
-
             <a
-              href="https://calendly.com/davids-goflowaai/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:glow-green transition-all cursor-none"
+              href="#cta-final"
+              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium pulse-glow transition-all cursor-none"
             >
-              Agendar llamada →
+              Diagnóstico gratis →
             </a>
           </div>
 
@@ -104,41 +76,11 @@ const Navigation = () => {
                 {l.label}
               </button>
             ))}
-
-            {/* Language Toggle Mobile */}
-            <div className="flex items-center gap-2 py-2">
-              <span className="text-xs text-muted-foreground">Idioma:</span>
-              <div className="flex items-center rounded-full border border-border bg-muted/50 p-0.5 text-xs">
-                <button
-                  onClick={() => setLang("ES")}
-                  className={`px-2.5 py-1 rounded-full transition-all ${
-                    lang === "ES"
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  ES
-                </button>
-                <button
-                  onClick={() => setLang("EN")}
-                  className={`px-2.5 py-1 rounded-full transition-all ${
-                    lang === "EN"
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  EN
-                </button>
-              </div>
-            </div>
-
             <a
-              href="https://calendly.com/davids-goflowaai/30min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#cta-final"
               className="block w-full bg-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-medium text-center"
             >
-              Agendar llamada →
+              Diagnóstico gratis →
             </a>
           </div>
         </div>
