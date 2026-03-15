@@ -53,9 +53,25 @@ serve(async (req) => {
       );
     }
 
-    // Send email notification via Resend
+    // Send email notification to both addresses via Resend
     const resendKey = Deno.env.get('RESEND_API_KEY');
     if (resendKey) {
+      const timestamp = new Date().toLocaleString('es-EC', { timeZone: 'America/Guayaquil' });
+      const emailHtml = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #0A0A0A; color: #ffffff; border-radius: 12px;">
+          <h2 style="color: #00C2FF; margin-bottom: 20px;">🔥 Nuevo lead GoFlow AI</h2>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr><td style="padding: 8px 0; color: #888;">Nombre:</td><td style="padding: 8px 0; color: #fff;">${body.fullName}</td></tr>
+            <tr><td style="padding: 8px 0; color: #888;">Empresa:</td><td style="padding: 8px 0; color: #fff;">${body.company}</td></tr>
+            <tr><td style="padding: 8px 0; color: #888;">WhatsApp:</td><td style="padding: 8px 0; color: #fff;">${body.whatsapp}</td></tr>
+            <tr><td style="padding: 8px 0; color: #888; vertical-align: top;">Proceso manual:</td><td style="padding: 8px 0; color: #fff;">${body.painPoint}</td></tr>
+            <tr><td style="padding: 8px 0; color: #888;">Fecha:</td><td style="padding: 8px 0; color: #fff;">${timestamp}</td></tr>
+          </table>
+          <hr style="border: 1px solid #222; margin: 16px 0;" />
+          <p style="color: #666; font-size: 12px;">Fuente: Landing goflowai.com</p>
+        </div>
+      `;
+
       try {
         await fetch('https://api.resend.com/emails', {
           method: 'POST',
@@ -65,16 +81,9 @@ serve(async (req) => {
           },
           body: JSON.stringify({
             from: 'GoFlow AI <onboarding@resend.dev>',
-            to: ['davids.goflowaai@gmail.com'],
-            subject: `🚀 Nuevo lead: ${body.fullName} — ${body.company}`,
-            html: `
-              <h2>Nuevo lead de diagnóstico</h2>
-              <p><strong>Nombre:</strong> ${body.fullName}</p>
-              <p><strong>Empresa:</strong> ${body.company}</p>
-              <p><strong>WhatsApp:</strong> ${body.whatsapp}</p>
-              <p><strong>Proceso costoso:</strong> ${body.painPoint}</p>
-              <p><em>Enviado desde goflowai.com</em></p>
-            `,
+            to: ['davidshawcontreras@gmail.com', 'davidshawcc@gmail.com'],
+            subject: `🔥 Nuevo lead GoFlow AI — ${body.fullName} de ${body.company}`,
+            html: emailHtml,
           }),
         });
       } catch (emailErr) {

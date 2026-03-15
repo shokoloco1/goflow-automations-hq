@@ -5,25 +5,16 @@ import { z } from "zod";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
-import { ArrowRight, CheckCircle } from "lucide-react";
-
-const painOptions = [
-  "Cotizaciones y seguimiento manual",
-  "Pedidos por WhatsApp sin orden",
-  "Facturación y cobranza lenta",
-  "Reportes que toman horas armar",
-  "Otro",
-] as const;
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { CheckCircle } from "lucide-react";
 
 const schema = z.object({
   fullName: z.string().trim().min(2, "Ingresa tu nombre").max(100),
   company: z.string().trim().min(2, "Ingresa el nombre de tu empresa").max(200),
   whatsapp: z.string().trim().min(7, "Ingresa tu número de WhatsApp").max(20),
-  painPoint: z.string().min(1, "Selecciona una opción"),
+  painPoint: z.string().trim().min(5, "Describe brevemente tu proceso manual").max(1000),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -32,6 +23,8 @@ const FinalCTA = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [showCalendly, setShowCalendly] = useState(false);
 
   const form = useForm<FormData>({
     resolver: zodResolver(schema),
@@ -59,11 +52,12 @@ const FinalCTA = () => {
         body: data,
       });
       if (error) throw error;
+
+      setUserName(data.fullName.split(" ")[0]);
       setSubmitted(true);
-      toast({
-        title: "¡Listo! Ahora agenda tu diagnóstico 👇",
-        description: "Selecciona el horario que mejor te funcione.",
-      });
+
+      // Show confirmation for 2s then reveal Calendly
+      setTimeout(() => setShowCalendly(true), 2000);
     } catch {
       toast({
         title: "Error al enviar",
@@ -83,6 +77,7 @@ const FinalCTA = () => {
       style={{ background: "linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(262 100% 8%) 100%)" }}
     >
       <div className="container mx-auto max-w-4xl">
+        {/* Headline */}
         <div className="text-center mb-12 scroll-reveal space-y-4">
           <h2>
             ¿Cuántas horas pierde tu equipo{" "}
@@ -93,23 +88,37 @@ const FinalCTA = () => {
           </p>
         </div>
 
-        {/* Step 1: Lead form */}
+        {/* Lead form */}
         {!submitted && (
-          <div className="scroll-reveal rounded-2xl bg-card/80 backdrop-blur-sm border border-primary/20 p-6 md:p-8 mb-8 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.15)]" style={{ transitionDelay: "0.15s" }}>
-            <div className="flex items-center gap-3 mb-6">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary text-sm font-bold">1</span>
-              <h3 className="text-lg font-semibold text-foreground">Cuéntanos sobre tu empresa</h3>
-            </div>
+          <div
+            className="scroll-reveal rounded-2xl p-6 md:p-8 mb-8"
+            style={{
+              background: "#1A1A1A",
+              border: "1px solid #2A2A2A",
+              transitionDelay: "0.15s",
+            }}
+          >
+            <p className="text-center text-sm mb-6" style={{ color: "#888888" }}>
+              Antes de agendar, cuéntanos sobre tu empresa.<br />
+              Así la llamada de 20 min es 100% útil para ti.
+            </p>
+
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <FormField
                     control={form.control}
                     name="fullName"
                     render={({ field }) => (
                       <FormItem>
+                        <FormLabel style={{ color: "#888888", fontSize: "0.8rem" }}>Nombre completo</FormLabel>
                         <FormControl>
-                          <Input placeholder="Tu nombre" className="bg-muted/50 border-border h-12" {...field} />
+                          <Input
+                            placeholder="Tu nombre"
+                            className="h-12 rounded-lg focus-visible:ring-primary"
+                            style={{ background: "#0D0D0D", borderColor: "#333333" }}
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -120,20 +129,14 @@ const FinalCTA = () => {
                     name="company"
                     render={({ field }) => (
                       <FormItem>
+                        <FormLabel style={{ color: "#888888", fontSize: "0.8rem" }}>Empresa</FormLabel>
                         <FormControl>
-                          <Input placeholder="Nombre de tu empresa" className="bg-muted/50 border-border h-12" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="whatsapp"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input type="tel" placeholder="+593 99 999 9999" className="bg-muted/50 border-border h-12" {...field} />
+                          <Input
+                            placeholder="Nombre de tu empresa"
+                            className="h-12 rounded-lg focus-visible:ring-primary"
+                            style={{ background: "#0D0D0D", borderColor: "#333333" }}
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -143,31 +146,39 @@ const FinalCTA = () => {
 
                 <FormField
                   control={form.control}
+                  name="whatsapp"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel style={{ color: "#888888", fontSize: "0.8rem" }}>WhatsApp</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="tel"
+                          placeholder="+593 99 999 9999"
+                          className="h-12 rounded-lg focus-visible:ring-primary"
+                          style={{ background: "#0D0D0D", borderColor: "#333333" }}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
                   name="painPoint"
                   render={({ field }) => (
                     <FormItem>
-                      <Label className="text-muted-foreground text-sm mb-3 block">¿Cuál es tu proceso manual más costoso?</Label>
+                      <FormLabel style={{ color: "#888888", fontSize: "0.8rem" }}>
+                        ¿Cuál es el proceso manual que más tiempo le cuesta a tu equipo?
+                      </FormLabel>
                       <FormControl>
-                        <RadioGroup
-                          onValueChange={field.onChange}
-                          value={field.value}
-                          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
-                        >
-                          {painOptions.map((option) => (
-                            <Label
-                              key={option}
-                              htmlFor={`pain-${option}`}
-                              className={`flex items-center gap-3 rounded-xl border p-3 cursor-pointer transition-all ${
-                                field.value === option
-                                  ? "border-primary bg-primary/10 text-foreground"
-                                  : "border-border bg-muted/30 text-muted-foreground hover:border-primary/40"
-                              }`}
-                            >
-                              <RadioGroupItem value={option} id={`pain-${option}`} />
-                              <span className="text-sm">{option}</span>
-                            </Label>
-                          ))}
-                        </RadioGroup>
+                        <Textarea
+                          placeholder="Ej: cotizaciones por WhatsApp, seguimiento de pedidos, reportes en Excel..."
+                          className="min-h-[100px] rounded-lg focus-visible:ring-primary resize-none"
+                          style={{ background: "#0D0D0D", borderColor: "#333333" }}
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -177,46 +188,58 @@ const FinalCTA = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full md:w-auto h-12 px-8 text-base font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
+                  className="w-full h-14 text-base font-bold text-white rounded-lg transition-all hover:opacity-90"
+                  style={{
+                    background: "linear-gradient(135deg, #00C2FF 0%, #7B2FFF 100%)",
+                  }}
                 >
-                  {isSubmitting ? "Enviando..." : (
-                    <>Continuar y agendar diagnóstico <ArrowRight className="ml-2 h-4 w-4" /></>
-                  )}
+                  {isSubmitting ? "Enviando..." : "Ver disponibilidad →"}
                 </Button>
               </form>
             </Form>
           </div>
         )}
 
-        {/* Success message */}
-        {submitted && (
-          <div className="scroll-reveal visible rounded-2xl bg-primary/10 border border-primary/30 p-5 mb-8 flex items-center gap-4">
+        {/* Confirmation message */}
+        {submitted && !showCalendly && (
+          <div className="rounded-2xl p-6 mb-8 flex items-center gap-4 animate-fade-in" style={{ background: "rgba(0,194,255,0.1)", border: "1px solid rgba(0,194,255,0.3)" }}>
             <CheckCircle className="h-6 w-6 text-primary shrink-0" />
-            <div>
-              <p className="text-foreground font-semibold">¡Datos recibidos!</p>
-              <p className="text-muted-foreground text-sm">Ahora selecciona un horario para tu diagnóstico gratuito de 20 minutos.</p>
+            <p className="text-foreground font-medium">
+              ✓ Perfecto {userName}. Selecciona el horario que mejor te funcione.
+            </p>
+          </div>
+        )}
+
+        {/* Calendly embed — revealed after form submit */}
+        {submitted && showCalendly && (
+          <div className="animate-fade-in">
+            <div className="rounded-2xl p-4 mb-4 flex items-center gap-3" style={{ background: "rgba(0,194,255,0.1)", border: "1px solid rgba(0,194,255,0.3)" }}>
+              <CheckCircle className="h-5 w-5 text-primary shrink-0" />
+              <p className="text-foreground text-sm font-medium">
+                ✓ Perfecto {userName}. Selecciona el horario que mejor te funcione.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden bg-card border border-border">
+              <iframe
+                src="https://calendly.com/davids-goflowaai/30min"
+                width="100%"
+                height="660"
+                frameBorder="0"
+                title="Agendar diagnóstico gratuito"
+                className="w-full"
+              />
             </div>
           </div>
         )}
 
-        {/* Step 2: Calendly (always visible after submit, or show with step label) */}
-        <div className={`scroll-reveal rounded-2xl overflow-hidden bg-card border border-border ${!submitted ? "opacity-40 pointer-events-none" : ""}`} style={{ transitionDelay: "0.2s" }}>
-          {submitted ? null : (
-            <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none" />
-          )}
-          <div className="flex items-center gap-3 p-4 border-b border-border">
-            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary text-sm font-bold">2</span>
-            <h3 className="text-lg font-semibold text-foreground">Elige tu horario</h3>
+        {/* Calendly hidden before submit */}
+        {!submitted && (
+          <div className="scroll-reveal rounded-2xl overflow-hidden bg-card border border-border opacity-30 pointer-events-none" style={{ transitionDelay: "0.2s" }}>
+            <div className="flex items-center justify-center py-16 text-muted-foreground text-sm">
+              <span>👆 Completa el formulario para ver horarios disponibles</span>
+            </div>
           </div>
-          <iframe
-            src="https://calendly.com/davids-goflowaai/30min"
-            width="100%"
-            height="660"
-            frameBorder="0"
-            title="Agendar diagnóstico gratuito"
-            className="w-full"
-          />
-        </div>
+        )}
 
         {/* Contact info */}
         <div className="scroll-reveal text-center mt-10 space-y-2 text-sm text-muted-foreground" style={{ transitionDelay: "0.3s" }}>
