@@ -1,31 +1,27 @@
 import { useEffect, useRef } from "react";
-import { Clock, Search, Smartphone } from "lucide-react";
-import AnimatedCounter from "./AnimatedCounter";
+import { MessageSquare, FileSpreadsheet, Clock } from "lucide-react";
 
 const problems = [
   {
+    icon: MessageSquare,
+    emoji: "📱",
+    title: "WhatsApp",
+    description:
+      "Los pedidos se pierden entre chats. Al final del día alguien tiene que revisar todo a mano para no olvidar nada.",
+  },
+  {
+    icon: FileSpreadsheet,
+    emoji: "📊",
+    title: "Excel",
+    description:
+      "Tienes hojas de cálculo que solo entiende una persona. Si esa persona falta, nadie sabe qué está pasando.",
+  },
+  {
     icon: Clock,
-    title: "Carga demasiado lento",
-    stat: 53,
-    statSuffix: "%",
-    description: "de usuarios abandona si tarda +3 segundos",
-    orange: true,
-  },
-  {
-    icon: Search,
-    title: "Google no te encuentra",
-    stat: 75,
-    statSuffix: "%",
-    description: "de clics van al primer resultado",
-    orange: false,
-  },
-  {
-    icon: Smartphone,
-    title: "Roto en celular",
-    stat: 80,
-    statSuffix: "%",
-    description: "de tus visitantes navegan desde el teléfono",
-    orange: true,
+    emoji: "⏰",
+    title: "Tiempo",
+    description:
+      "Tu equipo dedica 15-20 horas semanales a tareas que podrían correr solas. Eso son $600-1,000 USD al mes en tiempo perdido.",
   },
 ];
 
@@ -36,11 +32,10 @@ const ProblemSection = () => {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      (entries) => {
+      (entries) =>
         entries.forEach((e) => {
           if (e.isIntersecting) e.target.classList.add("visible");
-        });
-      },
+        }),
       { threshold: 0.15 }
     );
     el.querySelectorAll(".scroll-reveal").forEach((c) => obs.observe(c));
@@ -48,27 +43,24 @@ const ProblemSection = () => {
   }, []);
 
   return (
-    <section ref={ref} className="py-24 md:py-32 px-4">
+    <section id="problema" ref={ref} className="py-24 md:py-32 px-4">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-center mb-16 scroll-reveal">
-          Tu sitio actual está{" "}
-          <span className="text-secondary">costándote clientes</span>{" "}
-          ahora mismo.
+          Reconoces esto en tu empresa:
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {problems.map((p, i) => (
             <div
               key={i}
-              className={`scroll-reveal rounded-2xl p-8 ${p.orange ? "glass-card-orange" : "glass-card"}`}
+              className="scroll-reveal rounded-2xl p-8 bg-card border border-border"
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
-              <p.icon className={`w-10 h-10 mb-6 ${p.orange ? "text-secondary" : "text-primary"}`} />
-              <h3 className="mb-4">{p.title}</h3>
-              <div className={`text-5xl font-display font-bold mb-2 ${p.orange ? "text-secondary" : "text-primary"}`}>
-                <AnimatedCounter end={p.stat} suffix={p.statSuffix} />
-              </div>
-              <p className="text-muted-foreground text-sm">{p.description}</p>
+              <span className="text-4xl mb-4 block">{p.emoji}</span>
+              <h3 className="mb-3 text-foreground">{p.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {p.description}
+              </p>
             </div>
           ))}
         </div>
