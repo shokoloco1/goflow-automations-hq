@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/goflow-logo.png";
 
 const links = [
   { label: "Problema", id: "problema" },
@@ -38,7 +37,7 @@ const Navigation = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="cursor-none"
           >
-            <img src={logo} alt="GoFlow AI" className="h-10 md:h-12 w-auto" />
+            <img src="/logo-full.png" alt="GoFlow AI" className="h-8 md:h-10 w-auto" />
           </button>
 
           <div className="hidden md:flex items-center gap-6">
