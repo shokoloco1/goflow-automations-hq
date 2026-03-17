@@ -88,7 +88,7 @@ const CalculatorSection = () => {
           <div className="text-center">
             <a
               href="#cta-final"
-              className="inline-block bg-primary text-primary-foreground px-8 py-4 rounded-2xl text-base font-bold pulse-glow transition-all cursor-none"
+              className="inline-block bg-primary text-primary-foreground px-8 py-4 rounded-2xl text-base font-bold pulse-glow transition-all"
             >
               Reserva diagnóstico gratuito
             </a>

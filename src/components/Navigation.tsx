@@ -7,6 +7,7 @@ const links = [
   { label: "Cómo funciona", id: "como-funciona" },
   { label: "Servicio", id: "servicio" },
   { label: "Calculadora", id: "calculadora" },
+  { label: "FAQ", id: "faq" },
   { label: "Contacto", id: "cta-final" },
 ];
 
@@ -45,16 +46,16 @@ const Navigation = () => {
               <button
                 key={l.id}
                 onClick={() => scrollTo(l.id)}
-                className="text-muted-foreground hover:text-primary transition-colors text-sm cursor-none"
+                className="text-muted-foreground hover:text-primary transition-colors text-sm"
               >
                 {l.label}
               </button>
             ))}
             <a
               href="#cta-final"
-              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium pulse-glow transition-all cursor-none"
+              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium pulse-glow transition-all"
             >
-              Diagnóstico gratis →
+              Auditoría gratis →
             </a>
           </div>
 
@@ -80,7 +81,7 @@ const Navigation = () => {
               href="#cta-final"
               className="block w-full bg-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-medium text-center"
             >
-              Diagnóstico gratis →
+              Auditoría gratis →
             </a>
           </div>
         </div>

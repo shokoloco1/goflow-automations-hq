@@ -84,7 +84,7 @@ const FinalCTA = () => {
             <span className="text-primary">esta semana?</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            En 20 minutos te digo exactamente qué puedes automatizar y cuánto tiempo recuperas. Sin compromiso.
+            En 20 minutos analizamos tus procesos y te digo exactamente qué puedes automatizar y cuánto tiempo recuperas. Sin compromiso.
           </p>
         </div>
 
@@ -193,7 +193,7 @@ const FinalCTA = () => {
                     background: "linear-gradient(135deg, #00C2FF 0%, #7B2FFF 100%)",
                   }}
                 >
-                  {isSubmitting ? "Enviando..." : "Ver disponibilidad →"}
+                  {isSubmitting ? "Enviando..." : "Agendar auditoría gratuita →"}
                 </Button>
               </form>
             </Form>

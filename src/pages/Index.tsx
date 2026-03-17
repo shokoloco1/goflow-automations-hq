@@ -1,10 +1,13 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
+import WorkflowVisualization from "@/components/WorkflowVisualization";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ServicePricingSection from "@/components/ServicePricingSection";
 import CalculatorSection from "@/components/CalculatorSection";
 import IndustriesSection from "@/components/IndustriesSection";
+import FAQSection from "@/components/FAQSection";
+import AboutSection from "@/components/AboutSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -22,6 +25,9 @@ const Index = () => (
       <ProblemSection />
     </div>
     <div className="lazy-section">
+      <WorkflowVisualization />
+    </div>
+    <div className="lazy-section">
       <HowItWorksSection />
     </div>
     <div className="lazy-section">
@@ -32,6 +38,12 @@ const Index = () => (
     </div>
     <div className="lazy-section">
       <IndustriesSection />
+    </div>
+    <div className="lazy-section">
+      <FAQSection />
+    </div>
+    <div className="lazy-section">
+      <AboutSection />
     </div>
     <FinalCTA />
     <Footer />

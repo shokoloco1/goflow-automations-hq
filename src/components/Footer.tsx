@@ -17,7 +17,7 @@ const Footer = () => (
             href="https://www.linkedin.com/in/david-shaw"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors cursor-none"
+            className="text-muted-foreground hover:text-primary transition-colors"
             aria-label="LinkedIn"
           >
             <Linkedin className="w-4 h-4" />
@@ -26,7 +26,7 @@ const Footer = () => (
             href="https://goflowai.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors text-sm cursor-none"
+            className="text-muted-foreground hover:text-primary transition-colors text-sm"
           >
             goflowai.com
           </a>

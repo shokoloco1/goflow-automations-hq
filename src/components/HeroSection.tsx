@@ -15,9 +15,18 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 md:px-8 relative z-10 pt-24 pb-20 md:pb-24">
         <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* ICP Badge */}
+          <div
+            className={`transition-all duration-700 delay-200 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          >
+            <span className="inline-block text-xs font-mono uppercase tracking-wider text-primary bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20 badge-pulse">
+              Para agencias, consultoras y servicios profesionales
+            </span>
+          </div>
+
           {/* Headline */}
           <h1 className="leading-[1.1]">
-            {["¿Tu equipo sigue gestionando", "cotizaciones y pedidos", "a mano por WhatsApp?"].map((line, i) => (
+            {["Convierte WhatsApp en tu", "máquina de ventas", "automatizada con IA"].map((line, i) => (
               <span
                 key={i}
                 className={`block text-reveal ${i === 2 ? "gradient-text" : ""}`}
@@ -32,21 +41,26 @@ const HeroSection = () => {
           <p
             className={`text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto transition-all duration-700 delay-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
-            Automatizamos ese flujo completo en 72 horas. Sin cambiar los sistemas que ya usas.
+            Automatizamos cotización, seguimiento y facturación en 72 horas. Sin cambiar tus herramientas.
           </p>
 
           {/* Stats */}
           <div
-            className={`flex justify-center gap-8 md:gap-16 transition-all duration-700 delay-[0.85s] ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            className={`flex justify-center gap-6 md:gap-12 transition-all duration-700 delay-[0.85s] ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
             <div className="text-center">
-              <span className="block text-4xl md:text-5xl font-display font-bold text-primary">72h</span>
-              <span className="text-muted-foreground text-sm mt-1 block">tiempo de entrega</span>
+              <span className="block text-3xl md:text-5xl font-display font-bold text-primary">72h</span>
+              <span className="text-muted-foreground text-xs md:text-sm mt-1 block">entrega garantizada</span>
             </div>
             <div className="w-px bg-border" />
             <div className="text-center">
-              <span className="block text-4xl md:text-5xl font-display font-bold text-primary">$400</span>
-              <span className="text-muted-foreground text-sm mt-1 block">precio fijo USD</span>
+              <span className="block text-3xl md:text-5xl font-display font-bold text-primary">$400</span>
+              <span className="text-muted-foreground text-xs md:text-sm mt-1 block">USD · pago único</span>
+            </div>
+            <div className="w-px bg-border" />
+            <div className="text-center">
+              <span className="block text-3xl md:text-5xl font-display font-bold text-primary">15+</span>
+              <span className="text-muted-foreground text-xs md:text-sm mt-1 block">horas/semana recuperadas</span>
             </div>
           </div>
 
@@ -56,9 +70,9 @@ const HeroSection = () => {
           >
             <a
               href="#cta-final"
-              className="inline-block bg-primary text-primary-foreground px-10 py-5 rounded-2xl text-lg font-bold pulse-glow transition-all cursor-none"
+              className="inline-block bg-primary text-primary-foreground px-10 py-5 rounded-2xl text-lg font-bold pulse-glow transition-all"
             >
-              Reserva tu diagnóstico gratis de 20 min
+              Auditoría gratuita de procesos
             </a>
           </div>
         </div>
