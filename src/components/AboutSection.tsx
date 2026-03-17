@@ -4,7 +4,7 @@ import { Linkedin, Award, GraduationCap, Globe } from "lucide-react";
 const credentials = [
   { icon: GraduationCap, text: "Marketing Degree + MBA" },
   { icon: Award, text: "Google AI Essentials Certified" },
-  { icon: Globe, text: "10+ años en digital y automatización" },
+  { icon: Globe, text: "5+ años en digital y automatización" },
 ];
 
 const AboutSection = () => {
@@ -46,14 +46,14 @@ const AboutSection = () => {
               </div>
 
               <p className="text-muted-foreground leading-relaxed">
-                Llevo más de 10 años ayudando a empresas a digitalizar sus operaciones.
+                Llevo más de 5 años ayudando a empresas a digitalizar sus operaciones.
                 Creé GoFlow AI porque vi lo mismo una y otra vez: equipos talentosos perdiendo
                 horas en tareas repetitivas que una automatización bien hecha resuelve en minutos.
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
                 Basado en Brisbane, Australia. Atiendo empresas en Ecuador y Australia.
-                Cada proyecto lo lidero personalmente — no hay intermediarios.
+                Cada proyecto lo lidero personalmente no hay intermediarios.
               </p>
 
               {/* Credentials */}
@@ -72,7 +72,7 @@ const AboutSection = () => {
               {/* LinkedIn CTA */}
               <div className="pt-2">
                 <a
-                  href="https://www.linkedin.com/in/david-shaw"
+                  href="https://www.linkedin.com/in/davidshawc/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
