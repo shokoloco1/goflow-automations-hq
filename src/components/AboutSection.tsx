@@ -1,14 +1,16 @@
 import { useEffect, useRef } from "react";
 import { Linkedin, Award, GraduationCap, Globe } from "lucide-react";
-
-const credentials = [
-  { icon: GraduationCap, text: "Marketing Degree + MBA" },
-  { icon: Award, text: "Google AI Essentials Certified" },
-  { icon: Globe, text: "5+ años en digital y automatización" },
-];
+import { useTranslation } from "react-i18next";
 
 const AboutSection = () => {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
+
+  const credentials = [
+    { icon: GraduationCap, text: t("about.cred_1") },
+    { icon: Award, text: t("about.cred_2") },
+    { icon: Globe, text: t("about.cred_3") },
+  ];
 
   useEffect(() => {
     const el = ref.current;
@@ -40,20 +42,17 @@ const AboutSection = () => {
             <div className="flex-1 space-y-4 text-center md:text-left">
               <div>
                 <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-1">
-                  Hola, soy David Shaw
+                  {t("about.title")}
                 </h3>
-                <p className="text-primary text-sm font-medium">Founder, GoFlow AI</p>
+                <p className="text-primary text-sm font-medium">{t("about.founder")}</p>
               </div>
 
               <p className="text-muted-foreground leading-relaxed">
-                Llevo más de 5 años ayudando a empresas a digitalizar sus operaciones.
-                Creé GoFlow AI porque vi lo mismo una y otra vez: equipos talentosos perdiendo
-                horas en tareas repetitivas que una automatización bien hecha resuelve en minutos.
+                {t("about.p1")}
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
-                Basado en Brisbane, Australia. Atiendo empresas en Ecuador y Australia.
-                Cada proyecto lo lidero personalmente no hay intermediarios.
+                {t("about.p2")}
               </p>
 
               {/* Credentials */}
@@ -78,7 +77,7 @@ const AboutSection = () => {
                   className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
                 >
                   <Linkedin className="w-4 h-4" />
-                  Conecta conmigo en LinkedIn
+                  {t("about.linkedin")}
                 </a>
               </div>
             </div>

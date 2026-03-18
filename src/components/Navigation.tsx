@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { label: "Problema", id: "problema" },
-  { label: "Cómo funciona", id: "como-funciona" },
-  { label: "Servicio", id: "servicio" },
-  { label: "Calculadora", id: "calculadora" },
-  { label: "FAQ", id: "faq" },
-  { label: "Contacto", id: "cta-final" },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navigation = () => {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const links = [
+    { label: t("nav.problem"), id: "problema" },
+    { label: t("nav.how_it_works"), id: "como-funciona" },
+    { label: t("nav.service"), id: "servicio" },
+    { label: t("nav.calculator"), id: "calculadora" },
+    { label: t("nav.faq"), id: "faq" },
+    { label: t("nav.contact"), id: "cta-final" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -50,17 +53,21 @@ const Navigation = () => {
                 {l.label}
               </button>
             ))}
+            <LanguageSwitcher />
             <a
               href="#cta-final"
               className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium pulse-glow transition-all"
             >
-              Auditoría gratis →
+              {t("nav.free_audit")}
             </a>
           </div>
 
-          <button onClick={() => setOpen(!open)} className="md:hidden p-2">
-            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          <div className="flex items-center gap-4 md:hidden">
+            <LanguageSwitcher />
+            <button onClick={() => setOpen(!open)} className="p-2">
+              {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -80,7 +87,7 @@ const Navigation = () => {
               href="#cta-final"
               className="block w-full bg-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-medium text-center"
             >
-              Auditoría gratis →
+              {t("nav.free_audit")}
             </a>
           </div>
         </div>

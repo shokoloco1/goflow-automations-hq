@@ -1,26 +1,28 @@
 import { useEffect, useRef } from "react";
 import { ShieldCheck } from "lucide-react";
-
-const steps = [
-  {
-    time: "Día 1",
-    title: "Diagnóstico de 20 min",
-    desc: "Conversamos sobre tu proceso actual. Te digo exactamente cuántas horas puedes recuperar y cómo.",
-  },
-  {
-    time: "Día 1-2",
-    title: "Construimos el flujo",
-    desc: "Automatizamos el proceso específico que más tiempo le cuesta a tu equipo. Sin cambiar tu WhatsApp, Excel o sistema actual.",
-  },
-  {
-    time: "Día 3",
-    title: "Tu equipo lo usa",
-    desc: "El flujo corre solo. Tú ves los resultados. Si no te convence, no pagas.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const HowItWorksSection = () => {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
+
+  const steps = [
+    {
+      time: t("how_it_works.step_1_time"),
+      title: t("how_it_works.step_1_title"),
+      desc: t("how_it_works.step_1_desc"),
+    },
+    {
+      time: t("how_it_works.step_2_time"),
+      title: t("how_it_works.step_2_title"),
+      desc: t("how_it_works.step_2_desc"),
+    },
+    {
+      time: t("how_it_works.step_3_time"),
+      title: t("how_it_works.step_3_title"),
+      desc: t("how_it_works.step_3_desc"),
+    },
+  ];
 
   useEffect(() => {
     const el = ref.current;
@@ -40,7 +42,7 @@ const HowItWorksSection = () => {
     <section id="como-funciona" ref={ref} className="py-24 md:py-32 px-4">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-center mb-16 scroll-reveal">
-          Así funciona en <span className="text-primary">72 horas</span>
+          {t("how_it_works.title")} <span className="text-primary">{t("how_it_works.title_accent")}</span>
         </h2>
 
         {/* Timeline */}
@@ -86,7 +88,7 @@ const HowItWorksSection = () => {
           <div className="rounded-xl border-l-4 border-l-primary bg-card border border-border px-6 py-5 flex items-start gap-3">
             <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
             <p className="text-foreground font-medium text-sm md:text-base">
-              Garantía: si en 7 días no ves el ahorro prometido, te devolvemos el 100%.
+              {t("how_it_works.guarantee")}
             </p>
           </div>
         </div>

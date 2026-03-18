@@ -1,35 +1,37 @@
 import { useEffect, useRef } from "react";
-
-const industries = [
-  {
-    emoji: "📣",
-    name: "Agencias de marketing",
-    desc: "Propuestas que se envían y nadie da seguimiento. Leads que se enfrían porque el follow-up es manual. Reportes que toman medio día armar.",
-  },
-  {
-    emoji: "👔",
-    name: "Consultoras y servicios profesionales",
-    desc: "Cotizaciones por email que se pierden en el inbox. Facturación que depende de una persona. Onboarding de clientes que toma días en vez de horas.",
-  },
-  {
-    emoji: "🏪",
-    name: "Comercio y distribución",
-    desc: "Pedidos que llegan por WhatsApp y se pierden entre chats. Cuadrar inventario en Excel al final del día. Facturas que salen tarde porque son manuales.",
-  },
-  {
-    emoji: "🏥",
-    name: "Salud privada",
-    desc: "Recepción dedicando horas a confirmar citas por WhatsApp. Historiales que se buscan a mano. Seguimiento a pacientes que nadie hace.",
-  },
-  {
-    emoji: "🔧",
-    name: "Construcción y oficios (AU)",
-    desc: "Cotizaciones por teléfono que toman 20 min cada una. Facturas que salen días después. Trabajos que se pierden porque nadie hizo follow-up.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const IndustriesSection = () => {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
+
+  const industries = [
+    {
+      emoji: "📣",
+      name: t("industries.1_name"),
+      desc: t("industries.1_desc"),
+    },
+    {
+      emoji: "👔",
+      name: t("industries.2_name"),
+      desc: t("industries.2_desc"),
+    },
+    {
+      emoji: "🏪",
+      name: t("industries.3_name"),
+      desc: t("industries.3_desc"),
+    },
+    {
+      emoji: "🏥",
+      name: t("industries.4_name"),
+      desc: t("industries.4_desc"),
+    },
+    {
+      emoji: "🔧",
+      name: t("industries.5_name"),
+      desc: t("industries.5_desc"),
+    },
+  ];
 
   useEffect(() => {
     const el = ref.current;
@@ -49,10 +51,10 @@ const IndustriesSection = () => {
     <section id="industrias" ref={ref} className="py-24 md:py-32 px-4">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-center mb-4 scroll-reveal">
-          Trabajamos con empresas <span className="text-primary">como la tuya</span>
+          {t("industries.title")} <span className="text-primary">{t("industries.title_accent")}</span>
         </h2>
         <p className="text-center text-muted-foreground text-lg mb-16 scroll-reveal">
-          Si tu equipo pierde tiempo en tareas repetitivas, podemos ayudar.
+          {t("industries.subtitle")}
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

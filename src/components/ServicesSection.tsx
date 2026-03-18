@@ -1,38 +1,40 @@
 import { useEffect, useRef } from "react";
 import { Globe, Bot, Zap } from "lucide-react";
-
-const services = [
-  {
-    icon: Bot,
-    badge: "FUNDAMENTAL",
-    badgeClass: "bg-muted text-muted-foreground",
-    name: "AI Process Audit",
-    title: "Auditoría de Procesos con IA",
-    desc: "Análisis profundo de 20 min para detectar cuellos de botella. Sal con un mapa claro de qué automatizar y cuánto ahorrarás.",
-    price: "FREE",
-  },
-  {
-    icon: Zap,
-    badge: "MÁS POPULAR",
-    badgeClass: "bg-primary text-primary-foreground",
-    name: "Custom Agents",
-    title: "Agentes AI Custom a Medida",
-    desc: "Desarrollamos agentes específicos para tu negocio (ej. análisis de contratos, soporte técnico real, gestión de inventario).",
-    price: "Desde $1,000",
-  },
-  {
-    icon: Globe,
-    badge: "ESTRATÉGICO",
-    badgeClass: "bg-secondary text-secondary-foreground",
-    name: "Operations Consulting",
-    title: "Consultoría de CRM & Operaciones",
-    desc: "Optimización completa de tu stack tecnológico. Integramos HubSpot, Salesforce o tu CRM actual con inteligencia artificial.",
-    price: "Personalizado",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ServicesSection = () => {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
+
+  const services = [
+    {
+      icon: Bot,
+      badge: t("services.1_badge"),
+      badgeClass: "bg-muted text-muted-foreground",
+      name: t("services.1_name"),
+      title: t("services.1_title"),
+      desc: t("services.1_desc"),
+      price: t("services.1_price"),
+    },
+    {
+      icon: Zap,
+      badge: t("services.2_badge"),
+      badgeClass: "bg-primary text-primary-foreground",
+      name: t("services.2_name"),
+      title: t("services.2_title"),
+      desc: t("services.2_desc"),
+      price: t("services.2_price"),
+    },
+    {
+      icon: Globe,
+      badge: t("services.3_badge"),
+      badgeClass: "bg-secondary text-secondary-foreground",
+      name: t("services.3_name"),
+      title: t("services.3_title"),
+      desc: t("services.3_desc"),
+      price: t("services.3_price"),
+    },
+  ];
 
   useEffect(() => {
     const el = ref.current;
@@ -52,11 +54,11 @@ const ServicesSection = () => {
     <section id="servicios" ref={ref} className="py-24 md:py-32 px-4">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-center mb-4 scroll-reveal">
-          Soluciones que transforman{" "}
-          <span className="text-primary">tu negocio</span>
+          {t("services.title")}{" "}
+          <span className="text-primary">{t("services.title_accent")}</span>
         </h2>
         <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto scroll-reveal">
-          Tecnología de punta, resultados desde el primer mes
+          {t("services.subtitle")}
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -90,7 +92,7 @@ const ServicesSection = () => {
                   rel="noopener noreferrer"
                   className="inline-block w-full text-center py-3 rounded-xl font-medium text-sm bg-primary text-primary-foreground transition-all hover:shadow-[0_0_20px_rgba(0,229,160,0.4)] cursor-none"
                 >
-                  Agendar llamada →
+                  {t("services.cta")}
                 </a>
               </div>
             );

@@ -1,67 +1,69 @@
 import { useEffect, useRef } from "react";
 import { Check, Clock, ShieldCheck, Zap, Rocket, Crown } from "lucide-react";
-
-const tiers = [
-  {
-    name: "Starter",
-    price: "$400",
-    currency: "USD",
-    period: "pago único",
-    delivery: "72 horas",
-    icon: Zap,
-    description: "Un flujo automatizado de principio a fin.",
-    features: [
-      "1 proceso automatizado (cotización, seguimiento o facturación)",
-      "Conexión con tus herramientas actuales (WhatsApp, Excel, CRM)",
-      "Capacitación para tu equipo",
-      "Soporte 7 días post-entrega",
-    ],
-    guarantee: "Garantía: 7 días o devolución completa",
-    cta: "Empezar con Starter",
-    highlighted: false,
-  },
-  {
-    name: "Growth",
-    price: "$800–1,400",
-    currency: "USD",
-    period: "pago único",
-    delivery: "2–3 semanas",
-    icon: Rocket,
-    description: "Automatización completa de cotización a cobro.",
-    features: [
-      "2–3 flujos conectados (cotización + seguimiento + facturación)",
-      "Dashboard de seguimiento en tiempo real",
-      "Follow-up automático a clientes sin respuesta",
-      "Reportes semanales automáticos",
-      "Soporte 14 días post-entrega",
-    ],
-    guarantee: null,
-    cta: "Escalar con Growth",
-    highlighted: true,
-  },
-  {
-    name: "Custom",
-    price: "$1,500–3,000+",
-    currency: "USD",
-    period: "según alcance",
-    delivery: "4–8 semanas",
-    icon: Crown,
-    description: "Transformación operativa completa con IA.",
-    features: [
-      "Automatización de operaciones completas",
-      "Chatbot IA para atención 24/7",
-      "Integración con sistemas existentes (ERP, CRM, contabilidad)",
-      "Captura y calificación automática de leads",
-      "Soporte continuo + optimización mensual",
-    ],
-    guarantee: null,
-    cta: "Consultar proyecto Custom",
-    highlighted: false,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ServicePricingSection = () => {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
+
+  const tiers = [
+    {
+      name: t("pricing.starter_name"),
+      price: t("pricing.starter_price"),
+      currency: t("pricing.currency"),
+      period: t("pricing.period"),
+      delivery: t("pricing.starter_delivery"),
+      icon: Zap,
+      description: t("pricing.starter_desc"),
+      features: [
+        t("pricing.starter_f1"),
+        t("pricing.starter_f2"),
+        t("pricing.starter_f3"),
+        t("pricing.starter_f4"),
+      ],
+      guarantee: t("pricing.starter_guarantee"),
+      cta: t("pricing.starter_cta"),
+      highlighted: false,
+    },
+    {
+      name: t("pricing.growth_name"),
+      price: t("pricing.growth_price"),
+      currency: t("pricing.currency"),
+      period: t("pricing.period"),
+      delivery: t("pricing.growth_delivery"),
+      icon: Rocket,
+      description: t("pricing.growth_desc"),
+      features: [
+        t("pricing.growth_f1"),
+        t("pricing.growth_f2"),
+        t("pricing.growth_f3"),
+        t("pricing.growth_f4"),
+        t("pricing.growth_f5"),
+      ],
+      guarantee: null,
+      cta: t("pricing.growth_cta"),
+      highlighted: true,
+    },
+    {
+      name: t("pricing.custom_name"),
+      price: t("pricing.custom_price"),
+      currency: t("pricing.currency"),
+      period: t("pricing.custom_period"),
+      delivery: t("pricing.custom_delivery"),
+      icon: Crown,
+      description: t("pricing.custom_desc"),
+      features: [
+        t("pricing.custom_f1"),
+        t("pricing.custom_f2"),
+        t("pricing.custom_f3"),
+        t("pricing.custom_f4"),
+        t("pricing.custom_f5"),
+      ],
+      guarantee: null,
+      cta: t("pricing.custom_cta"),
+      highlighted: false,
+    },
+  ];
 
   useEffect(() => {
     const el = ref.current;
@@ -82,10 +84,10 @@ const ServicePricingSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 scroll-reveal space-y-3">
           <h2>
-            Un plan para cada <span className="gradient-text">etapa de tu negocio</span>
+            {t("pricing.title")} <span className="gradient-text">{t("pricing.title_accent")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Desde automatizar un flujo hasta transformar toda tu operación.
+            {t("pricing.subtitle")}
           </p>
         </div>
 
@@ -104,7 +106,7 @@ const ServicePricingSection = () => {
               >
                 {tier.highlighted && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-mono uppercase tracking-wider text-primary-foreground bg-primary px-3 py-1 rounded-full">
-                    Recomendado
+                    {t("pricing.recommended")}
                   </span>
                 )}
 
@@ -125,7 +127,7 @@ const ServicePricingSection = () => {
 
                 <div className="flex items-center gap-2 mb-6 text-sm text-muted-foreground">
                   <Clock className="w-4 h-4 text-primary" />
-                  <span>Entrega: {tier.delivery}</span>
+                  <span>{t("pricing.delivery")} {tier.delivery}</span>
                 </div>
 
                 <div className="space-y-3 mb-8 flex-1">
@@ -163,7 +165,7 @@ const ServicePricingSection = () => {
         <div className="scroll-reveal text-center" style={{ transitionDelay: "0.4s" }}>
           <div className="inline-block bg-card rounded-xl border border-border px-8 py-5">
             <p className="text-sm text-muted-foreground mb-3">
-              🇦🇺 <span className="font-medium text-foreground">Precios para Australia</span>
+              🇦🇺 <span className="font-medium text-foreground">{t("pricing.australia_title")}</span>
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <span className="text-muted-foreground">
