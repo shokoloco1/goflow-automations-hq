@@ -1,37 +1,27 @@
 import { useTranslation } from "react-i18next";
-import { Globe } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
+  const toggleLanguage = () => {
+    const nextLng = i18n.language.startsWith("es") ? "en" : "es";
+    i18n.changeLanguage(nextLng);
   };
 
+  const isEs = i18n.language.startsWith("es");
+
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="w-9 h-9 p-0">
-          <Globe className="h-[1.2rem] w-[1.2rem]" />
-          <span className="sr-only">Toggle language</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="glass-card">
-        <DropdownMenuItem onClick={() => changeLanguage("es")} className="cursor-none">
-          Español
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => changeLanguage("en")} className="cursor-none">
-          English
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Button
+      variant="ghost"
+      size="sm"
+      onClick={toggleLanguage}
+      className="text-[10px] md:text-xs font-bold font-mono tracking-tighter cursor-none hover:bg-transparent"
+    >
+      <span className={isEs ? "text-primary" : "text-muted-foreground/40"}>ES</span>
+      <span className="text-muted-foreground/20 mx-1">/</span>
+      <span className={!isEs ? "text-primary" : "text-muted-foreground/40"}>EN</span>
+    </Button>
   );
 };
 
