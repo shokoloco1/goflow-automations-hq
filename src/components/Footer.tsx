@@ -1,4 +1,4 @@
-import { Linkedin } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 import logo from "@/assets/goflow-logo.png";
 import { useTranslation } from "react-i18next";
 
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="GoFlow AI" className="h-8 w-auto" />
+            <img src={logo} alt="GoFlow AI" className="h-10 md:h-12 w-auto" />
             <p className="text-muted-foreground text-sm">
               {t("footer.tagline")}
             </p>
@@ -23,7 +23,16 @@ const Footer = () => {
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="w-4 h-4" />
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.instagram.com/goflow.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-5 h-5" />
             </a>
             <a
               href="https://goflowai.com"
