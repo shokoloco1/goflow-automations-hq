@@ -26,7 +26,7 @@ const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://www.instagram.com/goflow.ai/"
+              href="https://www.instagram.com/goflow_ai/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
