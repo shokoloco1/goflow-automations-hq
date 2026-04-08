@@ -78,7 +78,7 @@ const resources = {
       "pricing.currency": "USD",
       "pricing.period": "one-time payment",
       "pricing.delivery": "Delivery:",
-      "pricing.australia_title": "Australia — GoFlow x Quazar (Content + Automation)",
+      "pricing.australia_title": "Australia — Quazar x GoFlow (Content + Automation)",
       "pricing.starter_name": "Starter",
       "pricing.starter_price": "$399",
       "pricing.starter_delivery": "72 hours",
