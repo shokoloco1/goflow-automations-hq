@@ -169,13 +169,13 @@ const ServicePricingSection = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <span className="text-muted-foreground">
-                Starter: <span className="text-foreground font-medium">$999 AUD</span>
+                Starter: <span className="text-foreground font-medium">$699/mo AUD</span>
               </span>
               <span className="text-muted-foreground">
-                Growth: <span className="text-foreground font-medium">$1,800 AUD</span>
+                Growth: <span className="text-foreground font-medium">$1,299/mo AUD</span>
               </span>
               <span className="text-muted-foreground">
-                Custom: <span className="text-foreground font-medium">$3,500+ AUD</span>
+                Scale: <span className="text-foreground font-medium">$2,199/mo AUD</span>
               </span>
             </div>
           </div>
