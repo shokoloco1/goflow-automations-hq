@@ -162,21 +162,41 @@ const ServicePricingSection = () => {
         </div>
 
         {/* Australia pricing */}
-        <div className="scroll-reveal text-center" style={{ transitionDelay: "0.4s" }}>
-          <div className="inline-block bg-card rounded-xl border border-border px-8 py-5">
-            <p className="text-sm text-muted-foreground mb-3">
-              🇦🇺 <span className="font-medium text-foreground">{t("pricing.australia_title")}</span>
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <span className="text-muted-foreground">
-                Starter: <span className="text-foreground font-medium">$699/mo AUD</span>
-              </span>
-              <span className="text-muted-foreground">
-                Growth: <span className="text-foreground font-medium">$1,299/mo AUD</span>
-              </span>
-              <span className="text-muted-foreground">
-                Scale: <span className="text-foreground font-medium">$2,199/mo AUD</span>
-              </span>
+        <div className="scroll-reveal" style={{ transitionDelay: "0.4s" }}>
+          <div className="bg-card rounded-2xl border border-border p-8 max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <p className="text-lg font-display font-semibold text-foreground mb-1">
+                🇦🇺 Quazar x GoFlow (Content + Automation)
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Professional content + automation + ads. Monthly packages, no setup fee.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+              {/* Starter */}
+              <div className="flex flex-col items-center text-center py-6 md:py-0 md:px-6">
+                <span className="text-sm font-medium text-foreground mb-2">Starter</span>
+                <span className="text-2xl md:text-3xl font-display font-bold text-primary mb-1">$1,500</span>
+                <span className="text-xs text-muted-foreground mb-2">/mo AUD</span>
+                <span className="text-xs text-muted-foreground">15 photos + 1 reel + booking</span>
+              </div>
+
+              {/* Growth */}
+              <div className="flex flex-col items-center text-center py-6 md:py-0 md:px-6">
+                <span className="text-sm font-medium text-foreground mb-2">Growth ⭐</span>
+                <span className="text-2xl md:text-3xl font-display font-bold text-primary mb-1">$2,200</span>
+                <span className="text-xs text-muted-foreground mb-2">/mo AUD</span>
+                <span className="text-xs text-muted-foreground">30 photos + reels + ads + CRM</span>
+              </div>
+
+              {/* Scale */}
+              <div className="flex flex-col items-center text-center py-6 md:py-0 md:px-6">
+                <span className="text-sm font-medium text-foreground mb-2">Scale</span>
+                <span className="text-2xl md:text-3xl font-display font-bold text-primary mb-1">$3,200</span>
+                <span className="text-xs text-muted-foreground mb-2">/mo AUD</span>
+                <span className="text-xs text-muted-foreground">50 photos + AI chatbot + full ads</span>
+              </div>
             </div>
           </div>
         </div>
