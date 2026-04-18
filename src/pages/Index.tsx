@@ -5,6 +5,7 @@ import WorkflowVisualization from "@/components/WorkflowVisualization";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import AutomationShowcase from "@/components/AutomationShowcase";
 import ServicePricingSection from "@/components/ServicePricingSection";
+import ServicesPricingSection from "@/components/ServicesPricingSection";
 import ServicesSection from "@/components/ServicesSection";
 import CalculatorSection from "@/components/CalculatorSection";
 import IndustriesSection from "@/components/IndustriesSection";
@@ -23,6 +24,9 @@ const Index = () => (
     <GrainOverlay />
     <Navigation />
     <HeroSection />
+    <div className="lazy-section">
+      <ServicesPricingSection />
+    </div>
     <div className="lazy-section">
       <ProblemSection />
     </div>
