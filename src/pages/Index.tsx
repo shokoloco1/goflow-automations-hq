@@ -4,9 +4,7 @@ import ProblemSection from "@/components/ProblemSection";
 import WorkflowVisualization from "@/components/WorkflowVisualization";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import AutomationShowcase from "@/components/AutomationShowcase";
-import ServicePricingSection from "@/components/ServicePricingSection";
 import ServicesPricingSection from "@/components/ServicesPricingSection";
-import ServicesSection from "@/components/ServicesSection";
 import CalculatorSection from "@/components/CalculatorSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import FAQSection from "@/components/FAQSection";
@@ -38,12 +36,6 @@ const Index = () => (
     </div>
     <div className="lazy-section">
       <AutomationShowcase />
-    </div>
-    <div className="lazy-section">
-      <ServicePricingSection />
-    </div>
-    <div className="lazy-section">
-      <ServicesSection />
     </div>
     <div className="lazy-section">
       <CalculatorSection />
